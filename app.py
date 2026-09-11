@@ -245,7 +245,15 @@ def load_data():
         
     return df_quant, df_scenario
 
+@st.cache_data
+def load_qualitative_quotes():
+    qual_file = "qualitative_coded_database_complete_all_rows.xlsx"
+    if os.path.exists(qual_file):
+        return pd.read_excel(qual_file)
+    return pd.DataFrame()
+
 df_quant, df_scenario = load_data()
+df_qual_master = load_qualitative_quotes()
 
 # ---------------------------------------------------------
 # Sidebar Controls
@@ -1122,100 +1130,77 @@ with tab9:
 # TAB 10: TEACHER QUALITATIVE QUOTE BANK & SENTIMENT EXPLORER
 # =========================================================
 with tab10:
-    st.markdown('<div class="section-title">10. Teacher Qualitative Quote Bank & Field Sentiment Explorer</div>', unsafe_allow_html=True)
-    st.markdown("""
-    <div class="word-analysis-box" style="border-left: 6px solid #0EA5E9;">
-        <h3>💬 Qualitative Voice of the Field (N=60 Study Teachers)</h3>
-        <p>This repository captures authentic verbatim quotes, field note observations, and qualitative sentiments collected during 60 in-depth teacher interviews across Madhya Pradesh. Filter by intervention domain or sentiment type to explore field realities.</p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    quotes_data = [
-        {
-            "quote": "Tell me what to do differently, not just a list of what was wrong. And give me feedback privately—never criticize me in front of my students.",
-            "theme": "Classroom Observation & Mentoring (CRO)",
-            "sentiment": "Constructive / Non-Negotiable Demand",
-            "context": "Teacher Demand #1 & #2 (Table 23)",
-            "takeaway": "CRO observers must frame debriefs as private, non-punitive professional coaching sessions."
-        },
-        {
-            "quote": "If an officer comes to observe my English or Math class, they must understand the subject. Better yet, teach alongside me for 15 minutes to demonstrate how the technique works in real time.",
-            "theme": "Classroom Observation & Mentoring (CRO)",
-            "sentiment": "Positive / Pedagogical Demand",
-            "context": "Teacher Demand #3 & #4 (Table 23)",
-            "takeaway": "Subject credibility and live co-teaching build immediate teacher trust in observation systems."
-        },
-        {
-            "quote": "We attend 3 days of training with full enthusiasm, but leave empty-handed without any physical module, PPT, or handbook to refer back to when we return to our school.",
-            "theme": "In-Person Training (IPT)",
-            "sentiment": "Critical / Supply Deficit",
-            "context": "31.7% Zero Material Supply Deficit (Section 4.1)",
-            "takeaway": "Pre-session material logistics must be guaranteed prior to conducting workshop sessions."
-        },
-        {
-            "quote": "We are doing digital courses on our personal mobile phones late at night after completing household chores and administrative election duties. During school hours, there is simply no quiet time.",
-            "theme": "Digital Courses (DIKSHA)",
-            "sentiment": "Critical / Workload Constraint",
-            "context": "65% After-Hours Learning Constraint (Section 4.2)",
-            "takeaway": "Micro-learning modules (15-min limit) are essential for fitting into tight after-hours time budgets."
-        },
-        {
-            "quote": "Long PDF text modules are boring and hard to read on small mobile screens. The mid-course interactive quizzes and short animated videos are what actually keep us awake and engaged.",
-            "theme": "Digital Courses (DIKSHA)",
-            "sentiment": "Positive / Feature Preference",
-            "context": "Table 15 Course Feature Ranking #1 (Section 4.2)",
-            "takeaway": "Interactive mid-course checks drive significantly higher completion and retention."
-        },
-        {
-            "quote": "Shaikshik Samvaad is our favourite session because we sit with fellow teachers from neighboring schools and discuss real classroom problems like Cold Calling and student seating hooks.",
-            "theme": "Shaikshik Samvaad (CLSS)",
-            "sentiment": "Positive / Peer Transfer",
-            "context": "64.2% Classroom Transfer Rate (Section 4.3)",
-            "takeaway": "Peer learning yields the highest classroom transfer efficiency among all TPD interventions."
-        },
-        {
-            "quote": "At 4:30 PM when CLSS ends, everyone rushes to leave for home or catch bus transport. Trying to open the RSK MP portal and fill long feedback forms at that exact moment leads to server crashes and missed attendance entries.",
-            "theme": "Shaikshik Samvaad (CLSS)",
-            "sentiment": "Constructive / Technical Friction",
-            "context": "40% Session-End Exit Rush (Section 4.3)",
-            "takeaway": "Attendance recording should be decoupled from the immediate post-session exit window."
-        },
-        {
-            "quote": "I click whichever WhatsApp link comes in our teachers' group from the Jan Shikshak and complete the course. I don't know the formal program name 'CM RISE TPD', I just know it's the mandatory weekly training.",
-            "theme": "Brand Awareness & Communication",
-            "sentiment": "Constructive / Awareness Gap",
-            "context": "The 65% Unbranded Activity Gap (Section 4.5.7)",
-            "takeaway": "Program branding must be embedded inside course video intros, not relying on link text alone."
-        }
-    ]
-
-    q_col1, q_col2 = st.columns(2)
-    with q_col1:
-        selected_theme = st.selectbox("Filter Quote Bank by Intervention Theme:", ["All Themes"] + sorted(list(set(q["theme"] for q in quotes_data))))
-    with q_col2:
-        selected_sent = st.selectbox("Filter Quote Bank by Sentiment:", ["All Sentiments"] + sorted(list(set(q["sentiment"] for q in quotes_data))))
-
-    filtered_quotes = quotes_data
-    if selected_theme != "All Themes":
-        filtered_quotes = [q for q in filtered_quotes if q["theme"] == selected_theme]
-    if selected_sent != "All Sentiments":
-        filtered_quotes = [q for q in filtered_quotes if q["sentiment"] == selected_sent]
-
-    st.markdown(f"Displaying **{len(filtered_quotes)}** matching teacher field quotes:")
-
-    for item in filtered_quotes:
-        sent_color = "#10B981" if "Positive" in item["sentiment"] else ("#F59E0B" if "Constructive" in item["sentiment"] else "#EF4444")
+    st.markdown('<div class="section-title">10. Complete 60-Teacher Qualitative Quote Bank & Field Explorer</div>', unsafe_allow_html=True)
+    
+    if not df_qual_master.empty:
         st.markdown(f"""
-        <div class="metric-card" style="margin-bottom: 1.2rem; border-left: 5px solid {sent_color};">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                <span class="badge-tag" style="background-color: #F1F5F9; color: #334155; border: 1px solid #CBD5E1;">{item['theme']}</span>
-                <span style="font-size: 0.75rem; font-weight: 700; color: {sent_color}; background-color: #F8FAFC; padding: 0.2rem 0.6rem; border-radius: 12px; border: 1px solid {sent_color}33;">{item['sentiment']}</span>
-            </div>
-            <p style="font-size: 1.05rem; font-style: italic; color: #0F172A; font-weight: 600; line-height: 1.5; margin: 0.6rem 0;">“{item['quote']}”</p>
-            <p style="font-size: 0.85rem; color: #64748B; margin: 0.2rem 0;"><b>Study Context:</b> {item['context']}</p>
-            <p style="font-size: 0.85rem; color: #0284C7; font-weight: 600; margin-top: 0.3rem;"><b>💡 Strategic Takeaway:</b> {item['takeaway']}</p>
+        <div class="word-analysis-box" style="border-left: 6px solid #0EA5E9;">
+            <h3>💬 Qualitative Voice of the Field (N={len(df_qual_master)} Primary Study Teachers)</h3>
+            <p>This repository captures authentic verbatim quotes, field note observations, root cause analyses, and recommended policy actions for <b>all {len(df_qual_master)} primary study teachers</b> across 35 districts in Madhya Pradesh.</p>
         </div>
         """, unsafe_allow_html=True)
+
+        q_c1, q_c2, q_c3 = st.columns(3)
+        with q_c1:
+            all_themes = ["All Themes"] + sorted(df_qual_master['Theme'].dropna().astype(str).unique().tolist())
+            sel_theme = st.selectbox("Filter by Theme:", all_themes)
+        with q_c2:
+            all_dists = ["All Districts"] + sorted(df_qual_master['District'].dropna().astype(str).unique().tolist())
+            sel_dist = st.selectbox("Filter by District:", all_dists)
+        with q_c3:
+            search_query = st.text_input("🔍 Search Quotes & Field Text:", "")
+
+        filtered_df_qual = df_qual_master.copy()
+        if sel_theme != "All Themes":
+            filtered_df_qual = filtered_df_qual[filtered_df_qual['Theme'] == sel_theme]
+        if sel_dist != "All Districts":
+            filtered_df_qual = filtered_df_qual[filtered_df_qual['District'] == sel_dist]
+        if search_query.strip():
+            sq = search_query.strip().lower()
+            filtered_df_qual = filtered_df_qual[
+                filtered_df_qual['Teacher_ID'].astype(str).str.lower().str.contains(sq) |
+                filtered_df_qual['District'].astype(str).str.lower().str.contains(sq) |
+                filtered_df_qual['Verbatim_Quote'].astype(str).str.lower().str.contains(sq) |
+                filtered_df_qual['Policy_Action'].astype(str).str.lower().str.contains(sq)
+            ]
+
+        st.markdown(f"Displaying **{len(filtered_df_qual)}** of **{len(df_qual_master)}** study teacher entries:")
+
+        # Show as cards
+        for idx, row in filtered_df_qual.iterrows():
+            t_id = row.get('Teacher_ID', f'Teacher_{idx+1}')
+            dist = row.get('District', 'N/A')
+            exp = row.get('Experience', 'N/A')
+            theme = str(row.get('Theme', 'Field Insight'))
+            quote = str(row.get('Verbatim_Quote', '')).strip()
+            root_cause = str(row.get('Root_Cause', '')).strip()
+            policy = str(row.get('Policy_Action', '')).strip()
+
+            sent_color = "#0EA5E9"
+            if "Barrier" in theme or "Friction" in theme or "Deficit" in theme or "Non-Receipt" in theme:
+                sent_color = "#EF4444"
+            elif "Cascade" in theme or "Transfer" in theme or "Execution" in theme:
+                sent_color = "#10B981"
+            elif "Workload" in theme or "Passive" in theme:
+                sent_color = "#F59E0B"
+
+            st.markdown(f"""
+            <div class="metric-card" style="margin-bottom: 1.2rem; border-left: 5px solid {sent_color};">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div>
+                        <span class="badge-tag" style="background-color: #0F172A; color: #F8FAFC;">{t_id}</span>
+                        <span class="badge-tag" style="background-color: #F1F5F9; color: #334155; border: 1px solid #CBD5E1; margin-left: 0.4rem;">📍 {dist} District</span>
+                        <span style="font-size: 0.78rem; color: #64748B; margin-left: 0.4rem;">(Exp: {exp})</span>
+                    </div>
+                    <span style="font-size: 0.75rem; font-weight: 700; color: {sent_color}; background-color: #F8FAFC; padding: 0.2rem 0.6rem; border-radius: 12px; border: 1px solid {sent_color}33;">{theme}</span>
+                </div>
+                <p style="font-size: 1.02rem; font-style: italic; color: #0F172A; font-weight: 600; line-height: 1.5; margin: 0.6rem 0;">“{quote}”</p>
+                <p style="font-size: 0.85rem; color: #64748B; margin: 0.2rem 0;"><b>Root Cause / Observed Friction:</b> {root_cause}</p>
+                <p style="font-size: 0.85rem; color: #0284C7; font-weight: 600; margin-top: 0.3rem;"><b>💡 Strategic Policy Action:</b> {policy}</p>
+            </div>
+            """, unsafe_allow_html=True)
+    else:
+        st.info("Qualitative master dataset loading...")
 
 # ---------------------------------------------------------
 # Executive Page Footnote (Reduced Elegant Font Size)
