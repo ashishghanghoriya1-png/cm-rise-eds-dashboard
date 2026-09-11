@@ -22,7 +22,7 @@ st.set_page_config(
 # ---------------------------------------------------------
 st.markdown("""
 <style>
-    /* Global Typography & Background Override */
+    /* Global Typography & Canvas Reset */
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
     
     .stApp {
@@ -31,65 +31,68 @@ st.markdown("""
         font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
     }
 
+    /* Force all general markdown text to dark slate */
     .stMarkdown, .stMarkdown p, .stMarkdown span, .stMarkdown li, div[data-testid="stMarkdownContainer"] > p {
-        color: #0F172A !important;
+        color: #1E293B !important;
         font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
     }
     
-    /* Main Top Header */
-    .main-header {
-        background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%) !important;
-        padding: 2.2rem 2.5rem !important;
+    /* Executive Hero Header (Clean Light Design) */
+    .hero-header {
+        background-color: #FFFFFF !important;
         border-radius: 16px !important;
-        color: #FFFFFF !important;
+        padding: 2.2rem 2.5rem !important;
         margin-bottom: 2rem !important;
-        box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.25) !important;
-        border: 1px solid #334155 !important;
+        border: 1px solid #E2E8F0 !important;
+        border-left: 8px solid #0EA5E9 !important;
+        box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.01) !important;
     }
     
-    .main-header h1 {
-        font-size: 2.2rem !important;
-        font-weight: 800 !important;
-        margin: 0.4rem 0 0.5rem 0 !important;
-        color: #F8FAFC !important;
-        letter-spacing: -0.02em !important;
-    }
-    
-    .main-header p {
-        font-size: 1.05rem !important;
-        color: #CBD5E1 !important;
-        margin: 0 !important;
-        font-weight: 500 !important;
-    }
-    
-    .badge-tag {
+    .hero-badge {
         display: inline-block !important;
-        background: rgba(14, 165, 233, 0.2) !important;
-        color: #38BDF8 !important;
-        border: 1px solid rgba(56, 189, 248, 0.4) !important;
+        background-color: #E0F2FE !important;
+        color: #0284C7 !important;
+        border: 1px solid #BAE6FD !important;
         padding: 0.35rem 0.85rem !important;
         border-radius: 20px !important;
         font-size: 0.78rem !important;
         font-weight: 700 !important;
-        letter-spacing: 0.08em !important;
+        letter-spacing: 0.06em !important;
         text-transform: uppercase !important;
+        margin-bottom: 0.8rem !important;
+    }
+
+    .hero-title {
+        color: #0F172A !important;
+        font-size: 2.1rem !important;
+        font-weight: 800 !important;
+        line-height: 1.25 !important;
+        margin: 0 0 0.6rem 0 !important;
+        letter-spacing: -0.025em !important;
+    }
+
+    .hero-subtitle {
+        color: #475569 !important;
+        font-size: 1.05rem !important;
+        font-weight: 500 !important;
+        margin: 0 !important;
+        line-height: 1.5 !important;
     }
 
     /* In-Depth Word Analysis Box */
     .word-analysis-box {
         background-color: #FFFFFF !important;
-        border-left: 6px solid #0EA5E9 !important;
         border-radius: 12px !important;
         padding: 1.8rem 2.2rem !important;
         margin-bottom: 2rem !important;
-        box-shadow: 0 4px 15px rgba(15, 23, 42, 0.08) !important;
+        box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05) !important;
         border: 1px solid #CBD5E1 !important;
         border-left: 6px solid #0EA5E9 !important;
     }
 
     .word-analysis-box h3 {
         color: #0F172A !important;
-        font-size: 1.35rem !important;
+        font-size: 1.3rem !important;
         font-weight: 800 !important;
         margin-top: 0 !important;
         margin-bottom: 1.1rem !important;
@@ -213,10 +216,10 @@ st.markdown("""
 # Header Render
 # ---------------------------------------------------------
 st.markdown("""
-<div class="main-header">
-    <div class="badge-tag">CM RISE TPD — ECOSYSTEM DIAGNOSTIC STUDY (EDS)</div>
-    <h1>🎓 CM RISE Teacher Professional Development — Ecosystem Diagnostic Study</h1>
-    <p>Comprehensive Qualitative & Quantitative Field Analysis (N=60 Study Teachers Across Madhya Pradesh)</p>
+<div class="hero-header">
+    <div class="hero-badge">CM RISE TPD • ECOSYSTEM DIAGNOSTIC STUDY (EDS)</div>
+    <h1 class="hero-title">🎓 CM RISE Teacher Professional Development — Ecosystem Diagnostic Study</h1>
+    <p class="hero-subtitle">Comprehensive Qualitative & Quantitative Field Analysis (N=60 Study Teachers Across Madhya Pradesh)</p>
 </div>
 """, unsafe_allow_html=True)
 
