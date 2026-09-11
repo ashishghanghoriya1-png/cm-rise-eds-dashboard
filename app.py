@@ -281,7 +281,7 @@ if not filtered_quant.empty:
 # ---------------------------------------------------------
 # Main Application Tabs
 # ---------------------------------------------------------
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs([
     "🏆 Executive Summary & Gaps",
     "🏫 In-Person Training (IPT)",
     "📱 Digital Courses (DIKSHA)",
@@ -290,7 +290,8 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([
     "📊 Cross-Cutting Analysis",
     "📢 Brand Awareness Funnel",
     "🔮 TabFM Policy Simulator",
-    "🤖 Qwen AI Assistant & Data"
+    "🤖 Qwen AI Assistant & Data",
+    "💬 Teacher Quote Bank & Sentiments"
 ])
 
 # =========================================================
@@ -1116,6 +1117,105 @@ with tab9:
         st.dataframe(filtered_quant.astype(str), use_container_width=True)
     else:
         st.info("Primary quantitative dataset workbook loaded. Select filters above to explore rows.")
+
+# =========================================================
+# TAB 10: TEACHER QUALITATIVE QUOTE BANK & SENTIMENT EXPLORER
+# =========================================================
+with tab10:
+    st.markdown('<div class="section-title">10. Teacher Qualitative Quote Bank & Field Sentiment Explorer</div>', unsafe_allow_html=True)
+    st.markdown("""
+    <div class="word-analysis-box" style="border-left: 6px solid #0EA5E9;">
+        <h3>💬 Qualitative Voice of the Field (N=60 Study Teachers)</h3>
+        <p>This repository captures authentic verbatim quotes, field note observations, and qualitative sentiments collected during 60 in-depth teacher interviews across Madhya Pradesh. Filter by intervention domain or sentiment type to explore field realities.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    quotes_data = [
+        {
+            "quote": "Tell me what to do differently, not just a list of what was wrong. And give me feedback privately—never criticize me in front of my students.",
+            "theme": "Classroom Observation & Mentoring (CRO)",
+            "sentiment": "Constructive / Non-Negotiable Demand",
+            "context": "Teacher Demand #1 & #2 (Table 23)",
+            "takeaway": "CRO observers must frame debriefs as private, non-punitive professional coaching sessions."
+        },
+        {
+            "quote": "If an officer comes to observe my English or Math class, they must understand the subject. Better yet, teach alongside me for 15 minutes to demonstrate how the technique works in real time.",
+            "theme": "Classroom Observation & Mentoring (CRO)",
+            "sentiment": "Positive / Pedagogical Demand",
+            "context": "Teacher Demand #3 & #4 (Table 23)",
+            "takeaway": "Subject credibility and live co-teaching build immediate teacher trust in observation systems."
+        },
+        {
+            "quote": "We attend 3 days of training with full enthusiasm, but leave empty-handed without any physical module, PPT, or handbook to refer back to when we return to our school.",
+            "theme": "In-Person Training (IPT)",
+            "sentiment": "Critical / Supply Deficit",
+            "context": "31.7% Zero Material Supply Deficit (Section 4.1)",
+            "takeaway": "Pre-session material logistics must be guaranteed prior to conducting workshop sessions."
+        },
+        {
+            "quote": "We are doing digital courses on our personal mobile phones late at night after completing household chores and administrative election duties. During school hours, there is simply no quiet time.",
+            "theme": "Digital Courses (DIKSHA)",
+            "sentiment": "Critical / Workload Constraint",
+            "context": "65% After-Hours Learning Constraint (Section 4.2)",
+            "takeaway": "Micro-learning modules (15-min limit) are essential for fitting into tight after-hours time budgets."
+        },
+        {
+            "quote": "Long PDF text modules are boring and hard to read on small mobile screens. The mid-course interactive quizzes and short animated videos are what actually keep us awake and engaged.",
+            "theme": "Digital Courses (DIKSHA)",
+            "sentiment": "Positive / Feature Preference",
+            "context": "Table 15 Course Feature Ranking #1 (Section 4.2)",
+            "takeaway": "Interactive mid-course checks drive significantly higher completion and retention."
+        },
+        {
+            "quote": "Shaikshik Samvaad is our favourite session because we sit with fellow teachers from neighboring schools and discuss real classroom problems like Cold Calling and student seating hooks.",
+            "theme": "Shaikshik Samvaad (CLSS)",
+            "sentiment": "Positive / Peer Transfer",
+            "context": "64.2% Classroom Transfer Rate (Section 4.3)",
+            "takeaway": "Peer learning yields the highest classroom transfer efficiency among all TPD interventions."
+        },
+        {
+            "quote": "At 4:30 PM when CLSS ends, everyone rushes to leave for home or catch bus transport. Trying to open the RSK MP portal and fill long feedback forms at that exact moment leads to server crashes and missed attendance entries.",
+            "theme": "Shaikshik Samvaad (CLSS)",
+            "sentiment": "Constructive / Technical Friction",
+            "context": "40% Session-End Exit Rush (Section 4.3)",
+            "takeaway": "Attendance recording should be decoupled from the immediate post-session exit window."
+        },
+        {
+            "quote": "I click whichever WhatsApp link comes in our teachers' group from the Jan Shikshak and complete the course. I don't know the formal program name 'CM RISE TPD', I just know it's the mandatory weekly training.",
+            "theme": "Brand Awareness & Communication",
+            "sentiment": "Constructive / Awareness Gap",
+            "context": "The 65% Unbranded Activity Gap (Section 4.5.7)",
+            "takeaway": "Program branding must be embedded inside course video intros, not relying on link text alone."
+        }
+    ]
+
+    q_col1, q_col2 = st.columns(2)
+    with q_col1:
+        selected_theme = st.selectbox("Filter Quote Bank by Intervention Theme:", ["All Themes"] + sorted(list(set(q["theme"] for q in quotes_data))))
+    with q_col2:
+        selected_sent = st.selectbox("Filter Quote Bank by Sentiment:", ["All Sentiments"] + sorted(list(set(q["sentiment"] for q in quotes_data))))
+
+    filtered_quotes = quotes_data
+    if selected_theme != "All Themes":
+        filtered_quotes = [q for q in filtered_quotes if q["theme"] == selected_theme]
+    if selected_sent != "All Sentiments":
+        filtered_quotes = [q for q in filtered_quotes if q["sentiment"] == selected_sent]
+
+    st.markdown(f"Displaying **{len(filtered_quotes)}** matching teacher field quotes:")
+
+    for item in filtered_quotes:
+        sent_color = "#10B981" if "Positive" in item["sentiment"] else ("#F59E0B" if "Constructive" in item["sentiment"] else "#EF4444")
+        st.markdown(f"""
+        <div class="metric-card" style="margin-bottom: 1.2rem; border-left: 5px solid {sent_color};">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <span class="badge-tag" style="background-color: #F1F5F9; color: #334155; border: 1px solid #CBD5E1;">{item['theme']}</span>
+                <span style="font-size: 0.75rem; font-weight: 700; color: {sent_color}; background-color: #F8FAFC; padding: 0.2rem 0.6rem; border-radius: 12px; border: 1px solid {sent_color}33;">{item['sentiment']}</span>
+            </div>
+            <p style="font-size: 1.05rem; font-style: italic; color: #0F172A; font-weight: 600; line-height: 1.5; margin: 0.6rem 0;">“{item['quote']}”</p>
+            <p style="font-size: 0.85rem; color: #64748B; margin: 0.2rem 0;"><b>Study Context:</b> {item['context']}</p>
+            <p style="font-size: 0.85rem; color: #0284C7; font-weight: 600; margin-top: 0.3rem;"><b>💡 Strategic Takeaway:</b> {item['takeaway']}</p>
+        </div>
+        """, unsafe_allow_html=True)
 
 # ---------------------------------------------------------
 # Executive Page Footnote (Reduced Elegant Font Size)
