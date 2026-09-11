@@ -1185,18 +1185,18 @@ with tab10:
                 sent_color = "#F59E0B"
 
             st.markdown(f"""
-            <div class="metric-card" style="margin-bottom: 1.2rem; border-left: 5px solid {sent_color};">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <div style="background-color: #FFFFFF; border: 2px solid #CBD5E1; border-left: 8px solid {sent_color}; border-radius: 12px; padding: 1.4rem 1.6rem; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
                     <div>
-                        <span class="badge-tag" style="background-color: #0F172A; color: #F8FAFC;">{t_id}</span>
-                        <span class="badge-tag" style="background-color: #F1F5F9; color: #334155; border: 1px solid #CBD5E1; margin-left: 0.4rem;">📍 {dist} District</span>
-                        <span style="font-size: 0.78rem; color: #64748B; margin-left: 0.4rem;">(Exp: {exp})</span>
+                        <span style="background-color: #0F172A; color: #FFFFFF; font-weight: 800; font-size: 0.85rem; padding: 0.3rem 0.7rem; border-radius: 6px;">{t_id}</span>
+                        <span style="background-color: #E0F2FE; color: #0369A1; font-weight: 800; font-size: 0.85rem; padding: 0.3rem 0.7rem; border-radius: 6px; border: 1px solid #BAE6FD; margin-left: 0.4rem;">📍 {dist} District</span>
+                        <span style="font-size: 0.8rem; color: #475569; font-weight: 700; margin-left: 0.4rem;">(Exp: {exp})</span>
                     </div>
-                    <span style="font-size: 0.75rem; font-weight: 700; color: {sent_color}; background-color: #F8FAFC; padding: 0.2rem 0.6rem; border-radius: 12px; border: 1px solid {sent_color}33;">{theme}</span>
+                    <span style="font-size: 0.78rem; font-weight: 800; color: #0F172A; background-color: #FEF3C7; padding: 0.3rem 0.7rem; border-radius: 14px; border: 1px solid #FDE68A;">{theme}</span>
                 </div>
-                <p style="font-size: 1.02rem; font-style: italic; color: #0F172A; font-weight: 600; line-height: 1.5; margin: 0.6rem 0;">“{quote}”</p>
-                <p style="font-size: 0.85rem; color: #64748B; margin: 0.2rem 0;"><b>Root Cause / Observed Friction:</b> {root_cause}</p>
-                <p style="font-size: 0.85rem; color: #0284C7; font-weight: 600; margin-top: 0.3rem;"><b>💡 Strategic Policy Action:</b> {policy}</p>
+                <p style="font-size: 1.05rem; font-style: italic; color: #0F172A; font-weight: 800; line-height: 1.6; margin: 0.8rem 0;">“{quote}”</p>
+                <p style="font-size: 0.92rem; color: #1E3A8A; font-weight: 700; margin: 0.3rem 0;"><b>Root Cause / Observed Friction:</b> {root_cause}</p>
+                <p style="font-size: 0.92rem; color: #065F46; font-weight: 700; margin-top: 0.3rem;"><b>💡 Strategic Policy Action:</b> {policy}</p>
             </div>
             """, unsafe_allow_html=True)
     else:
