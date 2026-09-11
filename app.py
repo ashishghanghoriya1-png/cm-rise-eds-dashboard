@@ -1102,3 +1102,22 @@ with tab9:
         st.dataframe(filtered_quant.astype(str), use_container_width=True)
     else:
         st.info("Primary quantitative dataset workbook loaded. Select filters above to explore rows.")
+
+# ---------------------------------------------------------
+# Executive Page Footnote
+# ---------------------------------------------------------
+st.markdown("---")
+st.markdown("""
+<div style="text-align: center; padding: 1.5rem 0 2rem 0; color: #475569; font-size: 0.925rem; font-weight: 600;">
+    🎓 CM RISE Teacher Professional Development — Ecosystem Diagnostic Study (EDS)<br>
+    <span style="color: #0284C7; font-weight: 700; font-size: 1rem;">Prepared by Ashish</span>
+</div>
+""", unsafe_allow_html=True)
+
+st.sidebar.markdown("---")
+st.sidebar.markdown("""
+<div style="font-size: 0.85rem; color: #475569; text-align: center; font-weight: 600;">
+    <b>CM RISE TPD EDS Dashboard</b><br>
+    <span style="color: #0284C7; font-weight: 700;">Prepared by Ashish</span>
+</div>
+""", unsafe_allow_html=True)
