@@ -31,10 +31,44 @@ st.markdown("""
         font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
     }
 
-    /* Force all general markdown text to dark slate */
-    .stMarkdown, .stMarkdown p, .stMarkdown span, .stMarkdown li, div[data-testid="stMarkdownContainer"] > p {
+    /* Force general markdown text to dark slate (excluding custom badges) */
+    .stMarkdown, .stMarkdown p, .stMarkdown li, div[data-testid="stMarkdownContainer"] > p {
         color: #1E293B !important;
         font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    }
+
+    /* Small Badge Tabs (Teacher ID, District, Theme) */
+    .t-id-badge {
+        background-color: #0F172A !important;
+        color: #FFFFFF !important;
+        font-weight: 800 !important;
+        font-size: 0.85rem !important;
+        padding: 0.35rem 0.75rem !important;
+        border-radius: 6px !important;
+        display: inline-block !important;
+    }
+    
+    .dist-badge {
+        background-color: #DBEAFE !important;
+        color: #1E40AF !important;
+        font-weight: 800 !important;
+        font-size: 0.85rem !important;
+        padding: 0.35rem 0.75rem !important;
+        border-radius: 6px !important;
+        border: 1px solid #BFDBFE !important;
+        display: inline-block !important;
+        margin-left: 0.4rem !important;
+    }
+
+    .theme-badge {
+        background-color: #FEF08A !important;
+        color: #713F12 !important;
+        font-weight: 800 !important;
+        font-size: 0.78rem !important;
+        padding: 0.35rem 0.75rem !important;
+        border-radius: 14px !important;
+        border: 1px solid #FDE047 !important;
+        display: inline-block !important;
     }
     
     /* Executive Hero Header (Clean Light Design) */
@@ -1202,18 +1236,18 @@ with tab10:
                 sent_color = "#F59E0B"
 
             st.markdown(f"""
-            <div style="background-color: #FFFFFF; border: 2px solid #CBD5E1; border-left: 8px solid {sent_color}; border-radius: 12px; padding: 1.4rem 1.6rem; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);">
+            <div style="background-color: #FFFFFF !important; border: 2px solid #CBD5E1 !important; border-left: 8px solid {sent_color} !important; border-radius: 12px !important; padding: 1.4rem 1.6rem !important; margin-bottom: 1.2rem !important; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06) !important;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
                     <div>
-                        <span style="background-color: #0F172A; color: #FFFFFF; font-weight: 800; font-size: 0.85rem; padding: 0.3rem 0.7rem; border-radius: 6px;">{t_id}</span>
-                        <span style="background-color: #E0F2FE; color: #0369A1; font-weight: 800; font-size: 0.85rem; padding: 0.3rem 0.7rem; border-radius: 6px; border: 1px solid #BAE6FD; margin-left: 0.4rem;">📍 {dist} District</span>
-                        <span style="font-size: 0.8rem; color: #475569; font-weight: 700; margin-left: 0.4rem;">(Exp: {exp})</span>
+                        <span class="t-id-badge">{t_id}</span>
+                        <span class="dist-badge">📍 {dist} District</span>
+                        <span style="font-size: 0.8rem !important; color: #475569 !important; font-weight: 700 !important; margin-left: 0.4rem !important;">(Exp: {exp})</span>
                     </div>
-                    <span style="font-size: 0.78rem; font-weight: 800; color: #0F172A; background-color: #FEF3C7; padding: 0.3rem 0.7rem; border-radius: 14px; border: 1px solid #FDE68A;">{theme}</span>
+                    <span class="theme-badge">{theme}</span>
                 </div>
-                <p style="font-size: 1.05rem; font-style: italic; color: #0F172A; font-weight: 800; line-height: 1.6; margin: 0.8rem 0;">“{quote}”</p>
-                <p style="font-size: 0.92rem; color: #1E3A8A; font-weight: 700; margin: 0.3rem 0;"><b>Root Cause / Observed Friction:</b> {root_cause}</p>
-                <p style="font-size: 0.92rem; color: #065F46; font-weight: 700; margin-top: 0.3rem;"><b>💡 Strategic Policy Action:</b> {policy}</p>
+                <p style="font-size: 1.05rem !important; font-style: italic !important; color: #0F172A !important; font-weight: 800 !important; line-height: 1.6 !important; margin: 0.8rem 0 !important;">“{quote}”</p>
+                <p style="font-size: 0.92rem !important; color: #1E3A8A !important; font-weight: 700 !important; margin: 0.3rem 0 !important;"><b>Root Cause / Observed Friction:</b> {root_cause}</p>
+                <p style="font-size: 0.92rem !important; color: #065F46 !important; font-weight: 700 !important; margin-top: 0.3rem !important;"><b>💡 Strategic Policy Action:</b> {policy}</p>
             </div>
             """, unsafe_allow_html=True)
     else:
