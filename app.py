@@ -1073,10 +1073,24 @@ with tab8:
 # TAB 9: QWEN AI REPORT ASSISTANT & RAW DATA
 # =========================================================
 with tab9:
-    st.markdown('<div class="section-title">9. Local Qwen AI Research Assistant & Raw Data Explorer</div>', unsafe_allow_html=True)
-    st.markdown("Query your local Qwen model (`qwen3.5:9b-q4_K_M`) over the full EDS V7 report text and qualitative transcripts.")
+    st.markdown('<div class="section-title">9. Local Qwen AI Research Assistant & Executive Analytical Synthesis</div>', unsafe_allow_html=True)
     
-    user_query = st.text_input("Ask a question about the EDS V7 Report or Teacher Field Findings:", "What are the primary reasons teachers fail to complete DIKSHA courses?")
+    # QWEN PRE-COMPUTED EXECUTIVE DEEP ANALYSIS SYNTHESIS
+    st.markdown("""
+    <div class="word-analysis-box" style="border-left: 6px solid #8B5CF6;">
+        <h3 style="color: #6D28D9;">🤖 Qwen 3.5 AI Executive Deep Analysis Synthesis</h3>
+        <p><b>1. The Participation-Reality Gap Theorem:</b> Measuring participation alone systematically overstates TPD impact. Across N=60 study teachers, backend participation vs. confirmed classroom transfer shows major gaps: In-Person Training (93.3% vs 42.9% ➔ <b>50.4pt Gap</b>), Digital Courses (66.7% vs 38.3% ➔ <b>28.4pt Gap</b>), and Shaikshik Samvaad CLSS (88.3% vs 64.2% ➔ <b>24.1pt Gap</b>).</p>
+        <p><b>2. Supply Deficit & Material Delivery Failure:</b> <b>31.7% of teachers (19 of 60)</b> received <b>ZERO training materials</b> (PPTs, Modules, Margdarshika) despite attending multi-day workshops. Content remains heavily theoretical with low multi-grade adaptation.</p>
+        <p><b>3. Digital Course Engagement & Workload Constraints:</b> <b>86.7% of teachers</b> engage with courses when prompted via direct WhatsApp links, but <b>83.3% exhibit zero topic recall</b>. Engagement occurs primarily after school hours, constrained by daily administrative duties (46.7%) and election/non-academic workloads (26.7%). Interactive quizzes are rated #1 most engaging feature (33.3%).</p>
+        <p><b>4. CLSS Leadership & Topic Recall Deficit:</b> Peer learning achieved the highest transfer efficiency (64.2%), yet <b>34.0% of teachers recalled ZERO topics</b>. Attendance portal logging suffers from venue exit rush (40.0%).</p>
+        <p><b>5. CRO Mentoring Non-Negotiables:</b> Teachers demand Solution-Focused Guidance (28.3%), Dignity & Private Feedback (26.7%), Subject-Credible Observers (25.0%), and Co-Teaching (16.7%).</p>
+        <p><b>6. The 65% Unbranded Activity Gap:</b> 80.0% click WhatsApp course links, but only <b>1 teacher</b> possesses full unaided brand recall of CM RISE TPD.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("Query your local Qwen model (`qwen3.5:9b-q4_K_M`) live over the full EDS V7 report text and qualitative transcripts:")
+    
+    user_query = st.text_input("Ask a custom question to the Qwen Model:", "What are the primary reasons teachers fail to complete DIKSHA courses?")
     
     if st.button("🚀 Ask Local Qwen Model"):
         with st.spinner(f"Querying local Ollama model '{ollama_model}'..."):
@@ -1104,20 +1118,20 @@ with tab9:
         st.info("Primary quantitative dataset workbook loaded. Select filters above to explore rows.")
 
 # ---------------------------------------------------------
-# Executive Page Footnote
+# Executive Page Footnote (Reduced Elegant Font Size)
 # ---------------------------------------------------------
 st.markdown("---")
 st.markdown("""
-<div style="text-align: center; padding: 1.5rem 0 2rem 0; color: #475569; font-size: 0.925rem; font-weight: 600;">
-    🎓 CM RISE Teacher Professional Development — Ecosystem Diagnostic Study (EDS)<br>
-    <span style="color: #0284C7; font-weight: 700; font-size: 1rem;">Prepared by Ashish</span>
+<div style="text-align: center; padding: 1rem 0 1.5rem 0; color: #64748B; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.02em;">
+    CM RISE Teacher Professional Development — Ecosystem Diagnostic Study (EDS)<br>
+    <span style="color: #0284C7; font-weight: 600; font-size: 0.82rem;">Prepared by Ashish</span>
 </div>
 """, unsafe_allow_html=True)
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("""
-<div style="font-size: 0.85rem; color: #475569; text-align: center; font-weight: 600;">
-    <b>CM RISE TPD EDS Dashboard</b><br>
-    <span style="color: #0284C7; font-weight: 700;">Prepared by Ashish</span>
+<div style="font-size: 0.75rem; color: #64748B; text-align: center; font-weight: 500;">
+    CM RISE TPD EDS Dashboard<br>
+    <span style="color: #0284C7; font-weight: 600;">Prepared by Ashish</span>
 </div>
 """, unsafe_allow_html=True)
