@@ -191,23 +191,39 @@ st.markdown("""
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
     }
 
-    /* Table styling for high visibility */
-    .stTable, div[data-testid="stTable"] {
+    /* Form Inputs, Search Bars & Dropdown Selectbox High-Contrast Styling */
+    input, select, textarea, .stTextInput input, .stSelectbox select, div[data-baseweb="input"] input, div[data-baseweb="select"] input {
+        color: #0F172A !important;
+        background-color: #FFFFFF !important;
+        border: 2px solid #64748B !important;
+        border-radius: 8px !important;
+        font-weight: 800 !important;
+        font-size: 0.95rem !important;
+    }
+
+    input::placeholder, .stTextInput input::placeholder {
+        color: #475569 !important;
+        font-weight: 600 !important;
+    }
+
+    div[data-baseweb="select"] > div {
         background-color: #FFFFFF !important;
         color: #0F172A !important;
-        border: 1px solid #CBD5E1 !important;
+        border: 2px solid #64748B !important;
         border-radius: 8px !important;
+        font-weight: 800 !important;
     }
 
-    .stTable th {
-        background-color: #F1F5F9 !important;
+    div[data-baseweb="popover"], div[data-baseweb="menu"], ul[role="listbox"] {
+        background-color: #FFFFFF !important;
         color: #0F172A !important;
-        font-weight: 700 !important;
+        border: 2px solid #64748B !important;
     }
 
-    .stTable td {
-        color: #1E293B !important;
-        font-size: 0.95rem !important;
+    li[role="option"], div[role="option"], [data-baseweb="select"] span {
+        color: #0F172A !important;
+        background-color: #FFFFFF !important;
+        font-weight: 700 !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -226,7 +242,6 @@ st.markdown("""
 # ---------------------------------------------------------
 # Load Primary Dataset & Model Predictions
 # ---------------------------------------------------------
-@st.cache_data
 def load_data():
     reg_file = "quant_structured_tabfm_regression_all_cols.xlsx"
     clf_file = "tabfm_classifier_intervention_predictions.xlsx"
@@ -245,11 +260,13 @@ def load_data():
         
     return df_quant, df_scenario
 
-@st.cache_data
 def load_qualitative_quotes():
     qual_file = "qualitative_coded_database_complete_all_rows.xlsx"
     if os.path.exists(qual_file):
-        return pd.read_excel(qual_file)
+        df = pd.read_excel(qual_file)
+        for col in df.select_dtypes(include=['object']).columns:
+            df[col] = df[col].astype(str).str.replace('????', '').str.replace('?', '')
+        return df
     return pd.DataFrame()
 
 df_quant, df_scenario = load_data()
