@@ -410,12 +410,20 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs([
 with tab1:
     st.markdown('<div class="section-title">1. Executive Overview & The Participation-Reality Gap Theorem</div>', unsafe_allow_html=True)
     
-    # Executive Context Banner
+    # Executive Context Banner & Guided Navigation Map
     st.markdown("""
     <div class="word-analysis-box">
         <h3>📋 Ecosystem Diagnostic Study — Executive Context & Methodological Scope</h3>
         <p><b>Study Scope & Sample Context:</b> The Ecosystem Diagnostic Study (EDS V7) evaluates the CM RISE Teacher Professional Development (TPD) ecosystem across Madhya Pradesh, focusing on a primary study cohort of <b>N=60 teachers</b> selected across 35 districts. Using mixed qualitative-quantitative instruments, 4-tier learning transfer coding, and counterfactual analysis, the study measures how training participation translates into actual classroom pedagogical practice.</p>
-        <p><b>Core Executive Takeaway:</b> Administrative tracking systems that measure registered participation alone systematically overstate program impact. Diagnostic findings reveal a substantial post-delivery drop-off across all channels, highlighting the critical need for <i>100% material delivery prior to sessions, subject-specific pedagogical modules, and structured peer mentoring</i>.</p>
+        <p><b>⚠️ Executive Reader Guidance:</b> To avoid overgeneralized conclusions, please note that high attendance metrics reflect strong teacher motivation rather than program failure. The drop-off in verified classroom application is driven by specific administrative and systemic bottlenecks (e.g. material delivery delays, app login friction, and workload fatigue). Use the tab navigation bar above to explore channel-specific evidence:</p>
+        <div style="background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 6px; padding: 10px 14px; margin-top: 10px; font-size: 0.88rem;">
+            <b>🗺️ Dashboard Guided Deep-Dive Map:</b><br>
+            • <b>Tab 2 (In-Person Training):</b> Material receipt delays (31.7% zero material) & theoretical content gaps.<br>
+            • <b>Tab 3 (Digital Courses):</b> After-school workload fatigue (46.7%) & platform compliance friction.<br>
+            • <b>Tab 4 (Shaikshik Samvaad):</b> Peer community topic recall (64.2% transfer) & portal logging rush.<br>
+            • <b>Tab 5 (CRO Baseline & Dignity):</b> Self-reported vs. observer-verified classroom practice & mentor dignity demands.<br>
+            • <b>Tab 6 & 8 (Synthesis & Policy Simulator):</b> Multi-channel synthesis and policy package intervention modeling.
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -461,12 +469,14 @@ with tab1:
         <h3>💡 Mechanics of the Participation-Reality Gap Theorem</h3>
         <p>Across all three primary delivery channels, reported participation significantly outpaces verified classroom transfer:</p>
         <ul>
-            <li><b>In-Person Workshops (IPT):</b> 93.3% registered participation vs 42.9% confirmed transfer (50.4pt Gap). Primary friction: Material delivery failure (31.7% zero materials received) and theoretical content delivery.</li>
-            <li><b>Digital Modules (DIKSHA/iGOT):</b> 66.7% registered reach vs 38.3% active recall (28.4pt Gap). Primary friction: After-school workload fatigue (46.7%) and lack of guided facilitation.</li>
-            <li><b>Peer Communities (CLSS):</b> 88.3% attendance vs 64.2% confirmed technique transfer (24.1pt Gap). Highest transfer channel, but constrained by session-end attendance logging rush.</li>
+            <li><b>In-Person Workshops (IPT):</b> 93.3% registered participation vs 42.9% confirmed transfer (50.4pt Gap). <i>Primary Driver:</i> Material delivery failure (31.7% zero materials received) and theoretical content delivery. ➔ <b>See Tab 2 for detailed IPT breakdown.</b></li>
+            <li><b>Digital Modules (DIKSHA/iGOT):</b> 66.7% registered reach vs 38.3% active recall (28.4pt Gap). <i>Primary Driver:</i> After-school workload fatigue (46.7%) and lack of guided facilitation. ➔ <b>See Tab 3 for DIKSHA digital metrics.</b></li>
+            <li><b>Peer Communities (CLSS):</b> 88.3% attendance vs 64.2% confirmed technique transfer (24.1pt Gap). <i>Primary Driver:</i> Highest transfer channel, but constrained by session-end attendance logging rush. ➔ <b>See Tab 4 for CLSS topic recall analysis.</b></li>
+            <li><b>Classroom Mentoring & Observation (CRO):</b> Self-reported implementation rates exceed observer-verified rates by 28.5 percentage points. <i>Primary Driver:</i> Need for respectful, non-threatening peer mentoring protocols. ➔ <b>See Tab 5 for CRO dignity demands.</b></li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
+
 
     # SUB-SECTION 1A: DEMOGRAPHIC PROFILE & SAMPLE CONTEXT
     st.markdown('<div class="sub-section-title">👨‍🏫 Sub-section 1A: Sample Demographics & Teaching Profile (N=60 Primary Study Teachers)</div>', unsafe_allow_html=True)
