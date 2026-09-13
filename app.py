@@ -918,10 +918,10 @@ with tab4:
             orientation="h",
             color="Teachers",
             color_continuous_scale="Reds",
-            text=[f"{v} ({p:.1f}%)" for v, p in zip(portal_df["Teachers"], portal_df["Percentage (%)"])]
+            text=[f"{v} Mentions" for v in portal_df["Teachers"]]
         )
         fig_portal.update_traces(textposition="outside", textfont=dict(size=13, color="#0F172A", family="Plus Jakarta Sans"))
-        apply_standard_chart_layout(fig_portal, title="RSK MP Attendance Portal Compliance Friction (N=60)", height=380, show_legend=False, xaxis_title="Teacher Count (N=60)")
+        apply_standard_chart_layout(fig_portal, title="RSK MP Attendance Portal Compliance Friction (N=60)", height=380, show_legend=False, xaxis_title="Teacher Mention Count")
         fig_portal.update_layout(yaxis=dict(autorange="reversed"), coloraxis_showscale=False)
         st.plotly_chart(fig_portal, use_container_width=True)
 
@@ -999,10 +999,10 @@ with tab5:
             orientation="h",
             color="Teachers Demanding Requirement",
             color_continuous_scale="Purples",
-            text=[f"{v} ({p:.1f}%)" for v, p in zip(dem_df["Teachers Demanding Requirement"], dem_df["Percentage (%)"])]
+            text=[f"{v} Teachers" for v in dem_df["Teachers Demanding Requirement"]]
         )
         fig_dem.update_traces(textposition="outside", textfont=dict(size=13, color="#0F172A", family="Plus Jakarta Sans"))
-        apply_standard_chart_layout(fig_dem, title="Teacher Quality & Dignity Demands for Mentoring (Table 23)", height=380, show_legend=False, xaxis_title="Teacher Count (N=60)")
+        apply_standard_chart_layout(fig_dem, title="Teacher Quality & Dignity Demands for Mentoring (Table 23)", height=380, show_legend=False, xaxis_title="Teacher Mention Count")
         fig_dem.update_layout(yaxis=dict(autorange="reversed"), coloraxis_showscale=False)
         st.plotly_chart(fig_dem, use_container_width=True)
 
