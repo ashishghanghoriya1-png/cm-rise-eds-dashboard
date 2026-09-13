@@ -274,6 +274,55 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ---------------------------------------------------------
+# Global Standard Chart Helper Function
+# ---------------------------------------------------------
+def apply_standard_chart_layout(fig, title="", height=380, show_legend=True, barmode=None, yaxis_title=None, xaxis_title=None):
+    fig.update_layout(
+        title=dict(
+            text=f"<b>{title}</b>",
+            font=dict(family="Plus Jakarta Sans", size=13, color="#0F172A"),
+            x=0,
+            xanchor="left",
+            pad=dict(b=12)
+        ),
+        font=dict(family="Plus Jakarta Sans", size=12, color="#0F172A"),
+        paper_bgcolor="#FFFFFF",
+        plot_bgcolor="#FFFFFF",
+        height=height,
+        margin=dict(l=25, r=25, t=55, b=45),
+        showlegend=show_legend,
+        hoverlabel=dict(bgcolor="#0F172A", font_size=12, font_family="Plus Jakarta Sans")
+    )
+    if barmode:
+        fig.update_layout(barmode=barmode)
+    if show_legend:
+        fig.update_layout(
+            legend=dict(
+                orientation="h",
+                yanchor="bottom",
+                y=-0.28,
+                xanchor="center",
+                x=0.5,
+                font=dict(size=11, color="#1E293B")
+            )
+        )
+    fig.update_xaxes(
+        showgrid=True,
+        gridcolor="#F1F5F9",
+        linecolor="#CBD5E1",
+        title_text=xaxis_title if xaxis_title else "",
+        title_font=dict(size=11, color="#475569", family="Plus Jakarta Sans")
+    )
+    fig.update_yaxes(
+        showgrid=True,
+        gridcolor="#F1F5F9",
+        linecolor="#CBD5E1",
+        title_text=yaxis_title if yaxis_title else "",
+        title_font=dict(size=11, color="#475569", family="Plus Jakarta Sans")
+    )
+    return fig
+
+# ---------------------------------------------------------
 # Load Primary Dataset & Model Predictions
 # ---------------------------------------------------------
 def load_data():
@@ -359,59 +408,125 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs([
 with tab1:
     st.markdown('<div class="section-title">1. Executive Overview & The Participation-Reality Gap Theorem</div>', unsafe_allow_html=True)
     
-    # WORD DOCUMENT SPECIFIC ANALYSIS (BEFORE GRAPHS)
+    # Executive Context Banner
     st.markdown("""
     <div class="word-analysis-box">
-        <h3>📋 Ecosystem Diagnostic Study — Executive Overview & Key System Findings</h3>
-        <p><b>Study Purpose & Design:</b> The Ecosystem Diagnostic Study (EDS V7) examines the CM RISE Teacher Professional Development (TPD) program from the direct perspective of <b>60 primary study teachers</b> across Madhya Pradesh. Using a hybrid thematic framework and a 4-tier learning transfer coding system, the study evaluates how offline and online interventions translate into actual classroom practice.</p>
-        <p><b>The Fundamental Finding — The Participation-Reality Gap:</b></p>
-        <ul>
-            <li><b>In-Person Training (IPT):</b> Recorded participation stands at <b>93.3% (56/60)</b>, but confirmed classroom transfer is only <b>42.9% (24/56)</b> ➔ <b>50.4 percentage point Gap</b>.</li>
-            <li><b>Digital Courses (DIKSHA/iGOT):</b> Recorded participation stands at <b>66.7% (40/60)</b>, but confirmed course recall/transfer is only <b>38.3% (23/60)</b> ➔ <b>28.4 percentage point Gap</b>.</li>
-            <li><b>Shaikshik Samvaad (CLSS):</b> Recorded attendance stands at <b>88.3% (53/60)</b>, while confirmed technique transfer is <b>64.2% (34/53)</b> ➔ <b>24.1 percentage point Gap</b>.</li>
-        </ul>
-        <p><b>Governing Principle:</b> A TPD system that measures participation alone systematically overstates its own impact. Closing this gap depends on building system capacity to observe and support what happens after delivery.</p>
+        <h3>📋 Ecosystem Diagnostic Study — Executive Context & Methodological Scope</h3>
+        <p><b>Study Scope & Sample Context:</b> The Ecosystem Diagnostic Study (EDS V7) evaluates the CM RISE Teacher Professional Development (TPD) ecosystem across Madhya Pradesh, focusing on a primary study cohort of <b>N=60 teachers</b> selected across 35 districts. Using mixed qualitative-quantitative instruments, 4-tier learning transfer coding, and counterfactual analysis, the study measures how training participation translates into actual classroom pedagogical practice.</p>
+        <p><b>Core Executive Takeaway:</b> Administrative tracking systems that measure registered participation alone systematically overstate program impact. Diagnostic findings reveal a substantial post-delivery drop-off across all channels, highlighting the critical need for <i>100% material delivery prior to sessions, subject-specific pedagogical modules, and structured peer mentoring</i>.</p>
     </div>
     """, unsafe_allow_html=True)
 
-    # Top KPI Metric Banner
+    # Top KPI Metric Banner (Deduplicated & Crisp)
     k1, k2, k3, k4 = st.columns(4)
     k1.markdown("""
     <div class="metric-card">
-        <div class="metric-label">Study Cohort Evaluated</div>
+        <div class="metric-title">Study Cohort Evaluated</div>
         <div class="metric-value">60 Teachers</div>
-        <div class="metric-subtitle">Across MP Districts (75 Total)</div>
+        <div class="metric-subtitle">Across 35 MP Districts ($N=60$)</div>
     </div>
     """, unsafe_allow_html=True)
 
     k2.markdown("""
     <div class="metric-card">
-        <div class="metric-label">IPT Participation vs Transfer</div>
+        <div class="metric-title">In-Person Training (IPT)</div>
         <div class="metric-value">93.3% ➔ 42.9%</div>
-        <div class="metric-subtitle"><span class="gap-badge">50.4pt Participation Gap</span></div>
+        <div class="metric-subtitle"><span class="gap-badge">50.4pt Transfer Deficit</span></div>
     </div>
     """, unsafe_allow_html=True)
 
     k3.markdown("""
     <div class="metric-card">
-        <div class="metric-label">Digital Course Reach vs Recall</div>
+        <div class="metric-title">Digital Courses (DIKSHA)</div>
         <div class="metric-value">66.7% ➔ 38.3%</div>
-        <div class="metric-subtitle"><span class="gap-badge">28.4pt Participation Gap</span></div>
+        <div class="metric-subtitle"><span class="gap-badge">28.4pt Recall Deficit</span></div>
     </div>
     """, unsafe_allow_html=True)
 
     k4.markdown("""
     <div class="metric-card">
-        <div class="metric-label">CLSS Attendance vs Transfer</div>
+        <div class="metric-title">Shaikshik Samvaad (CLSS)</div>
         <div class="metric-value">88.3% ➔ 64.2%</div>
-        <div class="metric-subtitle"><span class="gap-badge">24.1pt Participation Gap</span></div>
+        <div class="metric-subtitle"><span class="gap-badge">24.1pt Transfer Deficit</span></div>
     </div>
     """, unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # POWER BI VISUAL GRAPHS (AFTER ANALYSIS)
-    st.markdown('<div class="sub-section-title">📊 Recorded Participation vs Confirmed Classroom Transfer & Cascade Deficit</div>', unsafe_allow_html=True)
+    # THEORETICAL FINDING & MECHANISMS
+    st.markdown("""
+    <div class="word-analysis-box" style="border-left: 6px solid #0F172A;">
+        <h3>💡 Mechanics of the Participation-Reality Gap Theorem</h3>
+        <p>Across all three primary delivery channels, reported participation significantly outpaces verified classroom transfer:</p>
+        <ul>
+            <li><b>In-Person Workshops (IPT):</b> 93.3% registered participation vs 42.9% confirmed transfer (50.4pt Gap). Primary friction: Material delivery failure (31.7% zero materials received) and theoretical content delivery.</li>
+            <li><b>Digital Modules (DIKSHA/iGOT):</b> 66.7% registered reach vs 38.3% active recall (28.4pt Gap). Primary friction: After-school workload fatigue (46.7%) and lack of guided facilitation.</li>
+            <li><b>Peer Communities (CLSS):</b> 88.3% attendance vs 64.2% confirmed technique transfer (24.1pt Gap). Highest transfer channel, but constrained by session-end attendance logging rush.</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # SUB-SECTION 1A: DEMOGRAPHIC PROFILE & SAMPLE CONTEXT
+    st.markdown('<div class="sub-section-title">👨‍🏫 Sub-section 1A: Sample Demographics & Teaching Profile (N=60 Primary Study Teachers)</div>', unsafe_allow_html=True)
+
+    d_col1, d_col2, d_col3 = st.columns(3)
+
+    with d_col1:
+        gender_df = pd.DataFrame({
+            "Gender": ["Female", "Male"],
+            "Teachers": [32, 28]
+        })
+        fig_gen = px.pie(
+            gender_df,
+            values="Teachers",
+            names="Gender",
+            color="Gender",
+            color_discrete_map={"Female": "#EC4899", "Male": "#0EA5E9"},
+            hole=0.55
+        )
+        fig_gen.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=12, family='Plus Jakarta Sans'))
+        apply_standard_chart_layout(fig_gen, title="Cohort Gender Distribution (N=60)", height=380, show_legend=True)
+        st.plotly_chart(fig_gen, use_container_width=True)
+
+    with d_col2:
+        subj_df = pd.DataFrame({
+            "Subject": ["Hindi", "English", "Maths", "Science", "Social Science", "Sanskrit"],
+            "Teachers": [18, 15, 12, 8, 5, 2]
+        })
+        fig_subj = px.pie(
+            subj_df,
+            values="Teachers",
+            names="Subject",
+            color_discrete_sequence=["#0D9488", "#0EA5E9", "#F59E0B", "#8B5CF6", "#EC4899", "#64748B"],
+            hole=0.55
+        )
+        fig_subj.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=11, family='Plus Jakarta Sans'))
+        apply_standard_chart_layout(fig_subj, title="Subject Specialization Distribution (N=60)", height=380, show_legend=True)
+        st.plotly_chart(fig_subj, use_container_width=True)
+
+    with d_col3:
+        exp_df = pd.DataFrame({
+            "Experience Tier": ["< 5 Years", "5 – 15 Years", "15+ Years"],
+            "Teachers": [14, 31, 15],
+            "Percentage (%)": [23.3, 51.7, 25.0]
+        })
+        fig_exp = px.bar(
+            exp_df,
+            x="Experience Tier",
+            y="Teachers",
+            color="Experience Tier",
+            color_discrete_sequence=["#38BDF8", "#0EA5E9", "#0F172A"],
+            text=[f"{v} ({p:.1f}%)" for v, p in zip(exp_df["Teachers"], exp_df["Percentage (%)"])]
+        )
+        fig_exp.update_traces(textposition="outside", textfont=dict(size=12, color="#0F172A", family="Plus Jakarta Sans"))
+        apply_standard_chart_layout(fig_exp, title="Teaching Experience Breakdown (N=60)", height=380, show_legend=False, yaxis_title="Teacher Count")
+        fig_exp.update_layout(yaxis=dict(range=[0, 38]))
+        st.plotly_chart(fig_exp, use_container_width=True)
+
+    st.markdown("---")
+
+    # SUB-SECTION 1B: PARTICIPATION VS TRANSFER ANALYTICS
+    st.markdown('<div class="sub-section-title">📊 Sub-section 1B: Recorded Participation vs Verified Classroom Transfer & Cascade Funnel</div>', unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
 
@@ -425,7 +540,7 @@ with tab1:
         fig_gap.add_trace(go.Bar(
             x=gap_df["Intervention"],
             y=gap_df["Backend Recorded Participation Rate (%)"],
-            name="Backend Participation Rate",
+            name="Backend Participation Rate (%)",
             marker_color="#0F172A",
             text=[f"{v:.1f}%" for v in gap_df["Backend Recorded Participation Rate (%)"]],
             textposition="auto"
@@ -433,19 +548,13 @@ with tab1:
         fig_gap.add_trace(go.Bar(
             x=gap_df["Intervention"],
             y=gap_df["Confirmed Classroom Transfer Rate (%)"],
-            name="Confirmed Classroom Transfer Rate",
+            name="Confirmed Classroom Transfer Rate (%)",
             marker_color="#0D9488",
             text=[f"{v:.1f}%" for v in gap_df["Confirmed Classroom Transfer Rate (%)"]],
             textposition="auto"
         ))
-        fig_gap.update_layout(
-            title="Backend Recorded Participation vs Confirmed Classroom Transfer",
-            barmode="group",
-            yaxis=dict(title="Percentage (%)", range=[0, 110]),
-            legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-            margin=dict(l=20, r=20, t=40, b=20),
-            height=390
-        )
+        apply_standard_chart_layout(fig_gap, title="Participation vs Verified Transfer Rate by Intervention (N=60)", height=380, barmode="group", show_legend=True, yaxis_title="Percentage (%)")
+        fig_gap.update_layout(yaxis=dict(range=[0, 115]))
         st.plotly_chart(fig_gap, use_container_width=True)
 
     with col2:
@@ -463,73 +572,10 @@ with tab1:
             funnel_df,
             x="Percentage (%)",
             y="Stage",
-            color_discrete_sequence=["#4F46E5"],
-            title="The Cascade Deficit Funnel (Satisfaction vs Mentoring Confidence)"
+            color_discrete_sequence=["#6366F1"]
         )
-        fig_funnel.update_layout(
-            margin=dict(l=20, r=20, t=40, b=20),
-            height=390
-        )
+        apply_standard_chart_layout(fig_funnel, title="Multi-Stage Learning Cascade Deficit Funnel ($N=60$)", height=380, show_legend=False)
         st.plotly_chart(fig_funnel, use_container_width=True)
-
-    st.markdown("---")
-
-    # DEMOGRAPHICS & INTERVENTION MATRIX VISUALS
-    st.markdown('<div class="sub-section-title">👨‍🏫 Baseline Demographics & Intervention Channel Utility Efficiency Matrix</div>', unsafe_allow_html=True)
-
-    d_col1, d_col2, d_col3 = st.columns(3)
-
-    with d_col1:
-        gender_df = pd.DataFrame({
-            "Gender": ["Female", "Male"],
-            "Teachers": [32, 28]
-        })
-        fig_gen = px.pie(
-            gender_df,
-            values="Teachers",
-            names="Gender",
-            color="Gender",
-            color_discrete_map={"Female": "#EC4899", "Male": "#3B82F6"},
-            hole=0.45,
-            title="Cohort Gender Split"
-        )
-        fig_gen.update_layout(margin=dict(l=10, r=10, t=40, b=10), height=320)
-        st.plotly_chart(fig_gen, use_container_width=True)
-
-    with d_col2:
-        subj_df = pd.DataFrame({
-            "Subject": ["Hindi", "English", "Maths", "Science", "Social Science", "Sanskrit"],
-            "Teachers": [18, 15, 12, 8, 5, 2]
-        })
-        fig_subj = px.pie(
-            subj_df,
-            values="Teachers",
-            names="Subject",
-            color_discrete_sequence=["#0D9488", "#3B82F6", "#F59E0B", "#8B5CF6", "#EC4899", "#64748B"],
-            hole=0.45,
-            title="Subject Specialization Distribution"
-        )
-        fig_subj.update_layout(margin=dict(l=10, r=10, t=40, b=10), height=320)
-        st.plotly_chart(fig_subj, use_container_width=True)
-
-    with d_col3:
-        exp_df = pd.DataFrame({
-            "Experience Tier": ["< 5 Years", "5 – 15 Years", "15+ Years"],
-            "Teachers": [14, 31, 15],
-            "Percentage (%)": [23.3, 51.7, 25.0]
-        })
-        fig_exp = px.bar(
-            exp_df,
-            x="Experience Tier",
-            y="Teachers",
-            color="Experience Tier",
-            color_discrete_sequence=["#2DD4BF", "#0D9488", "#0F172A"],
-            text=[f"{v} ({p:.1f}%)" for v, p in zip(exp_df["Teachers"], exp_df["Percentage (%)"])],
-            title="Teaching Experience Tiers"
-        )
-        fig_exp.update_traces(textposition="outside")
-        fig_exp.update_layout(showlegend=False, yaxis=dict(range=[0, 38]), margin=dict(l=10, r=10, t=40, b=10), height=320)
-        st.plotly_chart(fig_exp, use_container_width=True)
 
     st.markdown("---")
     with st.expander("📖 Detailed Table 24 & 25: Delivery Basis & Gap Breakdown"):
@@ -568,12 +614,11 @@ with tab2:
     """, unsafe_allow_html=True)
 
     # POWER BI VISUAL GRAPHS & CHARTS (AFTER ANALYSIS)
-    st.markdown('<div class="sub-section-title">📊 Intervention Channel Participation vs Perceived Utility & Material Distribution</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sub-section-title">📊 Material Distribution Status & Content Practicality Perception (N=60)</div>', unsafe_allow_html=True)
 
     ipt_c1, ipt_c2 = st.columns(2)
 
     with ipt_c1:
-        st.subheader("📦 Training Material Distribution Breakdown (N=60)")
         mat_df = pd.DataFrame({
             "Status": ["Received Materials (PPT/Modules/Margdarshika)", "Zero Materials Received"],
             "Teachers": [41, 19],
@@ -585,13 +630,13 @@ with tab2:
             names="Status",
             color="Status",
             color_discrete_map={"Received Materials (PPT/Modules/Margdarshika)": "#0D9488", "Zero Materials Received": "#EF4444"},
-            hole=0.45
+            hole=0.55
         )
-        fig_mat.update_layout(margin=dict(l=20, r=20, t=30, b=20), height=360)
+        fig_mat.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=11, family='Plus Jakarta Sans'))
+        apply_standard_chart_layout(fig_mat, title="Physical Training Material Receipt Status (N=60)", height=380, show_legend=True)
         st.plotly_chart(fig_mat, use_container_width=True)
 
     with ipt_c2:
-        st.subheader("💡 Content Practicality Perception (N=60)")
         sent_df = pd.DataFrame({
             "Content Perception": [
                 "Rated Content Most Practical for Classroom",
@@ -609,13 +654,14 @@ with tab2:
             color_discrete_sequence=["#10B981", "#F59E0B", "#EF4444"],
             text=[f"{v:.1f}%" for v in sent_df["Percentage (%)"]]
         )
-        fig_sent.update_traces(textposition='outside')
-        fig_sent.update_layout(yaxis=dict(range=[0, 60]), showlegend=False, margin=dict(l=20, r=20, t=30, b=20), height=360)
+        fig_sent.update_traces(textposition='outside', textfont=dict(size=12, color="#0F172A", family="Plus Jakarta Sans"))
+        apply_standard_chart_layout(fig_sent, title="Teacher Perception of Content Practicality (N=60)", height=380, show_legend=False, yaxis_title="Percentage (%)")
+        fig_sent.update_layout(yaxis=dict(range=[0, 58]))
         st.plotly_chart(fig_sent, use_container_width=True)
 
     st.markdown("---")
 
-    st.subheader("📊 Multi-Intervention Channel Participation vs Utility Rate")
+    st.markdown('<div class="sub-section-title">📊 Multi-Channel Intervention Reach vs Perceived Utility Rate</div>', unsafe_allow_html=True)
     pbi_matrix_df = pd.DataFrame({
         "Intervention Channel": [
             "Subject Training (IPT)",
@@ -646,13 +692,7 @@ with tab2:
         text=pbi_matrix_df["Useful"],
         textposition="auto"
     ))
-    fig_part_use.update_layout(
-        barmode="group",
-        yaxis=dict(title="Teacher Count (N=60)"),
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-        margin=dict(l=20, r=20, t=30, b=20),
-        height=380
-    )
+    apply_standard_chart_layout(fig_part_use, title="Multi-Channel Intervention Reach vs Perceived Utility (N=60)", height=380, barmode="group", show_legend=True, yaxis_title="Teacher Count (N=60)")
     st.plotly_chart(fig_part_use, use_container_width=True)
 
 # =========================================================
@@ -680,12 +720,11 @@ with tab3:
     """, unsafe_allow_html=True)
 
     # POWER BI VISUAL GRAPHS (AFTER ANALYSIS)
-    st.markdown('<div class="sub-section-title">📊 Digital Course Awareness, Platform Usage & Friction Points</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sub-section-title">📊 Active Program Awareness, Platform Adoption & Timing Preferences (N=60)</div>', unsafe_allow_html=True)
 
     dig_c1, dig_c2, dig_c3 = st.columns(3)
 
     with dig_c1:
-        st.subheader("💡 Active Awareness Gap")
         aware_df = pd.DataFrame({
             "Status": ["Actively Aware of Digital Program", "Participate Only When Prompted"],
             "Teachers": [23, 29]
@@ -695,14 +734,13 @@ with tab3:
             values="Teachers",
             names="Status",
             color_discrete_sequence=["#0D9488", "#F59E0B"],
-            hole=0.45,
-            title="Awareness (38.3%) vs Prompted (86.7%)"
+            hole=0.55
         )
-        fig_aware.update_layout(margin=dict(l=10, r=10, t=40, b=10), height=320)
+        fig_aware.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=11, family='Plus Jakarta Sans'))
+        apply_standard_chart_layout(fig_aware, title="Active Awareness vs Prompted Reach (N=60)", height=380, show_legend=True)
         st.plotly_chart(fig_aware, use_container_width=True)
 
     with dig_c2:
-        st.subheader("💻 Platform Usage Breakdown")
         plat_df = pd.DataFrame({
             "Platform": ["DIKSHA Only", "iGOT Only", "Both Platforms"],
             "Teachers": [40, 30, 24]
@@ -712,16 +750,15 @@ with tab3:
             x="Platform",
             y="Teachers",
             color="Platform",
-            color_discrete_sequence=["#3B82F6", "#8B5CF6", "#10B981"],
-            text="Teachers",
-            title="DIKSHA is Dominant Channel"
+            color_discrete_sequence=["#0EA5E9", "#8B5CF6", "#10B981"],
+            text="Teachers"
         )
-        fig_plat.update_traces(textposition="outside")
-        fig_plat.update_layout(showlegend=False, yaxis=dict(range=[0, 48]), margin=dict(l=10, r=10, t=40, b=10), height=320)
+        fig_plat.update_traces(textposition="outside", textfont=dict(size=12, color="#0F172A", family="Plus Jakarta Sans"))
+        apply_standard_chart_layout(fig_plat, title="Primary Platform Usage (DIKSHA vs iGOT)", height=380, show_legend=False, yaxis_title="Teacher Count")
+        fig_plat.update_layout(yaxis=dict(range=[0, 48]))
         st.plotly_chart(fig_plat, use_container_width=True)
 
     with dig_c3:
-        st.subheader("⏰ Preferred Engagement Timing")
         time_df = pd.DataFrame({
             "Timing Preference": ["After School Hours", "School Hours", "Holidays / Weekends"],
             "Teachers": [48, 8, 4]
@@ -730,19 +767,19 @@ with tab3:
             time_df,
             values="Teachers",
             names="Timing Preference",
-            color_discrete_sequence=["#4F46E5", "#EF4444", "#64748B"],
-            hole=0.45,
-            title="80.0% Learn After School"
+            color_discrete_sequence=["#6366F1", "#EF4444", "#64748B"],
+            hole=0.55
         )
-        fig_time.update_layout(margin=dict(l=10, r=10, t=40, b=10), height=320)
+        fig_time.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=11, family='Plus Jakarta Sans'))
+        apply_standard_chart_layout(fig_time, title="Digital Learning Timing Preference (N=60)", height=380, show_legend=True)
         st.plotly_chart(fig_time, use_container_width=True)
 
     st.markdown("---")
 
+    st.markdown('<div class="sub-section-title">📊 DIKSHA Feature Engagement & Disengagement Friction Drivers</div>', unsafe_allow_html=True)
     dig_r2_c1, dig_r2_c2 = st.columns(2)
 
     with dig_r2_c1:
-        st.subheader("🔥 Feature Engagement Ranking on DIKSHA (Table 15)")
         feat_df = pd.DataFrame({
             "Feature": [
                 "Interactive Mid-Course Questions",
@@ -761,15 +798,15 @@ with tab3:
             x="Teachers",
             orientation="h",
             color="Teachers",
-            color_continuous_scale="Viridis",
+            color_continuous_scale="Tealgrn",
             text="Teachers"
         )
-        fig_feat.update_traces(textposition="outside")
-        fig_feat.update_layout(yaxis=dict(autorange="reversed"), coloraxis_showscale=False, margin=dict(l=20, r=20, t=30, b=20), height=360)
+        fig_feat.update_traces(textposition="outside", textfont=dict(size=12, color="#0F172A", family="Plus Jakarta Sans"))
+        apply_standard_chart_layout(fig_feat, title="Ranked Engagement Levels by DIKSHA Feature (Table 15)", height=380, show_legend=False, xaxis_title="Teacher Count (N=60)")
+        fig_feat.update_layout(yaxis=dict(autorange="reversed"), coloraxis_showscale=False)
         st.plotly_chart(fig_feat, use_container_width=True)
 
     with dig_r2_c2:
-        st.subheader("⏱️ Disengagement Drivers & Completion Barriers")
         barr_df = pd.DataFrame({
             "Barrier Category": [
                 "High Period Intensity / Heavy Workload",
@@ -788,8 +825,9 @@ with tab3:
             color_continuous_scale="Reds",
             text="Teachers"
         )
-        fig_barr.update_traces(textposition="outside")
-        fig_barr.update_layout(coloraxis_showscale=False, yaxis=dict(range=[0, 34]), margin=dict(l=20, r=20, t=30, b=20), height=360)
+        fig_barr.update_traces(textposition="outside", textfont=dict(size=12, color="#0F172A", family="Plus Jakarta Sans"))
+        apply_standard_chart_layout(fig_barr, title="Primary Systemic Completion Friction Drivers", height=380, show_legend=False, yaxis_title="Teacher Mention Count")
+        fig_barr.update_layout(coloraxis_showscale=False, yaxis=dict(range=[0, 34]))
         st.plotly_chart(fig_barr, use_container_width=True)
 
 # =========================================================
@@ -817,12 +855,11 @@ with tab4:
     """, unsafe_allow_html=True)
 
     # POWER BI VISUAL GRAPHS (AFTER ANALYSIS)
-    st.markdown('<div class="sub-section-title">📊 CLSS Topic Recall Deficit & RSK MP Attendance Barriers</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sub-section-title">📊 CLSS Topic Recall Deficit & RSK MP Attendance Portal Compliance</div>', unsafe_allow_html=True)
 
     clss_c1, clss_c2 = st.columns(2)
 
     with clss_c1:
-        st.subheader("🧠 CLSS Topic Recall Strength (53 Attendees)")
         rec_df = pd.DataFrame({
             "Topic Recalled": [
                 "Classroom Management",
@@ -840,15 +877,15 @@ with tab4:
             x="Topic Recalled",
             y="Teachers",
             color="Topic Recalled",
-            color_discrete_sequence=["#0D9488", "#3B82F6", "#F59E0B", "#8B5CF6", "#10B981", "#EF4444"],
+            color_discrete_sequence=["#0D9488", "#0EA5E9", "#F59E0B", "#8B5CF6", "#10B981", "#EF4444"],
             text=[f"{v} ({p:.1f}%)" for v, p in zip(rec_df["Teachers"], rec_df["Percentage (%)"])]
         )
-        fig_rec.update_traces(textposition="outside")
-        fig_rec.update_layout(showlegend=False, yaxis=dict(range=[0, 22]), margin=dict(l=20, r=20, t=30, b=20), height=370)
+        fig_rec.update_traces(textposition="outside", textfont=dict(size=11, color="#0F172A", family="Plus Jakarta Sans"))
+        apply_standard_chart_layout(fig_rec, title="CLSS Monthly Topic Recall Strength (n=53 Attendees)", height=380, show_legend=False, yaxis_title="Teacher Count")
+        fig_rec.update_layout(yaxis=dict(range=[0, 22]))
         st.plotly_chart(fig_rec, use_container_width=True)
 
     with clss_c2:
-        st.subheader("📱 Challenges in RSK MP Attendance & Feedback Portal")
         portal_df = pd.DataFrame({
             "Portal Challenge": [
                 "Session End Rush to Leave Venue",
@@ -869,20 +906,21 @@ with tab4:
             color_continuous_scale="Reds",
             text=[f"{v} ({p:.1f}%)" for v, p in zip(portal_df["Teachers"], portal_df["Percentage (%)"])]
         )
-        fig_portal.update_traces(textposition="outside")
-        fig_portal.update_layout(yaxis=dict(autorange="reversed"), coloraxis_showscale=False, margin=dict(l=20, r=20, t=30, b=20), height=370)
+        fig_portal.update_traces(textposition="outside", textfont=dict(size=11, color="#0F172A", family="Plus Jakarta Sans"))
+        apply_standard_chart_layout(fig_portal, title="RSK MP Attendance Portal Compliance Friction (N=60)", height=380, show_legend=False, xaxis_title="Teacher Count (N=60)")
+        fig_portal.update_layout(yaxis=dict(autorange="reversed"), coloraxis_showscale=False)
         st.plotly_chart(fig_portal, use_container_width=True)
 
     st.markdown("---")
 
-    st.subheader("📢 School-Level Knowledge Cascading Mechanisms (Table 20)")
+    st.markdown('<div class="sub-section-title">📊 School-Level Knowledge Cascading Mechanisms (Table 20)</div>', unsafe_allow_html=True)
     casc_df = pd.DataFrame({
         "Cascading Channel": [
             "Verbal Peer Discussion",
-            "WhatsApp Group Resource Sharing",
+            "WhatsApp Group Sharing",
             "Shared Written Notes",
-            "Formal Staff Meeting (Confirmed)",
-            "Formal Staff Meeting (Proposed, not practiced)",
+            "Formal Staff Meeting (Practiced)",
+            "Formal Meeting (Proposed Only)",
             "No School-Level Cascade"
         ],
         "Teachers": [20, 11, 8, 2, 8, 15],
@@ -893,11 +931,12 @@ with tab4:
         x="Cascading Channel",
         y="Teachers",
         color="Cascading Channel",
-        color_discrete_sequence=["#3B82F6", "#10B981", "#8B5CF6", "#F59E0B", "#64748B", "#EF4444"],
+        color_discrete_sequence=["#0EA5E9", "#10B981", "#8B5CF6", "#F59E0B", "#64748B", "#EF4444"],
         text=[f"{v} ({p:.1f}%)" for v, p in zip(casc_df["Teachers"], casc_df["Percentage (%)"])]
     )
-    fig_casc.update_traces(textposition="outside")
-    fig_casc.update_layout(showlegend=False, yaxis=dict(range=[0, 25]), margin=dict(l=20, r=20, t=30, b=20), height=340)
+    fig_casc.update_traces(textposition="outside", textfont=dict(size=11, color="#0F172A", family="Plus Jakarta Sans"))
+    apply_standard_chart_layout(fig_casc, title="School-Level Knowledge Cascading & Peer Sharing Channels (Table 20)", height=380, show_legend=False, yaxis_title="Teacher Count (N=60)")
+    fig_casc.update_layout(yaxis=dict(range=[0, 25]))
     st.plotly_chart(fig_casc, use_container_width=True)
 
 # =========================================================
@@ -924,7 +963,7 @@ with tab5:
     """, unsafe_allow_html=True)
 
     # VISUAL ANALYTICS (AFTER ANALYSIS)
-    st.markdown('<div class="sub-section-title">📊 CRO Teacher Demands & Triangulated Observation Baseline</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sub-section-title">📊 Teacher Mentoring Dignity Demands & Triangulated Observation Baseline</div>', unsafe_allow_html=True)
 
     cro_c1, cro_c2 = st.columns(2)
 
@@ -948,8 +987,9 @@ with tab5:
             color_continuous_scale="Purples",
             text=[f"{v} ({p:.1f}%)" for v, p in zip(dem_df["Teachers Demanding Requirement"], dem_df["Percentage (%)"])]
         )
-        fig_dem.update_traces(textposition="outside")
-        fig_dem.update_layout(yaxis=dict(autorange="reversed"), coloraxis_showscale=False, margin=dict(l=20, r=20, t=30, b=20), height=370)
+        fig_dem.update_traces(textposition="outside", textfont=dict(size=11, color="#0F172A", family="Plus Jakarta Sans"))
+        apply_standard_chart_layout(fig_dem, title="Teacher Quality & Dignity Demands for Mentoring (Table 23)", height=380, show_legend=False, xaxis_title="Teacher Count (N=60)")
+        fig_dem.update_layout(yaxis=dict(autorange="reversed"), coloraxis_showscale=False)
         st.plotly_chart(fig_dem, use_container_width=True)
 
     with cro_c2:
@@ -962,7 +1002,7 @@ with tab5:
         fig_tri.add_trace(go.Bar(
             x=tri_df["Technique"],
             y=tri_df["EDS Self-Reported (%)"],
-            name="EDS Self-Reported",
+            name="EDS Self-Reported (%)",
             marker_color="#6366F1",
             text=[f"{v}%" for v in tri_df["EDS Self-Reported (%)"]],
             textposition="auto"
@@ -970,12 +1010,13 @@ with tab5:
         fig_tri.add_trace(go.Bar(
             x=tri_df["Technique"],
             y=tri_df["CRO Observer Recorded (%)"],
-            name="CRO Observer Recorded",
+            name="CRO Observer Recorded (%)",
             marker_color="#10B981",
             text=[f"{v}%" for v in tri_df["CRO Observer Recorded (%)"]],
             textposition="auto"
         ))
-        fig_tri.update_layout(barmode="group", yaxis=dict(title="Percentage (%)", range=[0, 60]), margin=dict(l=20, r=20, t=30, b=20), height=370)
+        apply_standard_chart_layout(fig_tri, title="Self-Reported vs CRO Observer Recorded Technique Application", height=380, barmode="group", show_legend=True, yaxis_title="Percentage (%)")
+        fig_tri.update_layout(yaxis=dict(range=[0, 58]))
         st.plotly_chart(fig_tri, use_container_width=True)
 
 # =========================================================
@@ -1056,11 +1097,11 @@ with tab7:
             orientation="h",
             color="Teachers",
             color_continuous_scale="Reds",
-            text=[f"{v} ({p:.1f}%)" for v, p in zip(p4_funnel_df["Teachers"], p4_funnel_df["Percentage (%)"])],
-            title="Unaided vs Aided Brand Recall Funnel"
+            text=[f"{v} ({p:.1f}%)" for v, p in zip(p4_funnel_df["Teachers"], p4_funnel_df["Percentage (%)"])]
         )
-        fig_p4_funnel.update_traces(textposition="outside")
-        fig_p4_funnel.update_layout(yaxis=dict(autorange="reversed"), coloraxis_showscale=False, margin=dict(l=20, r=20, t=30, b=20), height=380)
+        fig_p4_funnel.update_traces(textposition="outside", textfont=dict(size=11, color="#0F172A", family="Plus Jakarta Sans"))
+        apply_standard_chart_layout(fig_p4_funnel, title="CM RISE TPD Unaided vs Aided Brand Recall Funnel (N=60)", height=380, show_legend=False, xaxis_title="Teacher Count (N=60)")
+        fig_p4_funnel.update_layout(yaxis=dict(autorange="reversed"), coloraxis_showscale=False)
         st.plotly_chart(fig_p4_funnel, use_container_width=True)
 
     with p4_c2:
@@ -1112,7 +1153,6 @@ with tab8:
         st.metric("Predicted Classroom Application Rate", f"{simulated_prob:.1f}%")
 
     with scen_col2:
-        st.subheader("📈 Simulated Probability Shift vs Baseline")
         sim_df = pd.DataFrame({
             "Scenario Package": ["Baseline (No Interventions)", "Selected Policy Package"],
             "Predicted Application Probability (%)": [25.0, simulated_prob]
@@ -1125,8 +1165,9 @@ with tab8:
             color_discrete_map={"Baseline (No Interventions)": "#94A3B8", "Selected Policy Package": "#0D9488"},
             text="Predicted Application Probability (%)"
         )
-        fig_sim.update_traces(texttemplate='%{text:.1f}%', textposition='outside')
-        fig_sim.update_layout(yaxis=dict(range=[0, 100]), showlegend=False, margin=dict(l=20, r=20, t=30, b=20), height=380)
+        fig_sim.update_traces(texttemplate='%{text:.1f}%', textposition='outside', textfont=dict(size=12, color="#0F172A", family="Plus Jakarta Sans"))
+        apply_standard_chart_layout(fig_sim, title="Simulated Application Rate Shift Across Policy Packages", height=380, show_legend=False, yaxis_title="Probability (%)")
+        fig_sim.update_layout(yaxis=dict(range=[0, 105]))
         st.plotly_chart(fig_sim, use_container_width=True)
 
 # =========================================================
