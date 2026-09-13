@@ -998,27 +998,38 @@ with tab5:
 
     with cro_c1:
         dem_df = pd.DataFrame({
-            "Teacher Requirement": [
-                "1. Solution-Focused Guidance ('Tell me what to do differently')",
-                "2. Dignity & Respect ('Private feedback, never in front of students')",
-                "3. Subject-Credible Observer ('Understands my subject')",
-                "4. Co-Teaching & Demonstration ('Teach alongside me')"
+            "Requirement": [
+                "1. Solution-Focused Guidance",
+                "2. Dignity & Respect",
+                "3. Subject-Credible Observer",
+                "4. Co-Teaching & Demonstration"
             ],
-            "Teachers Demanding Requirement": [17, 16, 15, 10],
-            "Percentage (%)": [28.3, 26.7, 25.0, 16.7]
+            "Teachers": [17, 16, 15, 10],
+            "Quote": [
+                "Tell me what to do differently",
+                "Private feedback, never in front of students",
+                "Understands my subject",
+                "Teach alongside me, don't just watch"
+            ]
         })
         fig_dem = px.bar(
             dem_df,
-            y="Teacher Requirement",
-            x="Teachers Demanding Requirement",
+            y="Requirement",
+            x="Teachers",
             orientation="h",
-            color="Teachers Demanding Requirement",
+            color="Teachers",
             color_continuous_scale="Purples",
-            text=[f"{v} Teachers" for v in dem_df["Teachers Demanding Requirement"]]
+            text=[f"{v} Teachers" for v in dem_df["Teachers"]],
+            hover_data=["Quote"]
         )
-        fig_dem.update_traces(textposition="outside", textfont=dict(size=15, color="#0F172A", family="Plus Jakarta Sans"))
-        apply_standard_chart_layout(fig_dem, title="Teacher Quality & Dignity Demands for Mentoring (Table 23)", height=380, show_legend=False, xaxis_title="Teacher Mention Count")
-        fig_dem.update_layout(yaxis=dict(autorange="reversed"), coloraxis_showscale=False)
+        fig_dem.update_traces(textposition="outside", textfont=dict(size=14, color="#0F172A", family="Plus Jakarta Sans"))
+        apply_standard_chart_layout(fig_dem, title="Teacher Quality & Dignity Demands for Mentoring (Table 23)", height=400, show_legend=False, xaxis_title="Teacher Mention Count")
+        fig_dem.update_layout(
+            margin=dict(l=200, r=60, t=65, b=65),
+            yaxis=dict(autorange="reversed", tickfont=dict(size=13, color="#0F172A", family="Plus Jakarta Sans")),
+            xaxis=dict(range=[0, 22]),
+            coloraxis_showscale=False
+        )
         st.plotly_chart(fig_dem, use_container_width=True)
 
     with cro_c2:
@@ -1033,19 +1044,25 @@ with tab5:
             y=tri_df["EDS Self-Reported (%)"],
             name="EDS Self-Reported (%)",
             marker_color="#6366F1",
-            text=[f"{v}%" for v in tri_df["EDS Self-Reported (%)"]],
-            textposition="auto"
+            text=[f"{v:.0f}%" for v in tri_df["EDS Self-Reported (%)"]],
+            textposition="auto",
+            textfont=dict(size=14, family="Plus Jakarta Sans", color="#FFFFFF")
         ))
         fig_tri.add_trace(go.Bar(
             x=tri_df["Technique"],
             y=tri_df["CRO Observer Recorded (%)"],
             name="CRO Observer Recorded (%)",
             marker_color="#10B981",
-            text=[f"{v}%" for v in tri_df["CRO Observer Recorded (%)"]],
-            textposition="auto"
+            text=[f"{v:.0f}%" for v in tri_df["CRO Observer Recorded (%)"]],
+            textposition="auto",
+            textfont=dict(size=14, family="Plus Jakarta Sans", color="#FFFFFF")
         ))
-        apply_standard_chart_layout(fig_tri, title="Self-Reported vs CRO Observer Recorded Technique Application", height=380, barmode="group", show_legend=True, yaxis_title="Percentage (%)")
-        fig_tri.update_layout(yaxis=dict(range=[0, 58]))
+        apply_standard_chart_layout(fig_tri, title="Self-Reported vs CRO Observer Recorded Technique Application", height=400, barmode="group", show_legend=True, yaxis_title="Percentage (%)")
+        fig_tri.update_layout(
+            margin=dict(l=30, r=30, t=65, b=65),
+            yaxis=dict(range=[0, 58]),
+            xaxis=dict(tickfont=dict(size=12, color="#0F172A", family="Plus Jakarta Sans"))
+        )
         st.plotly_chart(fig_tri, use_container_width=True)
 
 # =========================================================
