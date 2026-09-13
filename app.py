@@ -498,7 +498,7 @@ with tab1:
             color_discrete_map={"Female": "#EC4899", "Male": "#0EA5E9"},
             hole=0.55
         )
-        fig_gen.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=15, family='Plus Jakarta Sans'))
+        fig_gen.update_traces(textposition='inside', texttemplate='<b>%{value}</b> (%{percent})', insidetextfont=dict(color='#FFFFFF', size=16, family='Plus Jakarta Sans'))
         apply_standard_chart_layout(fig_gen, title="Cohort Gender Distribution (N=60)", height=400, show_legend=True)
         st.plotly_chart(fig_gen, use_container_width=True)
 
@@ -514,7 +514,7 @@ with tab1:
             color_discrete_sequence=["#0D9488", "#0EA5E9", "#F59E0B", "#8B5CF6", "#EC4899", "#64748B"],
             hole=0.55
         )
-        fig_subj.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=15, family='Plus Jakarta Sans'))
+        fig_subj.update_traces(textposition='inside', texttemplate='<b>%{value}</b> (%{percent})', insidetextfont=dict(color='#FFFFFF', size=15, family='Plus Jakarta Sans'))
         apply_standard_chart_layout(fig_subj, title="Subject Specialization Distribution (N=60)", height=400, show_legend=True)
         st.plotly_chart(fig_subj, use_container_width=True)
 
@@ -649,7 +649,11 @@ with tab2:
             color_discrete_map={"Received Materials (PPT/Modules/Margdarshika)": "#0D9488", "Zero Materials Received": "#EF4444"},
             hole=0.55
         )
-        fig_mat.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=15, family='Plus Jakarta Sans'))
+        fig_mat.update_traces(
+            textposition='inside',
+            texttemplate='<b>%{value} Teachers</b><br>(<b>%{percent}</b>)',
+            insidetextfont=dict(color='#FFFFFF', size=16, family='Plus Jakarta Sans')
+        )
         apply_standard_chart_layout(fig_mat, title="Physical Training Material Receipt Status (N=60)", height=400, show_legend=True)
         st.plotly_chart(fig_mat, use_container_width=True)
 
