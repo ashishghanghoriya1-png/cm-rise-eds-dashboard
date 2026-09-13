@@ -757,7 +757,11 @@ with tab3:
             color_discrete_sequence=["#0D9488", "#F59E0B"],
             hole=0.55
         )
-        fig_aware.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=15, family='Plus Jakarta Sans'))
+        fig_aware.update_traces(
+            textposition='inside',
+            texttemplate='<b>%{value} Teachers</b><br>(<b>%{percent}</b>)',
+            insidetextfont=dict(color='#FFFFFF', size=16, family='Plus Jakarta Sans')
+        )
         apply_standard_chart_layout(fig_aware, title="Active Awareness vs Prompted Reach (N=60)", height=400, show_legend=True)
         st.plotly_chart(fig_aware, use_container_width=True)
 
@@ -791,7 +795,11 @@ with tab3:
             color_discrete_sequence=["#6366F1", "#EF4444", "#64748B"],
             hole=0.55
         )
-        fig_time.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=15, family='Plus Jakarta Sans'))
+        fig_time.update_traces(
+            textposition='inside',
+            texttemplate='<b>%{value} Teachers</b><br>(<b>%{percent}</b>)',
+            insidetextfont=dict(color='#FFFFFF', size=16, family='Plus Jakarta Sans')
+        )
         apply_standard_chart_layout(fig_time, title="Digital Learning Timing Preference (N=60)", height=400, show_legend=True)
         st.plotly_chart(fig_time, use_container_width=True)
 
