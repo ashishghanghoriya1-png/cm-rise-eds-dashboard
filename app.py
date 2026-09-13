@@ -19,116 +19,116 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------------
-# Custom Sleek & Presentable Styling (Figma Wireframe Kit Theme)
+# Custom Sleek & Presentable Styling (CSS)
 # ---------------------------------------------------------
 st.markdown("""
 <style>
-    /* Global Wireframe Kit Dark Charcoal Canvas Reset */
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+    /* Global Typography & Canvas Reset */
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
     
     .stApp {
-        background-color: #18181B !important;
-        color: #F4F4F5 !important;
+        background-color: #F8FAFC !important;
+        color: #0F172A !important;
         font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
     }
 
-    /* Force general markdown text to high-contrast silver/white */
+    /* Force general markdown text to dark slate (excluding custom badges) */
     .stMarkdown, .stMarkdown p, .stMarkdown li, div[data-testid="stMarkdownContainer"] > p {
-        color: #E4E4E7 !important;
+        color: #1E293B !important;
         font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
     }
 
     /* Small Badge Tabs (Teacher ID, District, Theme) */
     .t-id-badge {
-        background-color: #27272A !important;
+        background-color: #0F172A !important;
         color: #FFFFFF !important;
         font-weight: 800 !important;
         font-size: 0.85rem !important;
         padding: 0.35rem 0.75rem !important;
         border-radius: 6px !important;
-        border: 1px solid #3F3F46 !important;
         display: inline-block !important;
     }
     
     .dist-badge {
-        background-color: #0284C7 !important;
-        color: #FFFFFF !important;
+        background-color: #DBEAFE !important;
+        color: #1E40AF !important;
         font-weight: 800 !important;
         font-size: 0.85rem !important;
         padding: 0.35rem 0.75rem !important;
         border-radius: 6px !important;
+        border: 1px solid #BFDBFE !important;
         display: inline-block !important;
         margin-left: 0.4rem !important;
     }
 
     .theme-badge {
-        background-color: #3F3F46 !important;
-        color: #F4F4F5 !important;
+        background-color: #FEF08A !important;
+        color: #713F12 !important;
         font-weight: 800 !important;
         font-size: 0.78rem !important;
         padding: 0.35rem 0.75rem !important;
         border-radius: 14px !important;
-        border: 1px solid #52525B !important;
+        border: 1px solid #FDE047 !important;
         display: inline-block !important;
     }
     
-    /* Hero Header (Wireframe Kit Dark Hero Style) */
+    /* Executive Hero Header (Clean Light Design) */
     .hero-header {
-        background-color: #18181B !important;
+        background-color: #FFFFFF !important;
         border-radius: 16px !important;
-        padding: 2.5rem 2.8rem !important;
+        padding: 2.2rem 2.5rem !important;
         margin-bottom: 2rem !important;
-        border: 1px solid #27272A !important;
-        border-bottom: 3px solid #3F3F46 !important;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+        border: 1px solid #E2E8F0 !important;
+        border-left: 8px solid #0EA5E9 !important;
+        box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.01) !important;
     }
     
     .hero-badge {
         display: inline-block !important;
-        background-color: #27272A !important;
-        color: #F4F4F5 !important;
-        border: 1px solid #3F3F46 !important;
-        padding: 0.4rem 0.9rem !important;
+        background-color: #E0F2FE !important;
+        color: #0284C7 !important;
+        border: 1px solid #BAE6FD !important;
+        padding: 0.35rem 0.85rem !important;
         border-radius: 20px !important;
         font-size: 0.78rem !important;
         font-weight: 700 !important;
         letter-spacing: 0.06em !important;
         text-transform: uppercase !important;
-        margin-bottom: 1rem !important;
+        margin-bottom: 0.8rem !important;
     }
 
     .hero-title {
-        color: #FFFFFF !important;
-        font-size: 2.5rem !important;
-        font-weight: 300 !important;
-        line-height: 1.2 !important;
-        margin: 0 0 0.8rem 0 !important;
-        letter-spacing: -0.03em !important;
+        color: #0F172A !important;
+        font-size: 2.1rem !important;
+        font-weight: 800 !important;
+        line-height: 1.25 !important;
+        margin: 0 0 0.6rem 0 !important;
+        letter-spacing: -0.025em !important;
     }
 
     .hero-subtitle {
-        color: #A1A1AA !important;
-        font-size: 1.08rem !important;
-        font-weight: 400 !important;
+        color: #475569 !important;
+        font-size: 1.05rem !important;
+        font-weight: 500 !important;
         margin: 0 !important;
-        line-height: 1.6 !important;
+        line-height: 1.5 !important;
     }
 
-    /* Word Analysis Box (Pure White Wireframe Card Module) */
+    /* In-Depth Word Analysis Box */
     .word-analysis-box {
         background-color: #FFFFFF !important;
-        border-radius: 14px !important;
-        padding: 2rem 2.4rem !important;
+        border-radius: 12px !important;
+        padding: 1.8rem 2.2rem !important;
         margin-bottom: 2rem !important;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25) !important;
-        border: 1px solid #E4E4E7 !important;
-        color: #18181B !important;
+        box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05) !important;
+        border: 1px solid #CBD5E1 !important;
+        border-left: 6px solid #0EA5E9 !important;
     }
 
     .word-analysis-box h3 {
-        color: #09090B !important;
-        font-size: 1.35rem !important;
-        font-weight: 700 !important;
+        color: #0F172A !important;
+        font-size: 1.3rem !important;
+        font-weight: 800 !important;
         margin-top: 0 !important;
         margin-bottom: 1.1rem !important;
         display: flex !important;
@@ -139,12 +139,12 @@ st.markdown("""
     .word-analysis-box p, .word-analysis-box li, .word-analysis-box span, .word-analysis-box b, .word-analysis-box i {
         font-size: 1.02rem !important;
         line-height: 1.65 !important;
-        color: #27272A !important;
+        color: #1E293B !important;
     }
 
     .word-analysis-box b {
-        color: #09090B !important;
-        font-weight: 800 !important;
+        color: #0F172A !important;
+        font-weight: 700 !important;
     }
 
     .word-analysis-box ul, .word-analysis-box ol {
@@ -153,28 +153,28 @@ st.markdown("""
         padding-left: 1.5rem !important;
     }
 
-    /* Metric Cards (Pure White Wireframe Modules) */
+    /* Metric Cards */
     .metric-card {
         background: #FFFFFF !important;
         border-radius: 12px !important;
-        padding: 1.5rem !important;
-        border: 1px solid #E4E4E7 !important;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+        padding: 1.4rem !important;
+        border: 1px solid #CBD5E1 !important;
+        box-shadow: 0 4px 8px rgba(15, 23, 42, 0.04) !important;
     }
     
     .metric-title {
-        font-size: 0.82rem !important;
+        font-size: 0.85rem !important;
         text-transform: uppercase !important;
-        letter-spacing: 0.06em !important;
-        color: #71717A !important;
+        letter-spacing: 0.05em !important;
+        color: #475569 !important;
         font-weight: 700 !important;
         margin-bottom: 0.5rem !important;
     }
     
     .metric-value {
-        font-size: 2rem !important;
+        font-size: 1.9rem !important;
         font-weight: 800 !important;
-        color: #09090B !important;
+        color: #0F172A !important;
         line-height: 1.1 !important;
     }
     
@@ -186,37 +186,35 @@ st.markdown("""
     }
     
     .section-title {
-        font-size: 1.5rem !important;
-        font-weight: 300 !important;
-        color: #FFFFFF !important;
-        margin: 2rem 0 1.2rem 0 !important;
-        padding-bottom: 0.6rem !important;
-        border-bottom: 2px solid #3F3F46 !important;
-        letter-spacing: -0.02em !important;
+        font-size: 1.45rem !important;
+        font-weight: 800 !important;
+        color: #0F172A !important;
+        margin: 1.8rem 0 1.2rem 0 !important;
+        padding-bottom: 0.5rem !important;
+        border-bottom: 3px solid #0EA5E9 !important;
     }
 
     .sub-section-title {
-        font-size: 1.25rem !important;
-        font-weight: 600 !important;
-        color: #F4F4F5 !important;
-        margin: 1.6rem 0 1rem 0 !important;
+        font-size: 1.2rem !important;
+        font-weight: 800 !important;
+        color: #0F172A !important;
+        margin: 1.5rem 0 1rem 0 !important;
     }
 
-    /* Streamlit Tab Custom Styling (Wireframe Kit Dark Pill Selector) */
+    /* Streamlit Tab Custom Styling */
     .stTabs [data-baseweb="tab-list"] {
         gap: 8px !important;
-        background-color: #27272A !important;
+        background-color: #E2E8F0 !important;
         padding: 6px !important;
         border-radius: 12px !important;
-        border: 1px solid #3F3F46 !important;
     }
 
     .stTabs [data-baseweb="tab"] {
         height: 48px !important;
         border-radius: 8px !important;
         font-size: 0.9rem !important;
-        font-weight: 600 !important;
-        color: #A1A1AA !important;
+        font-weight: 700 !important;
+        color: #334155 !important;
         background-color: transparent !important;
         border: none !important;
         padding: 0 18px !important;
@@ -224,50 +222,43 @@ st.markdown("""
 
     .stTabs [aria-selected="true"] {
         background-color: #FFFFFF !important;
-        color: #09090B !important;
-        font-weight: 800 !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
-    }
-
-    /* Sidebar Wireframe Dark Styling */
-    section[data-testid="stSidebar"] {
-        background-color: #18181B !important;
-        border-right: 1px solid #27272A !important;
+        color: #0284C7 !important;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
     }
 
     /* Form Inputs, Search Bars & Dropdown Selectbox High-Contrast Styling */
     input, select, textarea, .stTextInput input, .stSelectbox select, div[data-baseweb="input"] input, div[data-baseweb="select"] input {
-        color: #FFFFFF !important;
-        background-color: #27272A !important;
-        border: 1px solid #3F3F46 !important;
+        color: #0F172A !important;
+        background-color: #FFFFFF !important;
+        border: 2px solid #64748B !important;
         border-radius: 8px !important;
-        font-weight: 700 !important;
+        font-weight: 800 !important;
         font-size: 0.95rem !important;
     }
 
     input::placeholder, .stTextInput input::placeholder {
-        color: #A1A1AA !important;
-        font-weight: 500 !important;
+        color: #475569 !important;
+        font-weight: 600 !important;
     }
 
     div[data-baseweb="select"] > div {
-        background-color: #27272A !important;
-        color: #FFFFFF !important;
-        border: 1px solid #3F3F46 !important;
+        background-color: #FFFFFF !important;
+        color: #0F172A !important;
+        border: 2px solid #64748B !important;
         border-radius: 8px !important;
-        font-weight: 700 !important;
+        font-weight: 800 !important;
     }
 
     div[data-baseweb="popover"], div[data-baseweb="menu"], ul[role="listbox"] {
-        background-color: #27272A !important;
-        color: #FFFFFF !important;
-        border: 1px solid #3F3F46 !important;
+        background-color: #FFFFFF !important;
+        color: #0F172A !important;
+        border: 2px solid #64748B !important;
     }
 
     li[role="option"], div[role="option"], [data-baseweb="select"] span {
-        color: #FFFFFF !important;
-        background-color: #27272A !important;
-        font-weight: 600 !important;
+        color: #0F172A !important;
+        background-color: #FFFFFF !important;
+        font-weight: 700 !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -388,9 +379,6 @@ st.sidebar.subheader("🤖 Local Qwen LLM Integration")
 ollama_model = st.sidebar.selectbox("Select Ollama LLM", ["qwen3.5:9b-q4_K_M", "qwen2.5:14B", "qwen3:14B", "deepseek-r1:7b"], index=0)
 ollama_url = st.sidebar.text_input("Ollama Endpoint", "http://localhost:11434/api/generate")
 
-st.sidebar.markdown("---")
-with st.sidebar.expander("🎨 Live Figma Wireframe Prototype"):
-    components.html("""<iframe style="border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px;" width="100%" height="450" src="https://embed.figma.com/proto/Q6KQ4Wu2Ta7WQMEK5yLdCF/-Legacy--Wireframe-Kit--Community-?node-id=1535-5&scaling=min-zoom&content-scaling=fixed&page-id=12805%3A646&embed-host=share" allowfullscreen></iframe>""", height=470)
 
 # Filter logic
 filtered_quant = df_quant.copy()
