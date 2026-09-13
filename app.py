@@ -18,115 +18,116 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------------
-# Custom Sleek & Presentable Styling (CSS)
+# Custom Sleek & Presentable Styling (Figma Wireframe Kit Theme)
 # ---------------------------------------------------------
 st.markdown("""
 <style>
-    /* Global Typography & Canvas Reset */
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+    /* Global Wireframe Kit Dark Charcoal Canvas Reset */
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
     
     .stApp {
-        background-color: #F8FAFC !important;
-        color: #0F172A !important;
+        background-color: #18181B !important;
+        color: #F4F4F5 !important;
         font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
     }
 
-    /* Force general markdown text to dark slate (excluding custom badges) */
+    /* Force general markdown text to high-contrast silver/white */
     .stMarkdown, .stMarkdown p, .stMarkdown li, div[data-testid="stMarkdownContainer"] > p {
-        color: #1E293B !important;
+        color: #E4E4E7 !important;
         font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
     }
 
     /* Small Badge Tabs (Teacher ID, District, Theme) */
     .t-id-badge {
-        background-color: #0F172A !important;
+        background-color: #27272A !important;
+        color: #FFFFFF !important;
+        font-weight: 800 !important;
+        font-size: 0.85rem !important;
+        padding: 0.35rem 0.75rem !important;
+        border-radius: 6px !important;
+        border: 1px solid #3F3F46 !important;
+        display: inline-block !important;
+    }
+    
+    .dist-badge {
+        background-color: #0284C7 !important;
         color: #FFFFFF !important;
         font-weight: 800 !important;
         font-size: 0.85rem !important;
         padding: 0.35rem 0.75rem !important;
         border-radius: 6px !important;
         display: inline-block !important;
-    }
-    
-    .dist-badge {
-        background-color: #DBEAFE !important;
-        color: #1E40AF !important;
-        font-weight: 800 !important;
-        font-size: 0.85rem !important;
-        padding: 0.35rem 0.75rem !important;
-        border-radius: 6px !important;
-        border: 1px solid #BFDBFE !important;
-        display: inline-block !important;
         margin-left: 0.4rem !important;
     }
 
     .theme-badge {
-        background-color: #FEF08A !important;
-        color: #713F12 !important;
+        background-color: #3F3F46 !important;
+        color: #F4F4F5 !important;
         font-weight: 800 !important;
         font-size: 0.78rem !important;
         padding: 0.35rem 0.75rem !important;
         border-radius: 14px !important;
-        border: 1px solid #FDE047 !important;
+        border: 1px solid #52525B !important;
         display: inline-block !important;
     }
     
-    /* Executive Hero Header (Config 2026 Theme Design) */
+    /* Hero Header (Wireframe Kit Dark Hero Style) */
     .hero-header {
-        background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%) !important;
+        background-color: #18181B !important;
         border-radius: 16px !important;
-        padding: 2.2rem 2.5rem !important;
+        padding: 2.5rem 2.8rem !important;
         margin-bottom: 2rem !important;
-        border: 2px solid #0EA5E9 !important;
-        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15) !important;
+        border: 1px solid #27272A !important;
+        border-bottom: 3px solid #3F3F46 !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
     }
     
     .hero-badge {
         display: inline-block !important;
-        background-color: #BEF264 !important;
-        color: #0F172A !important;
-        border: none !important;
-        padding: 0.35rem 0.85rem !important;
+        background-color: #27272A !important;
+        color: #F4F4F5 !important;
+        border: 1px solid #3F3F46 !important;
+        padding: 0.4rem 0.9rem !important;
         border-radius: 20px !important;
         font-size: 0.78rem !important;
-        font-weight: 800 !important;
+        font-weight: 700 !important;
         letter-spacing: 0.06em !important;
         text-transform: uppercase !important;
-        margin-bottom: 0.8rem !important;
+        margin-bottom: 1rem !important;
     }
 
     .hero-title {
-        color: #F8FAFC !important;
-        font-size: 2.1rem !important;
-        font-weight: 800 !important;
-        line-height: 1.25 !important;
-        margin: 0 0 0.6rem 0 !important;
-        letter-spacing: -0.025em !important;
+        color: #FFFFFF !important;
+        font-size: 2.5rem !important;
+        font-weight: 300 !important;
+        line-height: 1.2 !important;
+        margin: 0 0 0.8rem 0 !important;
+        letter-spacing: -0.03em !important;
     }
 
     .hero-subtitle {
-        color: #94A3B8 !important;
-        font-size: 1.05rem !important;
-        font-weight: 500 !important;
+        color: #A1A1AA !important;
+        font-size: 1.08rem !important;
+        font-weight: 400 !important;
         margin: 0 !important;
-        line-height: 1.5 !important;
+        line-height: 1.6 !important;
     }
 
-    /* In-Depth Word Analysis Box */
+    /* Word Analysis Box (Pure White Wireframe Card Module) */
     .word-analysis-box {
         background-color: #FFFFFF !important;
-        border-radius: 12px !important;
-        padding: 1.8rem 2.2rem !important;
+        border-radius: 14px !important;
+        padding: 2rem 2.4rem !important;
         margin-bottom: 2rem !important;
-        box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05) !important;
-        border: 1px solid #CBD5E1 !important;
-        border-left: 6px solid #0EA5E9 !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25) !important;
+        border: 1px solid #E4E4E7 !important;
+        color: #18181B !important;
     }
 
     .word-analysis-box h3 {
-        color: #0F172A !important;
-        font-size: 1.3rem !important;
-        font-weight: 800 !important;
+        color: #09090B !important;
+        font-size: 1.35rem !important;
+        font-weight: 700 !important;
         margin-top: 0 !important;
         margin-bottom: 1.1rem !important;
         display: flex !important;
@@ -137,12 +138,12 @@ st.markdown("""
     .word-analysis-box p, .word-analysis-box li, .word-analysis-box span, .word-analysis-box b, .word-analysis-box i {
         font-size: 1.02rem !important;
         line-height: 1.65 !important;
-        color: #1E293B !important;
+        color: #27272A !important;
     }
 
     .word-analysis-box b {
-        color: #0F172A !important;
-        font-weight: 700 !important;
+        color: #09090B !important;
+        font-weight: 800 !important;
     }
 
     .word-analysis-box ul, .word-analysis-box ol {
@@ -151,28 +152,28 @@ st.markdown("""
         padding-left: 1.5rem !important;
     }
 
-    /* Metric Cards */
+    /* Metric Cards (Pure White Wireframe Modules) */
     .metric-card {
         background: #FFFFFF !important;
         border-radius: 12px !important;
-        padding: 1.4rem !important;
-        border: 1px solid #CBD5E1 !important;
-        box-shadow: 0 4px 8px rgba(15, 23, 42, 0.04) !important;
+        padding: 1.5rem !important;
+        border: 1px solid #E4E4E7 !important;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
     }
     
     .metric-title {
-        font-size: 0.85rem !important;
+        font-size: 0.82rem !important;
         text-transform: uppercase !important;
-        letter-spacing: 0.05em !important;
-        color: #475569 !important;
+        letter-spacing: 0.06em !important;
+        color: #71717A !important;
         font-weight: 700 !important;
         margin-bottom: 0.5rem !important;
     }
     
     .metric-value {
-        font-size: 1.9rem !important;
+        font-size: 2rem !important;
         font-weight: 800 !important;
-        color: #0F172A !important;
+        color: #09090B !important;
         line-height: 1.1 !important;
     }
     
@@ -184,35 +185,37 @@ st.markdown("""
     }
     
     .section-title {
-        font-size: 1.45rem !important;
-        font-weight: 800 !important;
-        color: #0F172A !important;
-        margin: 1.8rem 0 1.2rem 0 !important;
-        padding-bottom: 0.5rem !important;
-        border-bottom: 3px solid #0EA5E9 !important;
+        font-size: 1.5rem !important;
+        font-weight: 300 !important;
+        color: #FFFFFF !important;
+        margin: 2rem 0 1.2rem 0 !important;
+        padding-bottom: 0.6rem !important;
+        border-bottom: 2px solid #3F3F46 !important;
+        letter-spacing: -0.02em !important;
     }
 
     .sub-section-title {
-        font-size: 1.2rem !important;
-        font-weight: 800 !important;
-        color: #0F172A !important;
-        margin: 1.5rem 0 1rem 0 !important;
+        font-size: 1.25rem !important;
+        font-weight: 600 !important;
+        color: #F4F4F5 !important;
+        margin: 1.6rem 0 1rem 0 !important;
     }
 
-    /* Streamlit Tab Custom Styling */
+    /* Streamlit Tab Custom Styling (Wireframe Kit Dark Pill Selector) */
     .stTabs [data-baseweb="tab-list"] {
         gap: 8px !important;
-        background-color: #E2E8F0 !important;
+        background-color: #27272A !important;
         padding: 6px !important;
         border-radius: 12px !important;
+        border: 1px solid #3F3F46 !important;
     }
 
     .stTabs [data-baseweb="tab"] {
         height: 48px !important;
         border-radius: 8px !important;
         font-size: 0.9rem !important;
-        font-weight: 700 !important;
-        color: #334155 !important;
+        font-weight: 600 !important;
+        color: #A1A1AA !important;
         background-color: transparent !important;
         border: none !important;
         padding: 0 18px !important;
@@ -220,43 +223,50 @@ st.markdown("""
 
     .stTabs [aria-selected="true"] {
         background-color: #FFFFFF !important;
-        color: #0284C7 !important;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+        color: #09090B !important;
+        font-weight: 800 !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+    }
+
+    /* Sidebar Wireframe Dark Styling */
+    section[data-testid="stSidebar"] {
+        background-color: #18181B !important;
+        border-right: 1px solid #27272A !important;
     }
 
     /* Form Inputs, Search Bars & Dropdown Selectbox High-Contrast Styling */
     input, select, textarea, .stTextInput input, .stSelectbox select, div[data-baseweb="input"] input, div[data-baseweb="select"] input {
-        color: #0F172A !important;
-        background-color: #FFFFFF !important;
-        border: 2px solid #64748B !important;
+        color: #FFFFFF !important;
+        background-color: #27272A !important;
+        border: 1px solid #3F3F46 !important;
         border-radius: 8px !important;
-        font-weight: 800 !important;
+        font-weight: 700 !important;
         font-size: 0.95rem !important;
     }
 
     input::placeholder, .stTextInput input::placeholder {
-        color: #475569 !important;
-        font-weight: 600 !important;
+        color: #A1A1AA !important;
+        font-weight: 500 !important;
     }
 
     div[data-baseweb="select"] > div {
-        background-color: #FFFFFF !important;
-        color: #0F172A !important;
-        border: 2px solid #64748B !important;
+        background-color: #27272A !important;
+        color: #FFFFFF !important;
+        border: 1px solid #3F3F46 !important;
         border-radius: 8px !important;
-        font-weight: 800 !important;
+        font-weight: 700 !important;
     }
 
     div[data-baseweb="popover"], div[data-baseweb="menu"], ul[role="listbox"] {
-        background-color: #FFFFFF !important;
-        color: #0F172A !important;
-        border: 2px solid #64748B !important;
+        background-color: #27272A !important;
+        color: #FFFFFF !important;
+        border: 1px solid #3F3F46 !important;
     }
 
     li[role="option"], div[role="option"], [data-baseweb="select"] span {
-        color: #0F172A !important;
-        background-color: #FFFFFF !important;
-        font-weight: 700 !important;
+        color: #FFFFFF !important;
+        background-color: #27272A !important;
+        font-weight: 600 !important;
     }
 </style>
 """, unsafe_allow_html=True)
