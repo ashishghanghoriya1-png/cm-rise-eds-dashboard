@@ -277,22 +277,22 @@ st.markdown("""
 # ---------------------------------------------------------
 # Global Standard Chart Helper Function
 # ---------------------------------------------------------
-def apply_standard_chart_layout(fig, title="", height=380, show_legend=True, barmode=None, yaxis_title=None, xaxis_title=None):
+def apply_standard_chart_layout(fig, title="", height=400, show_legend=True, barmode=None, yaxis_title=None, xaxis_title=None):
     fig.update_layout(
         title=dict(
             text=f"<b>{title}</b>",
-            font=dict(family="Plus Jakarta Sans", size=15, color="#0F172A"),
+            font=dict(family="Plus Jakarta Sans", size=18, color="#0F172A"),
             x=0,
             xanchor="left",
-            pad=dict(b=14)
+            pad=dict(b=16)
         ),
-        font=dict(family="Plus Jakarta Sans", size=13, color="#0F172A"),
+        font=dict(family="Plus Jakarta Sans", size=15, color="#0F172A"),
         paper_bgcolor="#FFFFFF",
         plot_bgcolor="#FFFFFF",
         height=height,
-        margin=dict(l=25, r=25, t=55, b=55),
+        margin=dict(l=30, r=30, t=65, b=65),
         showlegend=show_legend,
-        hoverlabel=dict(bgcolor="#0F172A", font_size=13, font_family="Plus Jakarta Sans")
+        hoverlabel=dict(bgcolor="#0F172A", font_size=15, font_family="Plus Jakarta Sans")
     )
     if barmode:
         fig.update_layout(barmode=barmode)
@@ -301,10 +301,10 @@ def apply_standard_chart_layout(fig, title="", height=380, show_legend=True, bar
             legend=dict(
                 orientation="h",
                 yanchor="bottom",
-                y=-0.32,
+                y=-0.35,
                 xanchor="center",
                 x=0.5,
-                font=dict(size=13, color="#0F172A", family="Plus Jakarta Sans")
+                font=dict(size=15, color="#0F172A", family="Plus Jakarta Sans")
             )
         )
     fig.update_xaxes(
@@ -312,16 +312,16 @@ def apply_standard_chart_layout(fig, title="", height=380, show_legend=True, bar
         gridcolor="#F1F5F9",
         linecolor="#94A3B8",
         title_text=xaxis_title if xaxis_title else "",
-        title_font=dict(size=13, color="#0F172A", family="Plus Jakarta Sans"),
-        tickfont=dict(size=12, color="#0F172A", family="Plus Jakarta Sans")
+        title_font=dict(size=15, color="#0F172A", family="Plus Jakarta Sans"),
+        tickfont=dict(size=14, color="#0F172A", family="Plus Jakarta Sans")
     )
     fig.update_yaxes(
         showgrid=True,
         gridcolor="#F1F5F9",
         linecolor="#94A3B8",
         title_text=yaxis_title if yaxis_title else "",
-        title_font=dict(size=13, color="#0F172A", family="Plus Jakarta Sans"),
-        tickfont=dict(size=12, color="#0F172A", family="Plus Jakarta Sans")
+        title_font=dict(size=15, color="#0F172A", family="Plus Jakarta Sans"),
+        tickfont=dict(size=14, color="#0F172A", family="Plus Jakarta Sans")
     )
     return fig
 
@@ -498,8 +498,8 @@ with tab1:
             color_discrete_map={"Female": "#EC4899", "Male": "#0EA5E9"},
             hole=0.55
         )
-        fig_gen.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=13, family='Plus Jakarta Sans'))
-        apply_standard_chart_layout(fig_gen, title="Cohort Gender Distribution (N=60)", height=380, show_legend=True)
+        fig_gen.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=15, family='Plus Jakarta Sans'))
+        apply_standard_chart_layout(fig_gen, title="Cohort Gender Distribution (N=60)", height=400, show_legend=True)
         st.plotly_chart(fig_gen, use_container_width=True)
 
     with d_col2:
@@ -514,8 +514,8 @@ with tab1:
             color_discrete_sequence=["#0D9488", "#0EA5E9", "#F59E0B", "#8B5CF6", "#EC4899", "#64748B"],
             hole=0.55
         )
-        fig_subj.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=13, family='Plus Jakarta Sans'))
-        apply_standard_chart_layout(fig_subj, title="Subject Specialization Distribution (N=60)", height=380, show_legend=True)
+        fig_subj.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=15, family='Plus Jakarta Sans'))
+        apply_standard_chart_layout(fig_subj, title="Subject Specialization Distribution (N=60)", height=400, show_legend=True)
         st.plotly_chart(fig_subj, use_container_width=True)
 
     with d_col3:
@@ -532,7 +532,7 @@ with tab1:
             color_discrete_sequence=["#38BDF8", "#0EA5E9", "#0F172A"],
             text=[f"{v} ({p:.1f}%)" for v, p in zip(exp_df["Teachers"], exp_df["Percentage (%)"])]
         )
-        fig_exp.update_traces(textposition="outside", textfont=dict(size=13, color="#0F172A", family="Plus Jakarta Sans"))
+        fig_exp.update_traces(textposition="outside", textfont=dict(size=15, color="#0F172A", family="Plus Jakarta Sans"))
         apply_standard_chart_layout(fig_exp, title="Teaching Experience Breakdown (N=60)", height=380, show_legend=False, yaxis_title="Teacher Count")
         fig_exp.update_layout(yaxis=dict(range=[0, 38]))
         st.plotly_chart(fig_exp, use_container_width=True)
@@ -557,7 +557,8 @@ with tab1:
             name="Backend Participation Rate (%)",
             marker_color="#0F172A",
             text=[f"{v:.1f}%" for v in gap_df["Backend Recorded Participation Rate (%)"]],
-            textposition="auto"
+            textposition="auto",
+            textfont=dict(size=15, family="Plus Jakarta Sans", color="#FFFFFF")
         ))
         fig_gap.add_trace(go.Bar(
             x=gap_df["Intervention"],
@@ -565,9 +566,10 @@ with tab1:
             name="Confirmed Classroom Transfer Rate (%)",
             marker_color="#0D9488",
             text=[f"{v:.1f}%" for v in gap_df["Confirmed Classroom Transfer Rate (%)"]],
-            textposition="auto"
+            textposition="auto",
+            textfont=dict(size=15, family="Plus Jakarta Sans", color="#FFFFFF")
         ))
-        apply_standard_chart_layout(fig_gap, title="Participation vs Verified Transfer Rate by Intervention (N=60)", height=380, barmode="group", show_legend=True, yaxis_title="Percentage (%)")
+        apply_standard_chart_layout(fig_gap, title="Participation vs Verified Transfer Rate by Intervention (N=60)", height=400, barmode="group", show_legend=True, yaxis_title="Percentage (%)")
         fig_gap.update_layout(yaxis=dict(range=[0, 115]))
         st.plotly_chart(fig_gap, use_container_width=True)
 
@@ -588,7 +590,8 @@ with tab1:
             y="Stage",
             color_discrete_sequence=["#6366F1"]
         )
-        apply_standard_chart_layout(fig_funnel, title="Multi-Stage Learning Cascade Deficit Funnel ($N=60$)", height=380, show_legend=False)
+        fig_funnel.update_traces(textfont=dict(size=15, family="Plus Jakarta Sans", color="#FFFFFF"))
+        apply_standard_chart_layout(fig_funnel, title="Multi-Stage Learning Cascade Deficit Funnel ($N=60$)", height=400, show_legend=False)
         st.plotly_chart(fig_funnel, use_container_width=True)
 
     st.markdown("---")
@@ -646,8 +649,8 @@ with tab2:
             color_discrete_map={"Received Materials (PPT/Modules/Margdarshika)": "#0D9488", "Zero Materials Received": "#EF4444"},
             hole=0.55
         )
-        fig_mat.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=13, family='Plus Jakarta Sans'))
-        apply_standard_chart_layout(fig_mat, title="Physical Training Material Receipt Status (N=60)", height=380, show_legend=True)
+        fig_mat.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=15, family='Plus Jakarta Sans'))
+        apply_standard_chart_layout(fig_mat, title="Physical Training Material Receipt Status (N=60)", height=400, show_legend=True)
         st.plotly_chart(fig_mat, use_container_width=True)
 
     with ipt_c2:
@@ -668,8 +671,8 @@ with tab2:
             color_discrete_sequence=["#10B981", "#F59E0B", "#EF4444"],
             text=[f"{v:.1f}%" for v in sent_df["Percentage (%)"]]
         )
-        fig_sent.update_traces(textposition='outside', textfont=dict(size=13, color="#0F172A", family="Plus Jakarta Sans"))
-        apply_standard_chart_layout(fig_sent, title="Teacher Perception of Content Practicality (N=60)", height=380, show_legend=False, yaxis_title="Percentage (%)")
+        fig_sent.update_traces(textposition='outside', textfont=dict(size=15, color="#0F172A", family="Plus Jakarta Sans"))
+        apply_standard_chart_layout(fig_sent, title="Teacher Perception of Content Practicality (N=60)", height=400, show_legend=False, yaxis_title="Percentage (%)")
         fig_sent.update_layout(yaxis=dict(range=[0, 58]))
         st.plotly_chart(fig_sent, use_container_width=True)
 
@@ -750,8 +753,8 @@ with tab3:
             color_discrete_sequence=["#0D9488", "#F59E0B"],
             hole=0.55
         )
-        fig_aware.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=13, family='Plus Jakarta Sans'))
-        apply_standard_chart_layout(fig_aware, title="Active Awareness vs Prompted Reach (N=60)", height=380, show_legend=True)
+        fig_aware.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=15, family='Plus Jakarta Sans'))
+        apply_standard_chart_layout(fig_aware, title="Active Awareness vs Prompted Reach (N=60)", height=400, show_legend=True)
         st.plotly_chart(fig_aware, use_container_width=True)
 
     with dig_c2:
@@ -767,8 +770,8 @@ with tab3:
             color_discrete_sequence=["#0EA5E9", "#8B5CF6", "#10B981"],
             text="Teachers"
         )
-        fig_plat.update_traces(textposition="outside", textfont=dict(size=13, color="#0F172A", family="Plus Jakarta Sans"))
-        apply_standard_chart_layout(fig_plat, title="Primary Platform Usage (DIKSHA vs iGOT)", height=380, show_legend=False, yaxis_title="Teacher Count")
+        fig_plat.update_traces(textposition="outside", textfont=dict(size=15, color="#0F172A", family="Plus Jakarta Sans"))
+        apply_standard_chart_layout(fig_plat, title="Primary Platform Usage (DIKSHA vs iGOT)", height=400, show_legend=False, yaxis_title="Teacher Count")
         fig_plat.update_layout(yaxis=dict(range=[0, 48]))
         st.plotly_chart(fig_plat, use_container_width=True)
 
@@ -784,8 +787,8 @@ with tab3:
             color_discrete_sequence=["#6366F1", "#EF4444", "#64748B"],
             hole=0.55
         )
-        fig_time.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=13, family='Plus Jakarta Sans'))
-        apply_standard_chart_layout(fig_time, title="Digital Learning Timing Preference (N=60)", height=380, show_legend=True)
+        fig_time.update_traces(textposition='inside', textinfo='percent+label', insidetextfont=dict(color='#FFFFFF', size=15, family='Plus Jakarta Sans'))
+        apply_standard_chart_layout(fig_time, title="Digital Learning Timing Preference (N=60)", height=400, show_legend=True)
         st.plotly_chart(fig_time, use_container_width=True)
 
     st.markdown("---")
@@ -815,8 +818,8 @@ with tab3:
             color_continuous_scale="Tealgrn",
             text="Teachers"
         )
-        fig_feat.update_traces(textposition="outside", textfont=dict(size=13, color="#0F172A", family="Plus Jakarta Sans"))
-        apply_standard_chart_layout(fig_feat, title="Ranked Engagement Levels by DIKSHA Feature (Table 15)", height=380, show_legend=False, xaxis_title="Teacher Count (N=60)")
+        fig_feat.update_traces(textposition="outside", textfont=dict(size=15, color="#0F172A", family="Plus Jakarta Sans"))
+        apply_standard_chart_layout(fig_feat, title="Ranked Engagement Levels by DIKSHA Feature (Table 15)", height=400, show_legend=False, xaxis_title="Teacher Count (N=60)")
         fig_feat.update_layout(yaxis=dict(autorange="reversed"), coloraxis_showscale=False)
         st.plotly_chart(fig_feat, use_container_width=True)
 
@@ -839,7 +842,7 @@ with tab3:
             color_continuous_scale="Reds",
             text="Teachers"
         )
-        fig_barr.update_traces(textposition="outside", textfont=dict(size=13, color="#0F172A", family="Plus Jakarta Sans"))
+        fig_barr.update_traces(textposition="outside", textfont=dict(size=15, color="#0F172A", family="Plus Jakarta Sans"))
         apply_standard_chart_layout(fig_barr, title="Primary Systemic Completion Friction Drivers", height=380, show_legend=False, yaxis_title="Teacher Mention Count")
         fig_barr.update_layout(coloraxis_showscale=False, yaxis=dict(range=[0, 34]))
         st.plotly_chart(fig_barr, use_container_width=True)
@@ -894,8 +897,8 @@ with tab4:
             color_discrete_sequence=["#0D9488", "#0EA5E9", "#F59E0B", "#8B5CF6", "#10B981", "#EF4444"],
             text=[f"{v} ({p:.1f}%)" for v, p in zip(rec_df["Teachers"], rec_df["Percentage (%)"])]
         )
-        fig_rec.update_traces(textposition="outside", textfont=dict(size=13, color="#0F172A", family="Plus Jakarta Sans"))
-        apply_standard_chart_layout(fig_rec, title="CLSS Monthly Topic Recall Strength (n=53 Attendees)", height=380, show_legend=False, yaxis_title="Teacher Count")
+        fig_rec.update_traces(textposition="outside", textfont=dict(size=15, color="#0F172A", family="Plus Jakarta Sans"))
+        apply_standard_chart_layout(fig_rec, title="CLSS Monthly Topic Recall Strength (n=53 Attendees)", height=400, show_legend=False, yaxis_title="Teacher Count")
         fig_rec.update_layout(yaxis=dict(range=[0, 22]))
         st.plotly_chart(fig_rec, use_container_width=True)
 
@@ -920,8 +923,8 @@ with tab4:
             color_continuous_scale="Reds",
             text=[f"{v} Mentions" for v in portal_df["Teachers"]]
         )
-        fig_portal.update_traces(textposition="outside", textfont=dict(size=13, color="#0F172A", family="Plus Jakarta Sans"))
-        apply_standard_chart_layout(fig_portal, title="RSK MP Attendance Portal Compliance Friction (N=60)", height=380, show_legend=False, xaxis_title="Teacher Mention Count")
+        fig_portal.update_traces(textposition="outside", textfont=dict(size=15, color="#0F172A", family="Plus Jakarta Sans"))
+        apply_standard_chart_layout(fig_portal, title="RSK MP Attendance Portal Compliance Friction (N=60)", height=400, show_legend=False, xaxis_title="Teacher Mention Count")
         fig_portal.update_layout(yaxis=dict(autorange="reversed"), coloraxis_showscale=False)
         st.plotly_chart(fig_portal, use_container_width=True)
 
@@ -948,8 +951,8 @@ with tab4:
         color_discrete_sequence=["#0EA5E9", "#10B981", "#8B5CF6", "#F59E0B", "#64748B", "#EF4444"],
         text=[f"{v} ({p:.1f}%)" for v, p in zip(casc_df["Teachers"], casc_df["Percentage (%)"])]
     )
-    fig_casc.update_traces(textposition="outside", textfont=dict(size=13, color="#0F172A", family="Plus Jakarta Sans"))
-    apply_standard_chart_layout(fig_casc, title="School-Level Knowledge Cascading & Peer Sharing Channels (Table 20)", height=380, show_legend=False, yaxis_title="Teacher Count (N=60)")
+    fig_casc.update_traces(textposition="outside", textfont=dict(size=15, color="#0F172A", family="Plus Jakarta Sans"))
+    apply_standard_chart_layout(fig_casc, title="School-Level Knowledge Cascading & Peer Sharing Channels (Table 20)", height=400, show_legend=False, yaxis_title="Teacher Count (N=60)")
     fig_casc.update_layout(yaxis=dict(range=[0, 25]))
     st.plotly_chart(fig_casc, use_container_width=True)
 
@@ -1001,7 +1004,7 @@ with tab5:
             color_continuous_scale="Purples",
             text=[f"{v} Teachers" for v in dem_df["Teachers Demanding Requirement"]]
         )
-        fig_dem.update_traces(textposition="outside", textfont=dict(size=13, color="#0F172A", family="Plus Jakarta Sans"))
+        fig_dem.update_traces(textposition="outside", textfont=dict(size=15, color="#0F172A", family="Plus Jakarta Sans"))
         apply_standard_chart_layout(fig_dem, title="Teacher Quality & Dignity Demands for Mentoring (Table 23)", height=380, show_legend=False, xaxis_title="Teacher Mention Count")
         fig_dem.update_layout(yaxis=dict(autorange="reversed"), coloraxis_showscale=False)
         st.plotly_chart(fig_dem, use_container_width=True)
@@ -1113,8 +1116,8 @@ with tab7:
             color_continuous_scale="Reds",
             text=[f"{v} ({p:.1f}%)" for v, p in zip(p4_funnel_df["Teachers"], p4_funnel_df["Percentage (%)"])]
         )
-        fig_p4_funnel.update_traces(textposition="outside", textfont=dict(size=13, color="#0F172A", family="Plus Jakarta Sans"))
-        apply_standard_chart_layout(fig_p4_funnel, title="CM RISE TPD Unaided vs Aided Brand Recall Funnel (N=60)", height=380, show_legend=False, xaxis_title="Teacher Count (N=60)")
+        fig_p4_funnel.update_traces(textposition="outside", textfont=dict(size=15, color="#0F172A", family="Plus Jakarta Sans"))
+        apply_standard_chart_layout(fig_p4_funnel, title="CM RISE TPD Unaided vs Aided Brand Recall Funnel (N=60)", height=400, show_legend=False, xaxis_title="Teacher Count (N=60)")
         fig_p4_funnel.update_layout(yaxis=dict(autorange="reversed"), coloraxis_showscale=False)
         st.plotly_chart(fig_p4_funnel, use_container_width=True)
 
@@ -1179,7 +1182,7 @@ with tab8:
             color_discrete_map={"Baseline (No Interventions)": "#94A3B8", "Selected Policy Package": "#0D9488"},
             text="Predicted Application Probability (%)"
         )
-        fig_sim.update_traces(texttemplate='%{text:.1f}%', textposition='outside', textfont=dict(size=13, color="#0F172A", family="Plus Jakarta Sans"))
+        fig_sim.update_traces(texttemplate='%{text:.1f}%', textposition='outside', textfont=dict(size=15, color="#0F172A", family="Plus Jakarta Sans"))
         apply_standard_chart_layout(fig_sim, title="Simulated Application Rate Shift Across Policy Packages", height=380, show_legend=False, yaxis_title="Probability (%)")
         fig_sim.update_layout(yaxis=dict(range=[0, 105]))
         st.plotly_chart(fig_sim, use_container_width=True)
