@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import pandas as pd
 import numpy as np
 import plotly.express as px
@@ -386,6 +387,10 @@ st.sidebar.markdown("---")
 st.sidebar.subheader("🤖 Local Qwen LLM Integration")
 ollama_model = st.sidebar.selectbox("Select Ollama LLM", ["qwen3.5:9b-q4_K_M", "qwen2.5:14B", "qwen3:14B", "deepseek-r1:7b"], index=0)
 ollama_url = st.sidebar.text_input("Ollama Endpoint", "http://localhost:11434/api/generate")
+
+st.sidebar.markdown("---")
+with st.sidebar.expander("🎨 Live Figma Wireframe Prototype"):
+    components.html("""<iframe style="border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px;" width="100%" height="450" src="https://embed.figma.com/proto/Q6KQ4Wu2Ta7WQMEK5yLdCF/-Legacy--Wireframe-Kit--Community-?node-id=1535-5&scaling=min-zoom&content-scaling=fixed&page-id=12805%3A646&embed-host=share" allowfullscreen></iframe>""", height=470)
 
 # Filter logic
 filtered_quant = df_quant.copy()
