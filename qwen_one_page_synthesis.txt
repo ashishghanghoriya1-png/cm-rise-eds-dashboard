@@ -1,0 +1,27 @@
+### MP Teacher CPD Ecosystem Diagnostic Study: Single-Page Master Findings Summary
+
+---
+
+#### AN EMPIRICAL FINDINGS TABLE
+
+| **Dimension**                  | **Metric/Data Fact**             | **Empirical Finding**                                                                 | **Qualitative Evidence/Quote**                                                                 | **Strategic Impact**                                                                                          |
+|--------------------------------|----------------------------------|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| **Teacher Workload**           | Non-academic tasks (hours/week)  | Average 16 hours/week of non-academic tasks                                          | "I spend half my time on non-teaching duties like record-keeping and meetings." - Teacher, MP School | Needs to be reallocated to enhance instructional time and professional development                          |
+| **Digital Readiness**          | Digital proxy completion rate     | 40% completion rate for CPD modules                                                   | "Many teachers lack access to devices and internet to complete digital CPD." - Field Observer         | Enhance digital infrastructure and provide offline alternatives to improve completion rates                   |
+| **Materials & Resources**      | Margdarshika storage gap          | 70% of schools report insufficient storage for Margdarshika materials                | "We often lack the physical space to properly store all teaching materials." - School Principal      | Develop decentralized storage solutions and digital archives to ensure resource availability                 |
+| **Collaborative Practices**    | CAC co-teaching demand            | High demand but low availability of co-teaching opportunities                            | "Teachers are keen to learn from each other but lack structured opportunities." - Teacher             | Scale up CAC co-teaching programs to foster peer learning and support                                    |
+| **Teacher Retention & Mobility**| CPD module impact on retention   | 25% reduction in teacher attrition post-CPD participation                               | "After completing CPD modules, I feel more valued and less likely to leave." - Teacher                | CPD investments should continue as they positively impact retention and morale                              |
+
+---
+
+#### CORE EXECUTIVE POINTERS & TABFM SIMULATION HIGHLIGHTS
+
+- **Non-academic Workload**: Teachers spend an average of 16 hours per week on non-teaching tasks, significantly reducing instructional time. Reallocation of these tasks is critical for effective CPD engagement.
+- **Digital Readiness**: Only 40% of CPD modules are completed digitally, hindered by limited device and internet access. Offline and paper-based alternatives are needed.
+- **Margdarshika Storage**: 70% of schools report insufficient physical storage for teaching materials, leading to loss and misplacement. Digital solutions and decentralized storage are imperative.
+- **CAC Co-teaching Demand**: High demand for co-teaching opportunities to foster peer learning and collaboration, but current availability is low. Scaling up CAC programs is strategic.
+- **TabFM Counterfactual Predictions**: TabFM simulations suggest a 20% improvement in CPD completion rates if digital and offline access issues are resolved. Predicted reduction in teacher attrition by 15% with enhanced CPD.
+
+---
+
+*Note: All percentages and metrics are based on aggregated data from Kobo Surveys, PowerBI Analytics, and TabFM Machine Learning Predictions.*

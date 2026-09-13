@@ -1,0 +1,3335 @@
+
+======================================================
+PAGE 1: Overview (ID: ced6afa0373a51defab7)
+======================================================
+
+--- Visual ID: visual.json | Type: cardVisual ---
+  QueryState: {
+  "Data": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Training"
+              }
+            },
+            "Property": "Useful %"
+          }
+        },
+        "queryRef": "Training.Useful %",
+        "nativeQueryRef": "Useful %",
+        "format": "0%;-0%;0%"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: donutChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Subject taught by teacher/English"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Subject taught by teacher/English)",
+        "nativeQueryRef": "English",
+        "displayName": "English"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Subject taught by teacher/Hindi"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Subject taught by teacher/Hindi)",
+        "nativeQueryRef": "Hindi",
+        "displayName": "Hindi"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Subject taught by teacher/Maths"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Subject taught by teacher/Maths)",
+        "nativeQueryRef": "Maths",
+        "displayName": "Maths"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Subject taught by teacher/Sanskrit"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Subject taught by teacher/Sanskrit)",
+        "nativeQueryRef": "Sanskrit",
+        "displayName": "Sanskrit"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Subject taught by teacher/Science"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Subject taught by teacher/Science)",
+        "nativeQueryRef": "Science",
+        "displayName": "Science"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Subject taught by teacher/Social Science"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Subject taught by teacher/Social Science)",
+        "nativeQueryRef": "Social Science",
+        "displayName": "Social Science"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: barChart ---
+  QueryState: {
+  "Category": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Aided/Unaided"
+              }
+            },
+            "Property": "Intervention"
+          }
+        },
+        "queryRef": "Aided/Unaided.Value",
+        "nativeQueryRef": "Intervention",
+        "active": true
+      }
+    ]
+  },
+  "Series": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Aided/Unaided"
+              }
+            },
+            "Property": "Type"
+          }
+        },
+        "queryRef": "Aided/Unaided.Type",
+        "nativeQueryRef": "Type"
+      }
+    ]
+  },
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Aided/Unaided"
+                  }
+                },
+                "Property": "Type"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "queryRef": "CountNonNull(Aided/Unaided.Type)",
+        "nativeQueryRef": "Count of Type"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: barChart ---
+  QueryState: {
+  "Category": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Training resources"
+              }
+            },
+            "Property": "Attribute"
+          }
+        },
+        "queryRef": "Training resources.Attribute",
+        "nativeQueryRef": "Attribute",
+        "active": true
+      }
+    ]
+  },
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Training resources"
+                  }
+                },
+                "Property": "Value"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Training resources.Value)",
+        "nativeQueryRef": "Sum of Value"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: columnChart ---
+  QueryState: {
+  "Category": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Experience Category"
+          }
+        },
+        "queryRef": "Quant_Structured.Experience Category",
+        "nativeQueryRef": "Experience Category",
+        "active": true
+      }
+    ]
+  },
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Experience %"
+          }
+        },
+        "queryRef": "Quant_Structured.Experience %",
+        "nativeQueryRef": "Experience %",
+        "format": "0%;-0%;0%"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: treemap ---
+  QueryState: {
+  "Group": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Gender of respondent"
+          }
+        },
+        "queryRef": "Quant_Structured.Gender of respondent",
+        "nativeQueryRef": "Gender of respondent",
+        "active": true
+      }
+    ]
+  },
+  "Values": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Teacher_ID"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "queryRef": "CountNonNull(Quant_Structured.Teacher_ID)",
+        "nativeQueryRef": "Count of Teacher_ID"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: image ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: clusteredColumnChart ---
+  QueryState: {
+  "Category": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Training"
+              }
+            },
+            "Property": "Training"
+          }
+        },
+        "queryRef": "Training.Training",
+        "nativeQueryRef": "Training",
+        "active": true
+      }
+    ]
+  },
+  "Tooltips": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Training"
+              }
+            },
+            "Property": "Useful %"
+          }
+        },
+        "queryRef": "Training.Useful %",
+        "nativeQueryRef": "Useful %",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ]
+  },
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Training"
+              }
+            },
+            "Property": "Participated"
+          }
+        },
+        "queryRef": "Training.Participated",
+        "nativeQueryRef": "Participated"
+      },
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Training"
+              }
+            },
+            "Property": "Useful"
+          }
+        },
+        "queryRef": "Training.Useful",
+        "nativeQueryRef": "Useful"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: clusteredColumnChart ---
+  QueryState: {
+  "Category": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Response"
+          }
+        },
+        "queryRef": "Quant_Structured.Response",
+        "nativeQueryRef": "Response",
+        "active": true
+      }
+    ]
+  },
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Teacher_ID"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "queryRef": "CountNonNull(Quant_Structured.Teacher_ID)",
+        "nativeQueryRef": "Count of Teacher_ID"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: Unknown ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: slicer ---
+  QueryState: {
+  "Values": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "CategoryWise"
+          }
+        },
+        "queryRef": "Quant_Structured.CategoryWise",
+        "nativeQueryRef": "CategoryWise",
+        "active": true
+      },
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Teacher_ID"
+          }
+        },
+        "queryRef": "Quant_Structured.Teacher_ID",
+        "nativeQueryRef": "Count of Teacher_ID",
+        "active": false
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: slicer ---
+  QueryState: {
+  "Values": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Experience Category"
+          }
+        },
+        "queryRef": "Quant_Structured.Experience Category",
+        "nativeQueryRef": "Experience Category",
+        "active": true
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: slicer ---
+  QueryState: {
+  "Values": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "District of respondent teacher"
+          }
+        },
+        "queryRef": "Quant_Structured.District of respondent teacher",
+        "nativeQueryRef": "District of respondent teacher",
+        "active": true
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: slicer ---
+  QueryState: {
+  "Values": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Gender of respondent"
+          }
+        },
+        "queryRef": "Quant_Structured.Gender of respondent",
+        "nativeQueryRef": "Gender of respondent",
+        "active": true
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: barChart ---
+  QueryState: {
+  "Category": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "CategoryWise"
+          }
+        },
+        "queryRef": "Quant_Structured.CategoryWise",
+        "nativeQueryRef": "CategoryWise",
+        "active": true
+      }
+    ]
+  },
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Teacher_ID"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "queryRef": "CountNonNull(Quant_Structured.Teacher_ID)",
+        "nativeQueryRef": "Count of Teacher_ID"
+      }
+    ]
+  }
+}
+
+======================================================
+PAGE 2: Digital Course (ID: 79dd1785d4138a581682)
+======================================================
+
+--- Visual ID: visual.json | Type: Unknown ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: donutChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Diksha & iGOT"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Diksha & iGOT)",
+        "nativeQueryRef": "Diksha & iGOT",
+        "displayName": "Diksha & iGOT"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Teacher_ID"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "queryRef": "CountNonNull(Quant_Structured.Teacher_ID)",
+        "nativeQueryRef": "Teachers",
+        "displayName": "Teachers"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: donutChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "iGOT"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.iGOT)",
+        "nativeQueryRef": "iGOT",
+        "displayName": "iGOT"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Teacher_ID"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "queryRef": "CountNonNull(Quant_Structured.Teacher_ID)",
+        "nativeQueryRef": "Teachers",
+        "displayName": "Teachers"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: donutChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "DIKSHA"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.DIKSHA)",
+        "nativeQueryRef": "DIKSHA",
+        "displayName": "DIKSHA"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Teacher_ID"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "queryRef": "CountNonNull(Quant_Structured.Teacher_ID)",
+        "nativeQueryRef": "Teacher_ID"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: cardVisual ---
+  QueryState: {
+  "Data": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Diksha & iGOT"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Diksha & iGOT)",
+        "nativeQueryRef": "DIKSHA & iGOT",
+        "displayName": "DIKSHA & iGOT"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "iGOT"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.iGOT)",
+        "nativeQueryRef": "iGOT",
+        "displayName": "iGOT"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "DIKSHA"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.DIKSHA)",
+        "nativeQueryRef": "DIKSHA",
+        "displayName": "DIKSHA"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: Unknown ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: gauge ---
+  QueryState: {
+  "MaxValue": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Gauge max"
+          }
+        },
+        "queryRef": "Quant_Structured.Gauge max",
+        "nativeQueryRef": "Gauge max"
+      }
+    ]
+  },
+  "MinValue": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Gauge Min"
+          }
+        },
+        "queryRef": "Quant_Structured.Gauge Min",
+        "nativeQueryRef": "Gauge Min"
+      }
+    ]
+  },
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Awareness Gauge Indicator"
+          }
+        },
+        "queryRef": "Quant_Structured.Awareness Gauge Indicator",
+        "nativeQueryRef": "Awareness Gauge Indicator"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: cardVisual ---
+  QueryState: {
+  "Data": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Awareness Yes %"
+          }
+        },
+        "queryRef": "Quant_Structured.Awareness Yes %",
+        "nativeQueryRef": "Awareness Yes %",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: clusteredBarChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Timing to do online or digital courses/learning/After school"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Timing to do online or digital courses/learning/After school)",
+        "nativeQueryRef": "After School",
+        "displayName": "After School"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Timing to do online or digital courses/learning/During holidays or weekends"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Timing to do online or digital courses/learning/During holidays or weekends)",
+        "nativeQueryRef": "During Holidays",
+        "displayName": "During Holidays"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Timing to do online or digital courses/learning/During school hours"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Timing to do online or digital courses/learning/During school hours)",
+        "nativeQueryRef": "During School Hours",
+        "displayName": "During School Hours"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: donutChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Most engaging features of DIKSHA digital course/Animated videos"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Most engaging features of DIKSHA digital course/Animated videos)",
+        "nativeQueryRef": "Animated videos",
+        "displayName": "Animated videos"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Most engaging features of DIKSHA digital course/Assessments"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Most engaging features of DIKSHA digital course/Assessments)",
+        "nativeQueryRef": "Assessments",
+        "displayName": "Assessments"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Most engaging features of DIKSHA digital course/Interactive questions/quizzes"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Most engaging features of DIKSHA digital course/Interactive questions/quizzes)",
+        "nativeQueryRef": "Quizzes",
+        "displayName": "Quizzes"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Most engaging features of DIKSHA digital course/Nothing"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Most engaging features of DIKSHA digital course/Nothing)",
+        "nativeQueryRef": "Nothing",
+        "displayName": "Nothing"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Most engaging features of DIKSHA digital course/Post work"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Most engaging features of DIKSHA digital course/Post work)",
+        "nativeQueryRef": "Post work",
+        "displayName": "Post work"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Most engaging features of DIKSHA digital course/Readings/resources"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Most engaging features of DIKSHA digital course/Readings/resources)",
+        "nativeQueryRef": "Readings/resources",
+        "displayName": "Readings/resources"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Most engaging features of DIKSHA digital course/Real classroom examples"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Most engaging features of DIKSHA digital course/Real classroom examples)",
+        "nativeQueryRef": "Real classroom examples",
+        "displayName": "Real classroom examples"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: cardVisual ---
+  QueryState: {
+  "Data": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "title Digital Course"
+          }
+        },
+        "queryRef": "Quant_Structured.title Digital Course",
+        "nativeQueryRef": "title Digital Course"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: donutChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Reason for not doing DIKSHA course/Not aware"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Reason for not doing DIKSHA course/Not aware)",
+        "nativeQueryRef": "Unaware",
+        "displayName": "Unaware"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Reason for not doing DIKSHA course/Not found useful"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Reason for not doing DIKSHA course/Not found useful)",
+        "nativeQueryRef": "Not found useful",
+        "displayName": "Not found useful"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Reason for not doing DIKSHA course/Other engagement"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Reason for not doing DIKSHA course/Other engagement)",
+        "nativeQueryRef": "Other engagement",
+        "displayName": "Other engagement"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Reason for not doing DIKSHA course/Technical issue"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Reason for not doing DIKSHA course/Technical issue)",
+        "nativeQueryRef": "Technical issue",
+        "displayName": "Technical issue"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Reason for not doing DIKSHA course/Time issue"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Reason for not doing DIKSHA course/Time issue)",
+        "nativeQueryRef": "Time issue",
+        "displayName": "Time issue"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: donutChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Source of information on DIKSHA digital course/Any other"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Source of information on DIKSHA digital course/Any other)",
+        "nativeQueryRef": "Any other",
+        "displayName": "Any other"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Source of information on DIKSHA digital course/CLSS"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Source of information on DIKSHA digital course/CLSS)",
+        "nativeQueryRef": "CLSS",
+        "displayName": "CLSS"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Source of information on DIKSHA digital course/Dashboard"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Source of information on DIKSHA digital course/Dashboard)",
+        "nativeQueryRef": "Dashboard",
+        "displayName": "Dashboard"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Source of information on DIKSHA digital course/JSK Instruction on whatsapp group"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Source of information on DIKSHA digital course/JSK Instruction on whatsapp group)",
+        "nativeQueryRef": "Instruction on whatsapp group",
+        "displayName": "Instruction on whatsapp group"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Source of information on DIKSHA digital course/VC"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Source of information on DIKSHA digital course/VC)",
+        "nativeQueryRef": "VC",
+        "displayName": "VC"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Source of information on DIKSHA digital course/WhatsApp posters"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Source of information on DIKSHA digital course/WhatsApp posters)",
+        "nativeQueryRef": "WhatsApp posters",
+        "displayName": "WhatsApp posters"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Source of information on DIKSHA digital course/Word of mouth"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Source of information on DIKSHA digital course/Word of mouth)",
+        "nativeQueryRef": "Word of mouth",
+        "displayName": "Word of mouth"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: image ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: clusteredColumnChart ---
+  QueryState: {
+  "Category": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Training"
+              }
+            },
+            "Property": "Training"
+          }
+        },
+        "queryRef": "Training.Training",
+        "nativeQueryRef": "Training",
+        "active": true
+      }
+    ]
+  },
+  "Tooltips": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Training"
+              }
+            },
+            "Property": "Useful %"
+          }
+        },
+        "queryRef": "Training.Useful %",
+        "nativeQueryRef": "Useful %",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ]
+  },
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Training"
+              }
+            },
+            "Property": "Participated"
+          }
+        },
+        "queryRef": "Training.Participated",
+        "nativeQueryRef": "Participated"
+      },
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Training"
+              }
+            },
+            "Property": "Useful"
+          }
+        },
+        "queryRef": "Training.Useful",
+        "nativeQueryRef": "Useful"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: Unknown ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: slicer ---
+  QueryState: {
+  "Values": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Gender of respondent"
+          }
+        },
+        "queryRef": "Quant_Structured.Gender of respondent",
+        "nativeQueryRef": "Gender of respondent",
+        "active": true
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: slicer ---
+  QueryState: {
+  "Values": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Experience Category"
+          }
+        },
+        "queryRef": "Quant_Structured.Experience Category",
+        "nativeQueryRef": "Experience Category",
+        "active": true
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: slicer ---
+  QueryState: {
+  "Values": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "District of respondent teacher"
+          }
+        },
+        "queryRef": "Quant_Structured.District of respondent teacher",
+        "nativeQueryRef": "District of respondent teacher",
+        "active": true
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: slicer ---
+  QueryState: {
+  "Values": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "CategoryWise"
+          }
+        },
+        "queryRef": "Quant_Structured.CategoryWise",
+        "nativeQueryRef": "CategoryWise",
+        "active": true
+      },
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Teacher_ID"
+          }
+        },
+        "queryRef": "Quant_Structured.Teacher_ID",
+        "nativeQueryRef": "Count of Teacher_ID",
+        "active": false
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: clusteredColumnChart ---
+  QueryState: {
+  "Category": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Digital Learning Time (Updated)"
+          }
+        },
+        "queryRef": "Quant_Structured.Digital Learning Time (Updated)",
+        "nativeQueryRef": "Digital Learning Time (Updated)",
+        "active": true
+      }
+    ]
+  },
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Teacher_ID"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "queryRef": "CountNonNull(Quant_Structured.Teacher_ID)",
+        "nativeQueryRef": "Teacher_ID"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: textbox ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: actionButton ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: actionButton ---
+  QueryState: {}
+
+======================================================
+PAGE 3: CLSS (ID: 85e4922b6f30811bb790)
+======================================================
+
+--- Visual ID: visual.json | Type: Unknown ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: cardVisual ---
+  QueryState: {
+  "Data": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "session end %"
+          }
+        },
+        "queryRef": "Quant_Structured.session end %",
+        "nativeQueryRef": "session end %",
+        "format": "0%;-0%;0%"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: donutChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Challenges/Session end rush for teachers to leave the venue"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Challenges/Session end rush for teachers to leave the venue)",
+        "nativeQueryRef": "Sum of Challenges/Session end rush for teachers to leave the venue"
+      },
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Total Challenges"
+          }
+        },
+        "queryRef": "Quant_Structured.Total Challenges",
+        "nativeQueryRef": "Total Challenges"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: columnChart ---
+  QueryState: {
+  "Category": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Reason Clss"
+              }
+            },
+            "Property": "Attribute"
+          }
+        },
+        "queryRef": "Reason Clss.Attribute",
+        "nativeQueryRef": "Attribute",
+        "active": true
+      }
+    ]
+  },
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Reason Clss"
+                  }
+                },
+                "Property": "Value"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Reason Clss.Value)",
+        "nativeQueryRef": "Sum of Value"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: Unknown ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: cardVisual ---
+  QueryState: {
+  "Data": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Awareness %"
+          }
+        },
+        "queryRef": "Quant_Structured.Awareness %",
+        "nativeQueryRef": "Awareness %",
+        "format": "0%;-0%;0%"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: donutChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "ChallenegesAwareness Issue"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.What challenges do they face in filling attendance and feedback form post the samwad?/Awareness Issue)",
+        "nativeQueryRef": "Sum of ChallenegesAwareness Issue"
+      },
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Total Challenges"
+          }
+        },
+        "queryRef": "Quant_Structured.Total Challenges",
+        "nativeQueryRef": "Total Challenges"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: clusteredBarChart ---
+  QueryState: {
+  "Category": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Training"
+              }
+            },
+            "Property": "Training"
+          }
+        },
+        "queryRef": "Training.Training",
+        "nativeQueryRef": "Training",
+        "active": true
+      }
+    ]
+  },
+  "Tooltips": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Training"
+              }
+            },
+            "Property": "Useful %"
+          }
+        },
+        "queryRef": "Training.Useful %",
+        "nativeQueryRef": "Useful %",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ]
+  },
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Training"
+              }
+            },
+            "Property": "Participated"
+          }
+        },
+        "queryRef": "Training.Participated",
+        "nativeQueryRef": "Participated"
+      },
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Training"
+              }
+            },
+            "Property": "Useful"
+          }
+        },
+        "queryRef": "Training.Useful",
+        "nativeQueryRef": "Useful"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: Unknown ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: slicer ---
+  QueryState: {
+  "Values": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Gender of respondent"
+          }
+        },
+        "queryRef": "Quant_Structured.Gender of respondent",
+        "nativeQueryRef": "Gender of respondent",
+        "active": true
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: slicer ---
+  QueryState: {
+  "Values": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "District of respondent teacher"
+          }
+        },
+        "queryRef": "Quant_Structured.District of respondent teacher",
+        "nativeQueryRef": "District of respondent teacher",
+        "active": true
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: slicer ---
+  QueryState: {
+  "Values": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Experience Category"
+          }
+        },
+        "queryRef": "Quant_Structured.Experience Category",
+        "nativeQueryRef": "Experience Category",
+        "active": true
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: slicer ---
+  QueryState: {
+  "Values": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "CategoryWise"
+          }
+        },
+        "queryRef": "Quant_Structured.CategoryWise",
+        "nativeQueryRef": "CategoryWise",
+        "active": true
+      },
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Teacher_ID"
+          }
+        },
+        "queryRef": "Quant_Structured.Teacher_ID",
+        "nativeQueryRef": "Count of Teacher_ID",
+        "active": false
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: Unknown ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: cardVisual ---
+  QueryState: {
+  "Data": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Unwilling %"
+          }
+        },
+        "queryRef": "Quant_Structured.Unwilling %",
+        "nativeQueryRef": "Unwilling %",
+        "format": "0%;-0%;0%"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: donutChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Challenges/Unwilling teachers"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Challenges/Unwilling teachers)",
+        "nativeQueryRef": "Sum of Challenges/Unwilling teachers"
+      },
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Total Challenges"
+          }
+        },
+        "queryRef": "Quant_Structured.Total Challenges",
+        "nativeQueryRef": "Total Challenges"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: cardVisual ---
+  QueryState: {
+  "Data": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "ChallenegesAwareness Issue"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.What challenges do they face in filling attendance and feedback form post the samwad?/Awareness Issue)",
+        "nativeQueryRef": "Awareness Issue",
+        "displayName": "Awareness Issue"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Challenges/Not perceived important"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.What challenges do they face in filling attendance and feedback form post the samwad?/Not perceived important)",
+        "nativeQueryRef": "Not perceived important",
+        "displayName": "Not perceived important"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Challenegs/others"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.What challenges do they face in filling attendance and feedback form post the samwad?/others)",
+        "nativeQueryRef": "others",
+        "displayName": "others"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Challenges/Session end rush for teachers to leave the venue"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.What challenges do they face in filling attendance and feedback form post the samwad?/Session end rush for teachers to leave the venue)",
+        "nativeQueryRef": "Session end rush",
+        "displayName": "Session end rush"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Challenges/Unwilling teachers"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.What challenges do they face in filling attendance and feedback form post the samwad?/Unwilling teachers)",
+        "nativeQueryRef": "Unwilling teachers",
+        "displayName": "Unwilling teachers"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: Unknown ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: donutChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Challenges/Not perceived important"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Challenges/Not perceived important)",
+        "nativeQueryRef": "Sum of Challenges/Not perceived important"
+      },
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Total Challenges"
+          }
+        },
+        "queryRef": "Quant_Structured.Total Challenges",
+        "nativeQueryRef": "Total Challenges"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: cardVisual ---
+  QueryState: {
+  "Data": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Not Per %"
+          }
+        },
+        "queryRef": "Quant_Structured.Not Per %",
+        "nativeQueryRef": "Not Per %",
+        "format": "0%;-0%;0%"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: clusteredBarChart ---
+  QueryState: {
+  "Category": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Experience Category"
+          }
+        },
+        "queryRef": "Quant_Structured.Experience Category",
+        "nativeQueryRef": "Experience Category",
+        "active": true
+      }
+    ]
+  },
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "CLSS Attended"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.CLSS Attended)",
+        "nativeQueryRef": "Average of CLSS Attended1"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: Unknown ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: gauge ---
+  QueryState: {
+  "MaxValue": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Activities participated over 2025-26 academic year/CLSS"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Activities participated over 2025-26 academic year/CLSS)",
+        "nativeQueryRef": "Sum of Activities participated over 2025-26 academic year/CLSS"
+      }
+    ]
+  },
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "gauge value"
+          }
+        },
+        "queryRef": "Quant_Structured.gauge value",
+        "nativeQueryRef": "gauge value"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: Unknown ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: cardVisual ---
+  QueryState: {
+  "Data": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "CLSS topics recalled/No topic recalled"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.CLSS topics recalled/No topic recalled)",
+        "nativeQueryRef": "No topic recalled",
+        "displayName": "No topic recalled"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "CLSS topics recalled/\u0915\u0915\u094d\u0937\u093e \u092a\u094d\u0930\u092c\u0902\u0927\u0928 \u0915\u0947 \u0936\u0941\u0930\u0941\u0906\u0924\u0940 \u092a\u094d\u0930\u092f\u093e\u0938"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.CLSS topics recalled/\u0915\u0915\u094d\u0937\u093e \u092a\u094d\u0930\u092c\u0902\u0927\u0928 \u0915\u0947 \u0936\u0941\u0930\u0941\u0906\u0924\u0940 \u092a\u094d\u0930\u092f\u093e\u0938)",
+        "nativeQueryRef": "\u0915\u0915\u094d\u0937\u093e \u092a\u094d\u0930\u092c\u0902\u0927\u0928 \u0915\u0947 \u0936\u0941\u0930\u0941\u0906\u0924\u0940 \u092a\u094d\u0930\u092f\u093e\u0938",
+        "displayName": "\u0915\u0915\u094d\u0937\u093e \u092a\u094d\u0930\u092c\u0902\u0927\u0928 \u0915\u0947 \u0936\u0941\u0930\u0941\u0906\u0924\u0940 \u092a\u094d\u0930\u092f\u093e\u0938"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "CLSS topics recalled/\u092a\u0941\u0928\u0930\u0935\u0932\u094b\u0915\u0928 \u090f\u0935\u0902 \u0938\u092e\u0947\u0915\u0928"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.CLSS topics recalled/\u092a\u0941\u0928\u0930\u0935\u0932\u094b\u0915\u0928 \u090f\u0935\u0902 \u0938\u092e\u0947\u0915\u0928)",
+        "nativeQueryRef": "\u092a\u0941\u0928\u0930\u0935\u0932\u094b\u0915\u0928 \u090f\u0935\u0902 \u0938\u092e\u0947\u0915\u0928",
+        "displayName": "\u092a\u0941\u0928\u0930\u0935\u0932\u094b\u0915\u0928 \u090f\u0935\u0902 \u0938\u092e\u0947\u0915\u0928"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "CLSS topics recalled/\u092a\u0942\u0930\u094d\u0935\u091c\u094d\u091e\u093e\u0928 \u0938\u0947 \u0936\u0941\u0930\u0941, \u0938\u092e\u0942\u0939\u0915\u093e\u0930\u094d\u092f \u0938\u0947 \u0938\u0940\u0916"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.CLSS topics recalled/\u092a\u0942\u0930\u094d\u0935\u091c\u094d\u091e\u093e\u0928 \u0938\u0947 \u0936\u0941\u0930\u0941, \u0938\u092e\u0942\u0939\u0915\u093e\u0930\u094d\u092f \u0938\u0947 \u0938\u0940\u0916)",
+        "nativeQueryRef": "\u092a\u0942\u0930\u094d\u0935\u091c\u094d\u091e\u093e\u0928 \u0938\u0947 \u0936\u0941\u0930\u0941, \u0938\u092e\u0942\u0939\u0915\u093e\u0930\u094d\u092f \u0938\u0947 \u0938\u0940\u0916",
+        "displayName": "\u092a\u0942\u0930\u094d\u0935\u091c\u094d\u091e\u093e\u0928 \u0938\u0947 \u0936\u0941\u0930\u0941, \u0938\u092e\u0942\u0939\u0915\u093e\u0930\u094d\u092f \u0938\u0947 \u0938\u0940\u0916"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "CLSS topics recalled/\u092a\u094d\u0930\u092d\u093e\u0935\u0940 \u0917\u0943\u0939\u0915\u093e\u0930\u094d\u092f"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.CLSS topics recalled/\u092a\u094d\u0930\u092d\u093e\u0935\u0940 \u0917\u0943\u0939\u0915\u093e\u0930\u094d\u092f)",
+        "nativeQueryRef": "\u092a\u094d\u0930\u092d\u093e\u0935\u0940 \u0917\u0943\u0939\u0915\u093e\u0930\u094d\u092f",
+        "displayName": "\u092a\u094d\u0930\u092d\u093e\u0935\u0940 \u0917\u0943\u0939\u0915\u093e\u0930\u094d\u092f"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "CLSS topics recalled/\u092a\u094d\u0930\u092d\u093e\u0935\u0940 \u092a\u0941\u0928\u0930\u093e\u0935\u0943\u0924\u094d\u0924\u093f"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.CLSS topics recalled/\u092a\u094d\u0930\u092d\u093e\u0935\u0940 \u092a\u0941\u0928\u0930\u093e\u0935\u0943\u0924\u094d\u0924\u093f)",
+        "nativeQueryRef": "\u092a\u094d\u0930\u092d\u093e\u0935\u0940 \u092a\u0941\u0928\u0930\u093e\u0935\u0943\u0924\u094d\u0924\u093f",
+        "displayName": "\u092a\u094d\u0930\u092d\u093e\u0935\u0940 \u092a\u0941\u0928\u0930\u093e\u0935\u0943\u0924\u094d\u0924\u093f"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: hundredPercentStackedColumnChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "CLSS topics recalled/\u092a\u094d\u0930\u092d\u093e\u0935\u0940 \u092a\u0941\u0928\u0930\u093e\u0935\u0943\u0924\u094d\u0924\u093f"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.CLSS topics recalled/\u092a\u094d\u0930\u092d\u093e\u0935\u0940 \u092a\u0941\u0928\u0930\u093e\u0935\u0943\u0924\u094d\u0924\u093f)",
+        "nativeQueryRef": "\u092a\u094d\u0930\u092d\u093e\u0935\u0940 \u092a\u0941\u0928\u0930\u093e\u0935\u0943\u0924\u094d\u0924\u093f",
+        "displayName": "\u092a\u094d\u0930\u092d\u093e\u0935\u0940 \u092a\u0941\u0928\u0930\u093e\u0935\u0943\u0924\u094d\u0924\u093f"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "CLSS topics recalled/\u092a\u094d\u0930\u092d\u093e\u0935\u0940 \u0917\u0943\u0939\u0915\u093e\u0930\u094d\u092f"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.CLSS topics recalled/\u092a\u094d\u0930\u092d\u093e\u0935\u0940 \u0917\u0943\u0939\u0915\u093e\u0930\u094d\u092f)",
+        "nativeQueryRef": "\u092a\u094d\u0930\u092d\u093e\u0935\u0940 \u0917\u0943\u0939\u0915\u093e\u0930\u094d\u092f",
+        "displayName": "\u092a\u094d\u0930\u092d\u093e\u0935\u0940 \u0917\u0943\u0939\u0915\u093e\u0930\u094d\u092f"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "CLSS topics recalled/\u092a\u0942\u0930\u094d\u0935\u091c\u094d\u091e\u093e\u0928 \u0938\u0947 \u0936\u0941\u0930\u0941, \u0938\u092e\u0942\u0939\u0915\u093e\u0930\u094d\u092f \u0938\u0947 \u0938\u0940\u0916"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.CLSS topics recalled/\u092a\u0942\u0930\u094d\u0935\u091c\u094d\u091e\u093e\u0928 \u0938\u0947 \u0936\u0941\u0930\u0941, \u0938\u092e\u0942\u0939\u0915\u093e\u0930\u094d\u092f \u0938\u0947 \u0938\u0940\u0916)",
+        "nativeQueryRef": "\u092a\u0942\u0930\u094d\u0935\u091c\u094d\u091e\u093e\u0928 \u0938\u0947 \u0936\u0941\u0930\u0941, \u0938\u092e\u0942\u0939\u0915\u093e\u0930\u094d\u092f \u0938\u0947 \u0938\u0940\u0916",
+        "displayName": "\u092a\u0942\u0930\u094d\u0935\u091c\u094d\u091e\u093e\u0928 \u0938\u0947 \u0936\u0941\u0930\u0941, \u0938\u092e\u0942\u0939\u0915\u093e\u0930\u094d\u092f \u0938\u0947 \u0938\u0940\u0916"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "CLSS topics recalled/\u092a\u0941\u0928\u0930\u0935\u0932\u094b\u0915\u0928 \u090f\u0935\u0902 \u0938\u092e\u0947\u0915\u0928"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.CLSS topics recalled/\u092a\u0941\u0928\u0930\u0935\u0932\u094b\u0915\u0928 \u090f\u0935\u0902 \u0938\u092e\u0947\u0915\u0928)",
+        "nativeQueryRef": "\u092a\u0941\u0928\u0930\u0935\u0932\u094b\u0915\u0928 \u090f\u0935\u0902 \u0938\u092e\u0947\u0915\u0928",
+        "displayName": "\u092a\u0941\u0928\u0930\u0935\u0932\u094b\u0915\u0928 \u090f\u0935\u0902 \u0938\u092e\u0947\u0915\u0928"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "CLSS topics recalled/\u0915\u0915\u094d\u0937\u093e \u092a\u094d\u0930\u092c\u0902\u0927\u0928 \u0915\u0947 \u0936\u0941\u0930\u0941\u0906\u0924\u0940 \u092a\u094d\u0930\u092f\u093e\u0938"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.CLSS topics recalled/\u0915\u0915\u094d\u0937\u093e \u092a\u094d\u0930\u092c\u0902\u0927\u0928 \u0915\u0947 \u0936\u0941\u0930\u0941\u0906\u0924\u0940 \u092a\u094d\u0930\u092f\u093e\u0938)",
+        "nativeQueryRef": "\u0915\u0915\u094d\u0937\u093e \u092a\u094d\u0930\u092c\u0902\u0927\u0928 \u0915\u0947 \u0936\u0941\u0930\u0941\u0906\u0924\u0940 \u092a\u094d\u0930\u092f\u093e\u0938",
+        "displayName": "\u0915\u0915\u094d\u0937\u093e \u092a\u094d\u0930\u092c\u0902\u0927\u0928 \u0915\u0947 \u0936\u0941\u0930\u0941\u0906\u0924\u0940 \u092a\u094d\u0930\u092f\u093e\u0938"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "CLSS topics recalled/No topic recalled"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.CLSS topics recalled/No topic recalled)",
+        "nativeQueryRef": "No topic recalled",
+        "displayName": "No topic recalled"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: Unknown ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: hundredPercentStackedBarChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Processes to cascade CLSS learnings at school level/Participating teacher share their notes"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Processes to cascade CLSS learnings at school level/Participating teacher share their notes)",
+        "nativeQueryRef": "Share their notes",
+        "displayName": "Share their notes"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Activities participated over 2025-26 academic year/CLSS"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Activities participated over 2025-26 academic year/CLSS)",
+        "nativeQueryRef": "Total",
+        "displayName": "Total"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: hundredPercentStackedBarChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Processes to cascade CLSS learnings at school level/Resources shared in the school whatsapp group"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Processes to cascade CLSS learnings at school level/Resources shared in the school whatsapp group)",
+        "nativeQueryRef": "Resources shared in the school whatsapp group",
+        "displayName": "Resources shared in the school whatsapp group"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Activities participated over 2025-26 academic year/CLSS"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Activities participated over 2025-26 academic year/CLSS)",
+        "nativeQueryRef": "Total",
+        "displayName": "Total"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: hundredPercentStackedBarChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Processes to cascade CLSS learnings at school level/No learnings shared or no set process adopted"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Processes to cascade CLSS learnings at school level/No learnings shared or no set process adopted)",
+        "nativeQueryRef": "No learnings shared or no set process adopted",
+        "displayName": "No learnings shared or no set process adopted"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Activities participated over 2025-26 academic year/CLSS"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Activities participated over 2025-26 academic year/CLSS)",
+        "nativeQueryRef": "Total",
+        "displayName": "Total"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: cardVisual ---
+  QueryState: {
+  "Data": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Processes to cascade CLSS learnings at school level/No learnings shared or no set process adopted"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Processes to cascade CLSS learnings at school level/No learnings shared or no set process adopted)",
+        "nativeQueryRef": "No learnings shared or no set process adopted",
+        "displayName": "No learnings shared or no set process adopted"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Processes to cascade CLSS learnings at school level/Other"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Processes to cascade CLSS learnings at school level/Other)",
+        "nativeQueryRef": "Other",
+        "displayName": "Other"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Processes to cascade CLSS learnings at school level/Participating teacher share their notes"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Processes to cascade CLSS learnings at school level/Participating teacher share their notes)",
+        "nativeQueryRef": "Share their notes",
+        "displayName": "Share their notes"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Processes to cascade CLSS learnings at school level/Participating teacher verbally cascade the learning (Peer learning discussions"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Processes to cascade CLSS learnings at school level/Participating teacher verbally cascade the learning (Peer learning discussions)",
+        "nativeQueryRef": "Verbally cascade the learning",
+        "displayName": "Verbally cascade the learning"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Processes to cascade CLSS learnings at school level/Resources shared in the school whatsapp group"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Processes to cascade CLSS learnings at school level/Resources shared in the school whatsapp group)",
+        "nativeQueryRef": "Resources shared in the school whatsapp group",
+        "displayName": "Resources shared in the school whatsapp group"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: hundredPercentStackedBarChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Processes to cascade CLSS learnings at school level/Participating teacher verbally cascade the learning (Peer learning discussions"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Processes to cascade CLSS learnings at school level/Participating teacher verbally cascade the learning (Peer learning discussions)",
+        "nativeQueryRef": "Verbally cascade the learning (Peer learning discussions",
+        "displayName": "Verbally cascade the learning (Peer learning discussions"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Activities participated over 2025-26 academic year/CLSS"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Activities participated over 2025-26 academic year/CLSS)",
+        "nativeQueryRef": "Total",
+        "displayName": "Total"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: hundredPercentStackedBarChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Processes to cascade CLSS learnings at school level/Other"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Processes to cascade CLSS learnings at school level/Other)",
+        "nativeQueryRef": "Other",
+        "displayName": "Other"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Activities participated over 2025-26 academic year/CLSS"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Activities participated over 2025-26 academic year/CLSS)",
+        "nativeQueryRef": "Total Participated",
+        "displayName": "Total Participated"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: cardVisual ---
+  QueryState: {
+  "Data": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "title CLSS"
+          }
+        },
+        "queryRef": "Quant_Structured.title CLSS",
+        "nativeQueryRef": "title CLSS"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: Unknown ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: shape ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: columnChart ---
+  QueryState: {
+  "Category": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Aided/Unaided"
+              }
+            },
+            "Property": "Intervention"
+          }
+        },
+        "queryRef": "Aided/Unaided.Value",
+        "nativeQueryRef": "Intervention",
+        "active": true
+      }
+    ]
+  },
+  "Series": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Aided/Unaided"
+              }
+            },
+            "Property": "Type"
+          }
+        },
+        "queryRef": "Aided/Unaided.Type",
+        "nativeQueryRef": "Type"
+      }
+    ]
+  },
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Aided/Unaided"
+                  }
+                },
+                "Property": "Type"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "queryRef": "CountNonNull(Aided/Unaided.Type)",
+        "nativeQueryRef": "Count of Type"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: barChart ---
+  QueryState: {
+  "Category": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "EDS Filler data"
+              }
+            },
+            "Property": "CLSS Structure Recall Rate"
+          }
+        },
+        "queryRef": "EDS Filler data.CLSS Structure Recall Rate",
+        "nativeQueryRef": "CLSS Structure Recall Rate",
+        "active": true
+      }
+    ]
+  },
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "EDS Filler data"
+                  }
+                },
+                "Property": "Name"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "queryRef": "CountNonNull(EDS Filler data.Name)",
+        "nativeQueryRef": "Count of Name"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: Unknown ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: cardVisual ---
+  QueryState: {
+  "Data": {
+    "projections": [
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "other %"
+          }
+        },
+        "queryRef": "Quant_Structured.other %",
+        "nativeQueryRef": "other %",
+        "format": "0%;-0%;0%"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: donutChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Challenegs/others"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Challenegs/others)",
+        "nativeQueryRef": "Sum of Challenegs/others"
+      },
+      {
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Quant_Structured"
+              }
+            },
+            "Property": "Total Challenges"
+          }
+        },
+        "queryRef": "Quant_Structured.Total Challenges",
+        "nativeQueryRef": "Total Challenges"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: hundredPercentStackedBarChart ---
+  QueryState: {
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Processes to cascade CLSS learnings at school level/No learnings shared or no set process adopted"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Processes to cascade CLSS learnings at school level/No learnings shared or no set process adopted)",
+        "nativeQueryRef": "No learnings shared or no set process adopted",
+        "displayName": "No learnings shared or no set process adopted"
+      },
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quant_Structured"
+                  }
+                },
+                "Property": "Activities participated over 2025-26 academic year/CLSS"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "queryRef": "Sum(Quant_Structured.Activities participated over 2025-26 academic year/CLSS)",
+        "nativeQueryRef": "Total",
+        "displayName": "Total"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: textbox ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: actionButton ---
+  QueryState: {}
+
+--- Visual ID: visual.json | Type: actionButton ---
+  QueryState: {}
+
+======================================================
+PAGE 4: Filler (ID: e4201d78762f97ed613d)
+======================================================
+
+--- Visual ID: visual.json | Type: tableEx ---
+  QueryState: {
+  "Values": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "EDS Filler data"
+              }
+            },
+            "Property": "Name"
+          }
+        },
+        "queryRef": "EDS Filler data.Name",
+        "nativeQueryRef": "Name"
+      },
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "EDS Filler data"
+              }
+            },
+            "Property": "Areas of Teacher Awareness Gaps"
+          }
+        },
+        "queryRef": "EDS Filler data.Areas of Teacher Awareness Gaps",
+        "nativeQueryRef": "Areas of Teacher Awareness Gaps"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: clusteredColumnChart ---
+  QueryState: {
+  "Category": {
+    "projections": [
+      {
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "EDS Filler data"
+              }
+            },
+            "Property": "CM RISE TPD Awareness Rate"
+          }
+        },
+        "queryRef": "EDS Filler data.CM RISE TPD Awareness Rate",
+        "nativeQueryRef": "CM RISE TPD Awareness Rate",
+        "active": true
+      }
+    ]
+  },
+  "Y": {
+    "projections": [
+      {
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "EDS Filler data"
+                  }
+                },
+                "Property": "Name"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "queryRef": "CountNonNull(EDS Filler data.Name)",
+        "nativeQueryRef": "Count of Name"
+      }
+    ]
+  }
+}
+
+--- Visual ID: visual.json | Type: textbox ---
+  QueryState: {}

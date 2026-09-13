@@ -1,0 +1,119 @@
+--- PAGE 1 ---
+POWER BI DASHBOARD ANALYSIS REPORT
+Comprehensive Inspection Across All 4 Pages
+(N=60 Study Teachers)
+Published Power BI Report URL Analysis | CM RISE TPD Evaluation
+Executive Overview: This report presents an exhaustive inspection of the 4-page Power BI dashboard (Overview, Digital
+Course, CLSS, and Filler) rendered via Playwright automation. It synthesizes ground-truth participation metrics, perceived
+utility rates, awareness funnel breakdowns, and critical execution barriers across 60 government school teachers in
+Madhya Pradesh.
+1. Page 1: Overview & Baseline Demographics
+The Overview page captures cohort demographics, intervention participation rates, and resource distribution.
+Intervention Channel
+Participated Count
+Perceived Useful Count
+Utility Efficiency Rate (%)
+Subject Training
+56 / 60 (93.3%)
+52 Teachers
+92.9% (Highest Utility)
+CLSS Workshops
+53 / 60 (88.3%)
+32 Teachers
+60.4%
+Digital Training
+52 / 60 (86.7%)
+38 Teachers
+73.1%
+YouTube Training (YTL)
+21 / 60 (35.0%)
+16 Teachers
+76.2%
+SKG (Sheekh ki Yatra)
+6 / 60 (10.0%)
+6 Teachers
+100.0%
+WEBEX Meetings
+1 / 60 (1.7%)
+1 Teacher
+100.0%
+2. Page 2: Digital Course Adoption & Friction Points
+Microsoft Power BI Dashboard Analysis Report | CM RISE TPD
+Exhaustive Inspection of 4 Dashboard Pages (N=60 Teachers)
+Page 1 of 4
+
+--- PAGE 2 ---
+Awareness Gap: Only 23 out of 60 teachers (38.3%) are actively aware of digital training initiatives, yet 52 teachers
+(86.7%) participate when prompted via WhatsApp.
+Digital Metric
+Power BI Value
+Key Operational Insight
+Preferred Timing
+48 Teachers (80.0%) After School
+Teachers do not learn during school hours due to
+classroom load.
+Available Time Window
+18 Teachers (30.0%) prefer 2 Hours
+2 hours is the optimal maximum completion
+threshold.
+Platform Usage
+DIKSHA (40), iGOT (30), Both (24)
+Platform fragmentation exists; DIKSHA is the
+dominant channel.
+Most Engaging Content
+Quizzes/Assessments (35.9%), Animated
+Videos (23.3%)
+Teachers prefer short visual/interactive content
+over long PDFs.
+Primary Barriers
+Time Constraints (27.8%), Tech Issues
+(22.2%)
+Network, device sharing & video length cause
+disengagement.
+Microsoft Power BI Dashboard Analysis Report | CM RISE TPD
+Exhaustive Inspection of 4 Dashboard Pages (N=60 Teachers)
+Page 2 of 4
+
+--- PAGE 3 ---
+3. Page 3: CLSS (Cluster Level Sharing Sessions) Breakdown
+Participation vs Utility: 53 teachers participated, but only 32 found it useful (60.4% utility rate). 34.0% failed to recall any
+specific topic.
+CLSS Dimension
+Power BI Finding
+Strategic Action Required
+Topic Recall Deficit
+18 Teachers (34.0%) recalled NO topic
+Reinforce sessions with post-meeting 1-page
+WhatsApp summary cards.
+Top Recalled Topics
+Classroom Management (14), Homework
+(11)
+Focus future CLSS sessions on practical
+classroom management.
+School Cascade Process
+20 Verbally Share, 15 Share NO Process
+Mandate 10-min Monday assembly briefing slot
+for attendees.
+Attendance Form Barriers
+Session End Rush (18.2%), Unwilling
+(12.1%)
+Provide 1-click WhatsApp attendance forms
+instead of long URLs.
+4. Page 4: Filler / Awareness Funnel Deep Dive
+Unaided vs Aided Program Recall: 13 teachers recall interventions without knowing the official programme name, while only
+1 teacher has unaided recall of full programme details.
+Microsoft Power BI Dashboard Analysis Report | CM RISE TPD
+Exhaustive Inspection of 4 Dashboard Pages (N=60 Teachers)
+Page 3 of 4
+
+--- PAGE 4 ---
+5. Strategic Recommendations Based on Power BI Inspection
+1. Capitalize on WhatsApp Broadcasts: 47.8% of teachers get course info from direct links and 26.9% from WhatsApp.
+Stop relying on passive web portals; push 1-click links directly to WhatsApp groups.
+2. Micro-Video Architecture: Since 80% learn at home after school and prefer 2-hour windows, break courses into
+15-minute animated modules.
+3. Formalize the CLSS Cascade: 28.3% of teachers share zero CLSS learnings upon return. Institute a 10-minute
+mandatory Monday assembly debrief slot.
+Microsoft Power BI Dashboard Analysis Report | CM RISE TPD
+Exhaustive Inspection of 4 Dashboard Pages (N=60 Teachers)
+Page 4 of 4

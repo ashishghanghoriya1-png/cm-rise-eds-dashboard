@@ -1,0 +1,216 @@
+=== TABLE 1 ===
+Ecosystem Diagnostic Study (EDS) | EDS is a structured diagnostic exercise that examines a teacher professional development (TPD) programme from the perspective of the teachers moving through it, to inform design decisions for the next planning cycle. It is designed in phased manner to cover all relevant stakeholders in the TPD programme.
+Classroom Transfer | Classroom transfer, as EDS defines and codes it: evidence that a teacher actually put something learned from an intervention (IPT, CLSS, a digital course) into practice in their own classroom. These are confirmed on account of teachers’ self reporting.
+CLSS learning cascade | Process in which participating teachers in monthly shaikshik samwad at the cluster level are expected to relay the learning to the other teachers in the school who couldn’t participate for the continued learning.
+Structural Barriers | Refers to a reason a teacher couldn't attend particular intervention that sits entirely outside their own choice, motivation, or awareness- a physical, institutional, or circumstantial condition that makes attendance genuinely impossible, not just less likely.
+ | 
+ | 
+
+=== TABLE 2 ===
+Participation category | Definition (participation profile) | Population
+High | Attended the in-person cascaded subject training (2025-26) Attended at least two peer learning sessions (out of 5 sessions conducted during 2025-26) Completed all two digital courses (PLC and PSP4) | 880
+Medium | Attended the in-person cascaded subject training (2025-26) Attended at least two peer learning sessions Completed at least one digital course (from PLC and PSP4) | 3,647
+Low 1 | Attended the in-person cascaded subject training (2025-26) Attended at least one peer learning session Completed no digital course | 6,660
+Low 2 | Attended the in-person cascaded subject training (2025-26) Attended no peer learning sessions Completed at least one digital course | 6,127
+
+=== TABLE 3 ===
+Because the participation categories are Peepul's own construct (limited by the available backend attendance data), the comparison in Section 3 between category and observed field participation is a check of the sampling design's own assumptions. The resulting match rate is a finding about the categorisation logic itself, and an input for how future studies should define participation.
+
+=== TABLE 4 ===
+Dimension | Distribution
+Total | 60 government middle school teachers (Grades 6–8)
+Gender | 38 male, 22 female
+Experience | 4 novice (≤5 yr), 27 mid-career (6–20 yr), 29 veteran (>20 yr)
+Geography | 35 districts
+Subjects | Predominantly Mathematics, Science, and Social Science, with smaller numbers in Hindi, Sanskrit, and English
+
+=== TABLE 5 ===
+# | Theme | Origin
+1 | Awareness, Access and Perception | Deductive
+2 | Participation and Engagement | Deductive
+3 | Quality of Learning Experience | Deductive
+4 | Relevance and Classroom Applicability | Deductive
+5 | System Support and Professional Culture | Deductive
+6 | Barriers and Opportunities for Improvement | Deductive
+7 | Participation-Reality Gap and Equity | Inductive (emerged during coding)
+
+=== TABLE 6 ===
+Tier | Standard | Requirement
+Tier 1 Substantial | Named technique, specific context, independent confirmation or a quantified outcome | Used- Respondent’s independent and observer's confidence   Ideal- Confirmed by note-taker observation or a measurable student outcome. Self-report alone does not qualify.
+Tier 2 Moderate | Named technique, stated application, stated but non-quantified outcome | Specific and credible, but unconfirmed by an independent source.
+Tier 3 Minimal | Technique named without further detail | No mechanism or outcome described. Recorded, but given limited analytical weight.
+
+=== TABLE 7 ===
+Source | What it is | What it can and cannot establish
+Official (RSK backed) participation/attendance records | Backend participation data underlying the engagement/ participation categories | Tests the sampling categorisation against actual EDS realized data.
+Classroom observation exercise | 1,045 observations; 439 master trainers sampled by simple random sampling from a population of 1,753, generalisable to their classrooms | Tests self-reported technique use against observed practice at scale. Reliability is strong for Area 1, Teaching Process (Cronbach's alpha 0.79), and weak for Area 2, Classroom Culture (alpha 0.18); Area 2 figures are treated as indicative
+Platform assessment data | DIKSHA PLC course post-test, approximately 97,000 teachers, average score 81.63 percent; and general-pedagogy pre/post data from the classroom observation exercise (Hook technique 48 percent to 98 percent) | Confirms knowledge gain at scale; does not by itself establish classroom transfer
+IPT Feedback form data | It was collected post completion of the IPT training at the block level, filled by more than 50000 teachers. It shares teachers immidiet feedback on training quality with respect to content quality, infrastructural arrangement, relevance and implementation confidence. | Confirms satisfaction, perceived relevance, and self-reported confidence at scale, assessed immediately post-training on a much larger and different population than this study's 60 teachers; does not measure classroom transfer, and cannot verify what any individual interviewed teacher experienced
+
+=== TABLE 8 ===
+Tier | Definition | Teachers
+0 | Have not done the Diksha course (20) or couldn’t recall Diksha course name (6) | 26
+1 | A single DIKSHA course, named or recalled only generically | 29
+2 | Two distinct DIKSHA courses, named or described in the plural | 5
+
+=== TABLE 9 ===
+Category | n | IPT met | CLSS met | Digital met | Overall match
+High | 20 | 20 of 20 | 18 of 20 | 1 of 20 | 1 of 20
+Medium | 20 | 19 of 20 | 19 of 20 | 15 of 20 | 14 of 20
+Low-2 | 10 | 8 of 10 | 10 of 10 | 4 of 10 | 4 of 10
+Low-1 | 10 | 9 of 10 | 5 of 10 | 10 of 10 | 5 of 10
+All | 60 | 56 of 60 | 52 of 60 | 30 of 60 | 24 of 60
+
+=== TABLE 10 ===
+Gap type | Teachers
+Digital only | 25
+CLSS only | 5
+Digital and IPT | 3
+CLSS and Digital | 2
+CLSS and IPT | 1
+
+=== TABLE 11 ===
+Reading guide: green rows describe something that is demonstrably working, based on direct evidence. Amber rows describe something that is partly working, working inconsistently, or working for some teachers but not others. Coral rows describe a gap, a barrier, or something that is not currently working as intended.
+
+=== TABLE 12 ===
+Learning transfer tier | Teachers
+Tier 1 (Substantial) | 13
+Tier 2 (Moderate) | 7
+Tier 3 (Minimal) | 4
+
+=== TABLE 13 ===
+Indicator | Result
+Overall satisfaction (highly satisfactory) | 70%
+Training content rated most relevant/practical | 43%
+Confidence/preparedness to build a lesson plan (most-satisfactory) | 65%
+Infrastructure/arrangement ( most-satisfactory) | 66%
+Received training materials (this study's sample) | 41 of 60 (68%)
+
+=== TABLE 14 ===
+Status | Summary
+Working | Attendance (56 of 60) and perceived usefulness (52 of 56) are both close to a ceiling.
+Working | Seven teachers transferred a technique with no materials at all, each independently confirmed.
+Working | The strongest transfer cases combine several techniques together.
+Working | A separate large-scale feedback exercise (50,899 teachers) corroborates this: 70% rate overall training highly satisfactory.
+Moderate | Follow-up activity (YTL) is valued by the teachers who engage with it, but reaches only about a third of the sample.
+Moderate | The same feedback exercise shows a gap between understanding training and being able to apply or teach it: only 30% are highly confident applying engagement strategies in their own lesson plans, and only 22% mentoring another teacher on the same content.
+Moderate | Feedback on overall training design, arrangements and applicability have been mixed.
+Moderate | IPT Learning transfer to classroom (24 of 56)
+Not working | 19 of 60 teachers receive no training materials at all.
+Not working | 8 teachers criticise the training itself as too theory-heavy relative to practice. Lower confideence in implementing the training learning in classroom- teachers resport content to be not contextual to their classroom and particularly not confident in skill to take the learning forward in classroom.
+Not working | 22 of 60 attend follow-up activity but retain none of it; monitoring relies on a single, retrospective instrument.
+Not working | Where YTL fails, it fails for three separable reasons: scheduling conflicts (the largest), absence of any monitoring mechanism, and access barriers that are not all the same barrier (digital discomfort, low-bandwidth need, server failure).
+Not working | Sheekh ki Yatra (SKY) reaches far fewer teachers than YTL (9 of 60 vs. 21 of 60) and shows weaker engagement even within that smaller group.
+
+=== TABLE 15 ===
+Feature | Teachers naming it
+Interactive mid-course questions | 20
+Animated videos | 17
+Assessments | 14
+Real classroom examples | 12
+Readings and resources | 10
+Nothing engaging | 9
+Post-course work | 4
+
+=== TABLE 16 ===
+Theme
+Shorter modules (specific length requested)
+Local / subject-specific examples
+Offline / downloadable access
+Names a platform defect as the main concern (login and buffring issues)
+
+=== TABLE 17 ===
+Recall strength | Teachers | Evidence
+Strong | T22, T25, T56 | Name a specific course and describe its content or classroom application (e.g. T22 names ‘Bahuvidhii Shikshan aur Bahuvidhii Abhivyakti’ and explains why it worked; T25 applies the MADAK PADARTH course to student awareness work). T5’s classification is pending confirmation.
+Moderate | T6, T13, T14, T45, T55 | Name a specific course with little or no further elaboration (e.g. ‘PLC’, ‘AI’).
+Weak | T30, T59 | T30 describes a general revision function with no course named; T59 names a course but recall is confirmed COVID-era, not current cycle.
+
+=== TABLE 18 ===
+Tier | Definition | Teachers | Illustrative case
+Tier 1 (Substantial) | Named technique + classroom context + independent confirmation or a clearly stated outcome | 11 | T41 (Sidhi): a peer-sourced technique on student attendance, with a stated, quantified outcome — attendance rose to roughly 90 percent.
+Tier 2 (Moderate) | Named technique + application context, without independent confirmation or a specific outcome | 16 | T39: cold calling and seating arrangement, applied for a stated purpose (fair selection, better connection), not independently observed.
+Tier 3 (Minimal) | Technique named without mechanism or outcome, or self-report only, unconfirmed | 7 | T13: names the topic covered (seating arrangement) but gives no specific classroom example of its use.
+No confirmed transfer | No technique named, or explicit non-application (includes T24, excluded as an unconfirmed 'candidate' case) | 19 | 
+
+=== TABLE 19 ===
+Technique | Teachers | What changed in the classroom
+Cold Calling | 17 | Calling on students at random rather than volunteers; teachers report wider participation
+Seating reorganisation | 14 | U-shaped or rotating seating, for better visibility and eye contact
+Entry Routine / Hook | 13 | An opening activity connected to what students already know, before the lesson begins
+Effective Homework | 10 | Homework that is realistic to complete and tied to what was taught, set on a regular schedule
+Group work / peer learning | 9 | Paired discussion before individual answers
+Subject-specific application | 6 | A technique tied to a named curriculum topic — the rarest and highest-quality evidence category
+
+=== TABLE 20 ===
+Channel | Type | Teachers
+Verbal peer discussion | Informal | 20
+WhatsApp group | Informal | 11
+Shared written notes | Informal | 8
+School staff meeting | Formal (confirmed in practice) | 2
+School staff meeting | Formal (proposed, not practiced) | 8
+No cascade at all | — | 15
+
+=== TABLE 21 ===
+CLSS topic recalled | Teachers
+Classroom management | 14
+Effective homework | 11
+Prior-knowledge and group-work techniques | 9
+Review and consolidation practices | 7
+Effective repetition | 6
+No specific topic recalled | 18
+
+=== TABLE 22 ===
+CRO has not been formally rolled out. Mid-level academic officials are currently being trained to conduct observation and mentoring visits. The findings in this section describe the baseline these officials are starting from and what teachers say they want from the intervention, they are design input for a programme still being built, not an evaluation of one that is already running.
+
+=== TABLE 23 ===
+What teachers want | Teachers | In their own words
+Dignity: private, respectful feedback | 16 | Never in front of students
+Solution-focused guidance | 17 | What to do differently, not a list of what was wrong
+Subject-credible observer | 15 | An observer who understands the subject being taught
+Co-teaching, not only observing | 10 | Wants the mentor to teach alongside them, not just watch
+
+=== TABLE 24 ===
+Intervention | Participation rate | Transfer rate | Gap (pts) | Participation basis | Transfer basis
+IPT | 93% | 43% | 50 | 56 of 60 attend | 24 of 56 attendees (43%) confirmed transfer
+Digital Courses | 67% | 38% | 29 | 40 of 60 (67%) show DIKSHA course activity on record | 23 of 60 (38%) recall a specific course topic or name
+CLSS | 88% | 64% | 24 | 53 of 60 (88%) attend at least one session | 34 of 53 attendees (64%) confirmed transfer
+
+=== TABLE 25 ===
+Measure | Top rating (%)
+Overall training satisfaction | 70%
+Training module understandable | 57%
+Content rated most practical for classroom | 43%
+Confident applying engagement strategies in own lesson plan | 30%
+Confident mentoring another teacher on the same content | 22%
+
+=== TABLE 26 ===
+Technique | EDS Self-reported | CRO observed
+Cold Calling | 33% | 21%
+Entry Hook | 25% | 47%
+Think-Pair-Share | 6% | 9%
+Group Discussion | 18% | 9%
+Constructive Feedback | 10% | 18%
+
+=== TABLE 27 ===
+Stated as a design principle: a TPD system that measures participation alone will systematically overstate its own impact, because participation is the input the system can observe, while transfer is the outcome it currently cannot. Closing this gap depends less on changing teacher behaviour than on building the system's capacity to observe what happens after delivery.
+
+=== TABLE 28 ===
+Claim | Strongest counter-case | Confidence after testing
+CLSS transfer at 64% (34 of 53), Tier 1: 11, Tier 2: 16, Tier 3: 7 | T46: co-facilitator, five sessions, no transfer; several single-session attendees show similarly limited transfer | High. Pattern holds; full tier breakdown now available and applied throughout this report
+Participation-reality gap confirmed across interventions | 34 of 51 CLSS attendees do show transfer; T50 describes an explicitly non-performative engagement | High. Confirmed by independent observation, not a function of method alone
+Post-delivery gap present across all interventions | YTL follow-up and CLSS partially fulfil this role for some teachers | High, with the finding qualified to incomplete reach rather than total absence
+Preference for non-punitive CRO | T59 argues for a degree of accountability pressure | High. T59 is the sole dissenting view among sixty teachers, and is recorded rather than treated as noise
+Gendered time barrier | T22, T26, T31, and T55 show high engagement despite the same constraint | Medium. The barrier is real for a sub-group but not universal or deterministic
+Peer-source mechanism in CLSS | Attribution depends on teacher self-report, which is not fully reliable | Medium. The direction of the finding is credible; the count of five should be read as a minimum
+
+=== TABLE 29 ===
+A study that hears only one side of a delivery system can identify every gap in it and still not establish where each gap originates. Pairing the teacher perspective with the officials' perspective is what turns a description of gaps into a diagnosis of their source, which is the information required for design decisions.
+
+=== TABLE 30 ===
+Element | Proposal
+Respondents | DIET and BAC/CAC officials, Jan Shikshaks, CLSS facilitators and Master Trainers, district and block programme staff, and the mid-level academic officials currently being trained for CRO
+Focus | How officials understand the purpose of each intervention and their own role within it; where they observe the system breaking down; the constraints under which they operate; and their perception of teacher engagement .
+Method | In-depth interviews following this phase's paired-observation design, supplemented by a small number of focus group discussions at block and district level. .  Additionally, systematic data can be collated from coming interventions to inform the study on emerging questions such as CLSS DO, State-orientation, MT training etc
+Integration | Findings paired directly with the teacher findings from this phase, intervention by intervention, to identify where each gap originates in the delivery chain
+Timing | Ahead of the next planning cycle, so findings can inform redesign decisions before they are finalised
+

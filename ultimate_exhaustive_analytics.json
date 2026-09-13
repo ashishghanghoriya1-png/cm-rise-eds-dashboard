@@ -1,0 +1,4326 @@
+{
+  "Quant_Structured": {
+    "rows": 75,
+    "cols": 103,
+    "total_cells": 7725,
+    "columns_detail": [
+      {
+        "col_idx": 1,
+        "col_name": "Teacher_ID",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 30.5,
+          "std": 17.46,
+          "min": 1.0,
+          "max": 60.0,
+          "median": 30.5
+        },
+        "top_frequencies": {
+          "Teacher_ID": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1
+        },
+        "text_samples": []
+      },
+      {
+        "col_idx": 2,
+        "col_name": "Name of the interviewer",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Ritesh Pandey": 8,
+          "Aishwarya Yadav": 7,
+          "Rashmi Mishra": 6,
+          "Rahul Kumar": 6,
+          "Srujan Deshpande": 6
+        },
+        "text_samples": [
+          "Name of the interviewer",
+          "Pushpendra Singh",
+          "Dharmendra Mishra"
+        ]
+      },
+      {
+        "col_idx": 3,
+        "col_name": "Name of the note-taker",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Vaibhav Tambe": 6,
+          "Vaibhav Kurwade": 6,
+          "Devendra Sharma": 5,
+          "Jay Prakash": 4,
+          "Other": 4
+        },
+        "text_samples": [
+          "Name of the note-taker",
+          "Dharmendra Mishra",
+          "Dharmendra Mishra"
+        ]
+      },
+      {
+        "col_idx": 4,
+        "col_name": "District of respondent teacher",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Balaghat": 4,
+          "Betul": 3,
+          "Ujjain": 3,
+          "Chhindwara": 3,
+          "Datia": 3
+        },
+        "text_samples": [
+          "District of respondent teacher"
+        ]
+      },
+      {
+        "col_idx": 5,
+        "col_name": "Gender of respondent",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Male": 38,
+          "Female": 22,
+          "Gender of respondent": 1
+        },
+        "text_samples": [
+          "Gender of respondent"
+        ]
+      },
+      {
+        "col_idx": 6,
+        "col_name": "Date of the interview",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "2026-06-12 00:00:00": 8,
+          "2026-06-15 00:00:00": 8,
+          "2026-06-16 00:00:00": 8,
+          "2026-06-19 00:00:00": 8,
+          "2026-06-11 00:00:00": 7
+        },
+        "text_samples": [
+          "Date of the interview",
+          "2026-06-10 00:00:00",
+          "2026-06-10 00:00:00"
+        ]
+      },
+      {
+        "col_idx": 7,
+        "col_name": "Subject taught by teacher",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Maths Science": 14,
+          "Social Science": 11,
+          "Maths": 8,
+          "Social Science Sanskrit": 6,
+          "Hindi Social Science": 5
+        },
+        "text_samples": [
+          "Subject taught by teacher",
+          "Hindi Social Science",
+          "Hindi Social Science Sanskrit"
+        ]
+      },
+      {
+        "col_idx": 8,
+        "col_name": "Years of teaching experience",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 20.93,
+          "std": 8.78,
+          "min": 3.0,
+          "max": 43.0,
+          "median": 20.0
+        },
+        "top_frequencies": {
+          "16": 6,
+          "25": 6,
+          "28": 6,
+          "15": 5,
+          "13": 3
+        },
+        "text_samples": [
+          "Years of teaching experience"
+        ]
+      },
+      {
+        "col_idx": 9,
+        "col_name": "Subject taught by teacher__Hindi",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.18,
+          "std": 0.39,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 49,
+          "1": 11,
+          "Subject taught by teacher/Hindi": 1
+        },
+        "text_samples": [
+          "Subject taught by teacher/Hindi"
+        ]
+      },
+      {
+        "col_idx": 10,
+        "col_name": "Subject taught by teacher__English",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.12,
+          "std": 0.32,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 53,
+          "1": 7,
+          "Subject taught by teacher/English": 1
+        },
+        "text_samples": [
+          "Subject taught by teacher/English"
+        ]
+      },
+      {
+        "col_idx": 11,
+        "col_name": "Subject taught by teacher__Social Science",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.43,
+          "std": 0.5,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 34,
+          "1": 26,
+          "Subject taught by teacher/Social Science": 1
+        },
+        "text_samples": [
+          "Subject taught by teacher/Social Science"
+        ]
+      },
+      {
+        "col_idx": 12,
+        "col_name": "Subject taught by teacher__Maths",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.42,
+          "std": 0.5,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 35,
+          "1": 25,
+          "Subject taught by teacher/Maths": 1
+        },
+        "text_samples": [
+          "Subject taught by teacher/Maths"
+        ]
+      },
+      {
+        "col_idx": 13,
+        "col_name": "Subject taught by teacher__Sanskrit",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.13,
+          "std": 0.34,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 52,
+          "1": 8,
+          "Subject taught by teacher/Sanskrit": 1
+        },
+        "text_samples": [
+          "Subject taught by teacher/Sanskrit"
+        ]
+      },
+      {
+        "col_idx": 14,
+        "col_name": "Subject taught by teacher__Science",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.37,
+          "std": 0.49,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 38,
+          "1": 22,
+          "Subject taught by teacher/Science": 1
+        },
+        "text_samples": [
+          "Subject taught by teacher/Science"
+        ]
+      },
+      {
+        "col_idx": 15,
+        "col_name": "Subject taught by teacher__Other",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.02,
+          "std": 0.13,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 59,
+          "Subject taught by teacher/Other": 1,
+          "1": 1
+        },
+        "text_samples": [
+          "Subject taught by teacher/Other"
+        ]
+      },
+      {
+        "col_idx": 16,
+        "col_name": "Avg no. of classroom periods taken in a day",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 4.67,
+          "std": 1.56,
+          "min": 1.0,
+          "max": 7.0,
+          "median": 5.0
+        },
+        "top_frequencies": {
+          "6": 26,
+          "4": 14,
+          "5": 7,
+          "3": 6,
+          "1": 4
+        },
+        "text_samples": [
+          "Avg no. of classroom periods taken in a day"
+        ]
+      },
+      {
+        "col_idx": 17,
+        "col_name": "Activities participated over 2025-26 academic year__Subject Training",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.93,
+          "std": 0.25,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 1.0
+        },
+        "top_frequencies": {
+          "1": 56,
+          "0": 4,
+          "Activities participated over 2025-26 academic year/Subject Training": 1
+        },
+        "text_samples": [
+          "Activities participated over 2025-26 academic year/Subject Training"
+        ]
+      },
+      {
+        "col_idx": 18,
+        "col_name": "Activities participated over 2025-26 academic year__Digital Training",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.67,
+          "std": 0.48,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 1.0
+        },
+        "top_frequencies": {
+          "1": 40,
+          "0": 20,
+          "Activities participated over 2025-26 academic year/Digital Training": 1
+        },
+        "text_samples": [
+          "Activities participated over 2025-26 academic year/Digital Training"
+        ]
+      },
+      {
+        "col_idx": 19,
+        "col_name": "Activities participated over 2025-26 academic year__CLSS",
+        "non_null": 74,
+        "null": 1,
+        "completion_pct": 98.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.88,
+          "std": 0.32,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 1.0
+        },
+        "top_frequencies": {
+          "1": 53,
+          "0": 7,
+          "Activities participated over 2025-26 academic year/CLSS": 1,
+          "Annual Enagement ": 1,
+          "Subject Training": 1
+        },
+        "text_samples": [
+          "Activities participated over 2025-26 academic year/CLSS",
+          "Annual Enagement",
+          "Subject Training"
+        ]
+      },
+      {
+        "col_idx": 20,
+        "col_name": "Activities participated over 2025-26 academic year__SKG",
+        "non_null": 73,
+        "null": 2,
+        "completion_pct": 97.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 3.47,
+          "std": 10.82,
+          "min": 0.0,
+          "max": 56.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 52,
+          "1": 10,
+          "9": 2,
+          "Activities participated over 2025-26 academic year/SKG": 1,
+          "56": 1
+        },
+        "text_samples": [
+          "Activities participated over 2025-26 academic year/SKG"
+        ]
+      },
+      {
+        "col_idx": 21,
+        "col_name": "Activities participated over 2025-26 academic year__Webex",
+        "non_null": 62,
+        "null": 13,
+        "completion_pct": 82.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.02,
+          "std": 0.13,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 59,
+          "Activities participated over 2025-26 academic year/Webex": 1,
+          "1": 1,
+          "1 teacher (T60) haS attended primary CLSS out of 53": 1
+        },
+        "text_samples": [
+          "Activities participated over 2025-26 academic year/Webex",
+          "1 teacher (T60) haS attended primary CLSS out of 53"
+        ]
+      },
+      {
+        "col_idx": 22,
+        "col_name": "Activities participated over 2025-26 academic year__YTL",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.35,
+          "std": 0.48,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 39,
+          "1": 21,
+          "Activities participated over 2025-26 academic year/YTL": 1
+        },
+        "text_samples": [
+          "Activities participated over 2025-26 academic year/YTL"
+        ]
+      },
+      {
+        "col_idx": 23,
+        "col_name": "Activities participated over 2025-26 academic year__APF Demo Sessions",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 60,
+          "Activities participated over 2025-26 academic year/APF Demo Sessions": 1
+        },
+        "text_samples": [
+          "Activities participated over 2025-26 academic year/APF Demo Sessions"
+        ]
+      },
+      {
+        "col_idx": 24,
+        "col_name": "Activities participated over 2025-26 academic year__SIR",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.15,
+          "std": 0.36,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 51,
+          "1": 9,
+          "Activities participated over 2025-26 academic year/SIR": 1
+        },
+        "text_samples": [
+          "Activities participated over 2025-26 academic year/SIR"
+        ]
+      },
+      {
+        "col_idx": 25,
+        "col_name": "Activities participated over 2025-26 academic year__Muskaan Dreams- DIET Training",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.03,
+          "std": 0.18,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 58,
+          "1": 2,
+          "Activities participated over 2025-26 academic year/Muskaan Dreams- DIET Training": 1
+        },
+        "text_samples": [
+          "Activities participated over 2025-26 academic year/Muskaan Dreams- DIET Training"
+        ]
+      },
+      {
+        "col_idx": 26,
+        "col_name": "Activities participated over 2025-26 academic year__HM Training",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.12,
+          "std": 0.32,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 53,
+          "1": 7,
+          "Activities participated over 2025-26 academic year/HM Training": 1
+        },
+        "text_samples": [
+          "Activities participated over 2025-26 academic year/HM Training"
+        ]
+      },
+      {
+        "col_idx": 27,
+        "col_name": "Activities participated over 2025-26 academic year__Election related Duties",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.28,
+          "std": 0.45,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 43,
+          "1": 17,
+          "Activities participated over 2025-26 academic year/Election related Duties": 1
+        },
+        "text_samples": [
+          "Activities participated over 2025-26 academic year/Election related Duties"
+        ]
+      },
+      {
+        "col_idx": 28,
+        "col_name": "Activities participated over 2025-26 academic year__Any other",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.43,
+          "std": 0.5,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 34,
+          "1": 26,
+          "Activities participated over 2025-26 academic year/Any other": 1
+        },
+        "text_samples": [
+          "Activities participated over 2025-26 academic year/Any other"
+        ]
+      },
+      {
+        "col_idx": 29,
+        "col_name": "Do teachers find subject in-person training useful or helpful",
+        "non_null": 57,
+        "null": 18,
+        "completion_pct": 76.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Yes": 52,
+          "Not sure": 4,
+          "Do teachers find subject in-person training useful or helpful": 1
+        },
+        "text_samples": [
+          "Do teachers find subject in-person training useful or helpful"
+        ]
+      },
+      {
+        "col_idx": 30,
+        "col_name": "Training resources received from in-person training__PPT",
+        "non_null": 57,
+        "null": 18,
+        "completion_pct": 76.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.16,
+          "std": 0.37,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 47,
+          "1": 9,
+          "Training resources received from in-person training/PPT": 1
+        },
+        "text_samples": [
+          "Training resources received from in-person training/PPT"
+        ]
+      },
+      {
+        "col_idx": 31,
+        "col_name": "Training resources received from in-person training__Margdarshika_Teaching Plan__Modules",
+        "non_null": 57,
+        "null": 18,
+        "completion_pct": 76.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.64,
+          "std": 0.48,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 1.0
+        },
+        "top_frequencies": {
+          "1": 36,
+          "0": 20,
+          "Training resources received from in-person training/Margdarshika - Teaching Plan": 1
+        },
+        "text_samples": [
+          "Training resources received from in-person training/Margdarshika - Teaching Plan/Modules"
+        ]
+      },
+      {
+        "col_idx": 32,
+        "col_name": "Training resources received from in-person training__ToT",
+        "non_null": 57,
+        "null": 18,
+        "completion_pct": 76.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.04,
+          "std": 0.19,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 54,
+          "1": 2,
+          "Training resources received from in-person training/ToT": 1
+        },
+        "text_samples": [
+          "Training resources received from in-person training/ToT"
+        ]
+      },
+      {
+        "col_idx": 33,
+        "col_name": "Training resources received from in-person training__Not received",
+        "non_null": 57,
+        "null": 18,
+        "completion_pct": 76.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.34,
+          "std": 0.48,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 37,
+          "1": 19,
+          "Training resources received from in-person training/Not received": 1
+        },
+        "text_samples": [
+          "Training resources received from in-person training/Not received"
+        ]
+      },
+      {
+        "col_idx": 34,
+        "col_name": "Have they applied given resources_teaching lesson plan__ modules in their classroom",
+        "non_null": 39,
+        "null": 36,
+        "completion_pct": 52.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Yes": 16,
+          "No": 12,
+          "Not sure": 10,
+          "Have they applied given resources - teaching lesson plan/ modules in their class": 1
+        },
+        "text_samples": [
+          "Have they applied given resources - teaching lesson plan/ modules in their classroom?"
+        ]
+      },
+      {
+        "col_idx": 35,
+        "col_name": "Does teacher find SKG Sheekh ki Yatra useful",
+        "non_null": 10,
+        "null": 65,
+        "completion_pct": 13.3,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Yes": 6,
+          "Not Sure": 2,
+          "Does teacher find SKG (Sheekh ki Yatra) useful?": 1,
+          "No": 1
+        },
+        "text_samples": [
+          "Does teacher find SKG (Sheekh ki Yatra) useful?"
+        ]
+      },
+      {
+        "col_idx": 36,
+        "col_name": "Does teacher find Webex useful",
+        "non_null": 2,
+        "null": 73,
+        "completion_pct": 2.7,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Does teacher find Webex useful?": 1,
+          "No": 1
+        },
+        "text_samples": [
+          "Does teacher find Webex useful?"
+        ]
+      },
+      {
+        "col_idx": 37,
+        "col_name": "Does teacher find YTL useful",
+        "non_null": 22,
+        "null": 53,
+        "completion_pct": 29.3,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Yes": 16,
+          "Not Sure": 3,
+          "No": 2,
+          "Does teacher find YTL useful?": 1
+        },
+        "text_samples": [
+          "Does teacher find YTL useful?"
+        ]
+      },
+      {
+        "col_idx": 38,
+        "col_name": "Are there any online courses teacher has done in last 1 year",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Yes": 52,
+          "No": 8,
+          "Are there any online courses teacher has done in last 1 year?": 1
+        },
+        "text_samples": [
+          "Are there any online courses teacher has done in last 1 year?"
+        ]
+      },
+      {
+        "col_idx": 39,
+        "col_name": "Does teacher think digital or online courses are an effective way for teachers to learn",
+        "non_null": 53,
+        "null": 22,
+        "completion_pct": 70.7,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Yes": 38,
+          "No": 8,
+          "Not sure": 6,
+          "Does teacher think digital or online courses are an effective way for teachers t": 1
+        },
+        "text_samples": [
+          "Does teacher think digital or online courses are an effective way for teachers to learn?"
+        ]
+      },
+      {
+        "col_idx": 40,
+        "col_name": "How many hours teacher can allocate to engage with digital courses__ digital learning",
+        "non_null": 54,
+        "null": 21,
+        "completion_pct": 72.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "2 hr": 18,
+          "1 hr": 14,
+          "4-5 hrs": 11,
+          "3 hr": 10,
+          "How many hours teacher can allocate to engage with digital courses/ digital lear": 1
+        },
+        "text_samples": [
+          "How many hours teacher can allocate to engage with digital courses/ digital learning?"
+        ]
+      },
+      {
+        "col_idx": 41,
+        "col_name": "Timing to do online or digital courses__learning__During school hours",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.37,
+          "std": 0.49,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 38,
+          "1": 22,
+          "Timing to do online or digital courses/learning/During school hours": 1
+        },
+        "text_samples": [
+          "Timing to do online or digital courses/learning/During school hours"
+        ]
+      },
+      {
+        "col_idx": 42,
+        "col_name": "Timing to do online or digital courses__learning__After school",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.8,
+          "std": 0.4,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 1.0
+        },
+        "top_frequencies": {
+          "1": 48,
+          "0": 12,
+          "Timing to do online or digital courses/learning/After school": 1
+        },
+        "text_samples": [
+          "Timing to do online or digital courses/learning/After school"
+        ]
+      },
+      {
+        "col_idx": 43,
+        "col_name": "Timing to do online or digital courses__learning__During holidays or weekends",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.13,
+          "std": 0.34,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 52,
+          "1": 8,
+          "Timing to do online or digital courses/learning/During holidays or weekends": 1
+        },
+        "text_samples": [
+          "Timing to do online or digital courses/learning/During holidays or weekends"
+        ]
+      },
+      {
+        "col_idx": 44,
+        "col_name": "Most engaging features of DIKSHA digital course__Animated videos",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.42,
+          "std": 0.5,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 23,
+          "1": 17,
+          "Most engaging features of DIKSHA digital course/Animated videos": 1
+        },
+        "text_samples": [
+          "Most engaging features of DIKSHA digital course/Animated videos"
+        ]
+      },
+      {
+        "col_idx": 45,
+        "col_name": "Most engaging features of DIKSHA digital course__Real classroom examples",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.3,
+          "std": 0.46,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 28,
+          "1": 12,
+          "Most engaging features of DIKSHA digital course/Real classroom examples": 1
+        },
+        "text_samples": [
+          "Most engaging features of DIKSHA digital course/Real classroom examples"
+        ]
+      },
+      {
+        "col_idx": 46,
+        "col_name": "Most engaging features of DIKSHA digital course__Interactive questions__quizzes",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.5,
+          "std": 0.51,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.5
+        },
+        "top_frequencies": {
+          "0": 20,
+          "1": 20,
+          "Most engaging features of DIKSHA digital course/Interactive questions/quizzes": 1
+        },
+        "text_samples": [
+          "Most engaging features of DIKSHA digital course/Interactive questions/quizzes"
+        ]
+      },
+      {
+        "col_idx": 47,
+        "col_name": "Most engaging features of DIKSHA digital course__Readings__resources",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.25,
+          "std": 0.44,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 30,
+          "1": 10,
+          "Most engaging features of DIKSHA digital course/Readings/resources": 1
+        },
+        "text_samples": [
+          "Most engaging features of DIKSHA digital course/Readings/resources"
+        ]
+      },
+      {
+        "col_idx": 48,
+        "col_name": "Most engaging features of DIKSHA digital course__Assessments",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.35,
+          "std": 0.48,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 26,
+          "1": 14,
+          "Most engaging features of DIKSHA digital course/Assessments": 1
+        },
+        "text_samples": [
+          "Most engaging features of DIKSHA digital course/Assessments"
+        ]
+      },
+      {
+        "col_idx": 49,
+        "col_name": "Most engaging features of DIKSHA digital course__Post work",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.1,
+          "std": 0.3,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 36,
+          "1": 4,
+          "Most engaging features of DIKSHA digital course/Post work": 1
+        },
+        "text_samples": [
+          "Most engaging features of DIKSHA digital course/Post work"
+        ]
+      },
+      {
+        "col_idx": 50,
+        "col_name": "Most engaging features of DIKSHA digital course__Nothing",
+        "non_null": 29,
+        "null": 46,
+        "completion_pct": 38.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.32,
+          "std": 0.48,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 19,
+          "1": 9,
+          "Most engaging features of DIKSHA digital course/Nothing": 1
+        },
+        "text_samples": [
+          "Most engaging features of DIKSHA digital course/Nothing"
+        ]
+      },
+      {
+        "col_idx": 51,
+        "col_name": "Source of information on DIKSHA digital course__WhatsApp posters",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.45,
+          "std": 0.5,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 22,
+          "1": 18,
+          "Source of information on DIKSHA digital course/WhatsApp posters": 1
+        },
+        "text_samples": [
+          "Source of information on DIKSHA digital course/WhatsApp posters"
+        ]
+      },
+      {
+        "col_idx": 52,
+        "col_name": "Source of information on DIKSHA digital course__Dashboard",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.03,
+          "std": 0.16,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 39,
+          "Source of information on DIKSHA digital course/Dashboard": 1,
+          "1": 1
+        },
+        "text_samples": [
+          "Source of information on DIKSHA digital course/Dashboard"
+        ]
+      },
+      {
+        "col_idx": 53,
+        "col_name": "Source of information on DIKSHA digital course__JSK Instruction on whatsapp group",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.8,
+          "std": 0.41,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 1.0
+        },
+        "top_frequencies": {
+          "1": 32,
+          "0": 8,
+          "Source of information on DIKSHA digital course/JSK Instruction on whatsapp group": 1
+        },
+        "text_samples": [
+          "Source of information on DIKSHA digital course/JSK Instruction on whatsapp group"
+        ]
+      },
+      {
+        "col_idx": 54,
+        "col_name": "Source of information on DIKSHA digital course__CLSS",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.12,
+          "std": 0.33,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 35,
+          "1": 5,
+          "Source of information on DIKSHA digital course/CLSS": 1
+        },
+        "text_samples": [
+          "Source of information on DIKSHA digital course/CLSS"
+        ]
+      },
+      {
+        "col_idx": 55,
+        "col_name": "Source of information on DIKSHA digital course__VC",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 40,
+          "Source of information on DIKSHA digital course/VC": 1
+        },
+        "text_samples": [
+          "Source of information on DIKSHA digital course/VC"
+        ]
+      },
+      {
+        "col_idx": 56,
+        "col_name": "Source of information on DIKSHA digital course__Word of mouth",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.17,
+          "std": 0.38,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 33,
+          "1": 7,
+          "Source of information on DIKSHA digital course/Word of mouth": 1
+        },
+        "text_samples": [
+          "Source of information on DIKSHA digital course/Word of mouth"
+        ]
+      },
+      {
+        "col_idx": 57,
+        "col_name": "Source of information on DIKSHA digital course__Any other",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.1,
+          "std": 0.3,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 36,
+          "1": 4,
+          "Source of information on DIKSHA digital course/Any other": 1
+        },
+        "text_samples": [
+          "Source of information on DIKSHA digital course/Any other"
+        ]
+      },
+      {
+        "col_idx": 58,
+        "col_name": "Effective source of information to receive program related information",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "JSK Whatsapp": 26,
+          "JSK Whatsapp Letter": 6,
+          "JSK Whatsapp School Whatsapp Letter": 3,
+          "JSK Whatsapp School Whatsapp": 3,
+          "Effective source of information to receive program related information": 1
+        },
+        "text_samples": [
+          "Effective source of information to receive program related information",
+          "JSK Whatsapp School Whatsapp Letter",
+          "JSK Whatsapp School Whatsapp"
+        ]
+      },
+      {
+        "col_idx": 59,
+        "col_name": "Effective source of information to receive program related information__JSK Whatsapp",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "median": 1.0
+        },
+        "top_frequencies": {
+          "1": 40,
+          "Effective source of information to receive program related information/JSK Whats": 1
+        },
+        "text_samples": [
+          "Effective source of information to receive program related information/JSK Whatsapp"
+        ]
+      },
+      {
+        "col_idx": 60,
+        "col_name": "Effective source of information to receive program related information__School Whatsapp",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.15,
+          "std": 0.36,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 34,
+          "1": 6,
+          "Effective source of information to receive program related information/School Wh": 1
+        },
+        "text_samples": [
+          "Effective source of information to receive program related information/School Whatsapp"
+        ]
+      },
+      {
+        "col_idx": 61,
+        "col_name": "Effective source of information to receive program related information__Letter",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.25,
+          "std": 0.44,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 30,
+          "1": 10,
+          "Effective source of information to receive program related information/Letter": 1
+        },
+        "text_samples": [
+          "Effective source of information to receive program related information/Letter"
+        ]
+      },
+      {
+        "col_idx": 62,
+        "col_name": "Effective source of information to receive program related information__Other",
+        "non_null": 41,
+        "null": 34,
+        "completion_pct": 54.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.05,
+          "std": 0.22,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 38,
+          "1": 2,
+          "Effective source of information to receive program related information/Other": 1
+        },
+        "text_samples": [
+          "Effective source of information to receive program related information/Other"
+        ]
+      },
+      {
+        "col_idx": 63,
+        "col_name": "Does teacher know about DIKSHA Courses and platform",
+        "non_null": 24,
+        "null": 51,
+        "completion_pct": 32.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Yes": 23,
+          "Does teacher know about DIKSHA Courses and platform?": 1
+        },
+        "text_samples": [
+          "Does teacher know about DIKSHA Courses and platform?"
+        ]
+      },
+      {
+        "col_idx": 64,
+        "col_name": "Reason for not doing DIKSHA course__Time issue",
+        "non_null": 21,
+        "null": 54,
+        "completion_pct": 28.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.5,
+          "std": 0.51,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.5
+        },
+        "top_frequencies": {
+          "1": 10,
+          "0": 10,
+          "Reason for not doing DIKSHA course/Time issue": 1
+        },
+        "text_samples": [
+          "Reason for not doing DIKSHA course/Time issue"
+        ]
+      },
+      {
+        "col_idx": 65,
+        "col_name": "Reason for not doing DIKSHA course__Other engagement",
+        "non_null": 21,
+        "null": 54,
+        "completion_pct": 28.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.25,
+          "std": 0.44,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 15,
+          "1": 5,
+          "Reason for not doing DIKSHA course/Other engagement": 1
+        },
+        "text_samples": [
+          "Reason for not doing DIKSHA course/Other engagement"
+        ]
+      },
+      {
+        "col_idx": 66,
+        "col_name": "Reason for not doing DIKSHA course__Technical issue",
+        "non_null": 21,
+        "null": 54,
+        "completion_pct": 28.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.4,
+          "std": 0.5,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 12,
+          "1": 8,
+          "Reason for not doing DIKSHA course/Technical issue": 1
+        },
+        "text_samples": [
+          "Reason for not doing DIKSHA course/Technical issue"
+        ]
+      },
+      {
+        "col_idx": 67,
+        "col_name": "Reason for not doing DIKSHA course__Not aware",
+        "non_null": 21,
+        "null": 54,
+        "completion_pct": 28.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.6,
+          "std": 0.5,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 1.0
+        },
+        "top_frequencies": {
+          "1": 12,
+          "0": 8,
+          "Reason for not doing DIKSHA course/Not aware": 1
+        },
+        "text_samples": [
+          "Reason for not doing DIKSHA course/Not aware"
+        ]
+      },
+      {
+        "col_idx": 68,
+        "col_name": "Reason for not doing DIKSHA course__Not found useful",
+        "non_null": 21,
+        "null": 54,
+        "completion_pct": 28.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.05,
+          "std": 0.22,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 19,
+          "Reason for not doing DIKSHA course/Not found useful": 1,
+          "1": 1
+        },
+        "text_samples": [
+          "Reason for not doing DIKSHA course/Not found useful"
+        ]
+      },
+      {
+        "col_idx": 69,
+        "col_name": "No. of CLSS attended by teacher",
+        "non_null": 54,
+        "null": 21,
+        "completion_pct": 72.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 3.67,
+          "std": 1.31,
+          "min": 1.0,
+          "max": 5.0,
+          "median": 4.0
+        },
+        "top_frequencies": {
+          "5": 20,
+          "3": 13,
+          "4": 9,
+          "2": 6,
+          "1": 4
+        },
+        "text_samples": [
+          "No. of CLSS attended by teacher",
+          "Not Participated"
+        ]
+      },
+      {
+        "col_idx": 70,
+        "col_name": "CLSS topics recalled__कक्षा प्रबंधन के शुरुआती प्रयास",
+        "non_null": 37,
+        "null": 38,
+        "completion_pct": 49.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.39,
+          "std": 0.49,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 22,
+          "1": 14,
+          "CLSS topics recalled/कक्षा प्रबंधन के शुरुआती प्रयास": 1
+        },
+        "text_samples": [
+          "CLSS topics recalled/कक्षा प्रबंधन के शुरुआती प्रयास"
+        ]
+      },
+      {
+        "col_idx": 71,
+        "col_name": "CLSS topics recalled__पूर्वज्ञान से शुरु, समूहकार्य से सीख",
+        "non_null": 37,
+        "null": 38,
+        "completion_pct": 49.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.25,
+          "std": 0.44,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 27,
+          "1": 9,
+          "CLSS topics recalled/पूर्वज्ञान से शुरु, समूहकार्य से सीख": 1
+        },
+        "text_samples": [
+          "CLSS topics recalled/पूर्वज्ञान से शुरु, समूहकार्य से सीख"
+        ]
+      },
+      {
+        "col_idx": 72,
+        "col_name": "CLSS topics recalled__प्रभावी गृहकार्य",
+        "non_null": 37,
+        "null": 38,
+        "completion_pct": 49.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.31,
+          "std": 0.47,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 25,
+          "1": 11,
+          "CLSS topics recalled/प्रभावी गृहकार्य": 1
+        },
+        "text_samples": [
+          "CLSS topics recalled/प्रभावी गृहकार्य"
+        ]
+      },
+      {
+        "col_idx": 73,
+        "col_name": "CLSS topics recalled__पुनरवलोकन एवं समेकन",
+        "non_null": 37,
+        "null": 38,
+        "completion_pct": 49.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.19,
+          "std": 0.4,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 29,
+          "1": 7,
+          "CLSS topics recalled/पुनरवलोकन एवं समेकन": 1
+        },
+        "text_samples": [
+          "CLSS topics recalled/पुनरवलोकन एवं समेकन"
+        ]
+      },
+      {
+        "col_idx": 74,
+        "col_name": "CLSS topics recalled__प्रभावी पुनरावृत्ति",
+        "non_null": 37,
+        "null": 38,
+        "completion_pct": 49.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.17,
+          "std": 0.38,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 30,
+          "1": 6,
+          "CLSS topics recalled/प्रभावी पुनरावृत्ति": 1
+        },
+        "text_samples": [
+          "CLSS topics recalled/प्रभावी पुनरावृत्ति"
+        ]
+      },
+      {
+        "col_idx": 75,
+        "col_name": "CLSS topics recalled__No topic recalled",
+        "non_null": 37,
+        "null": 38,
+        "completion_pct": 49.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.5,
+          "std": 0.51,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.5
+        },
+        "top_frequencies": {
+          "0": 18,
+          "1": 18,
+          "CLSS topics recalled/No topic recalled": 1
+        },
+        "text_samples": [
+          "CLSS topics recalled/No topic recalled"
+        ]
+      },
+      {
+        "col_idx": 76,
+        "col_name": "CLSS learning solved classroom challenge",
+        "non_null": 55,
+        "null": 20,
+        "completion_pct": 73.3,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Yes": 32,
+          "Couldn't remember particular learning from CLSS": 13,
+          "No": 9,
+          "CLSS learning solved classroom challenge": 1
+        },
+        "text_samples": [
+          "CLSS learning solved classroom challenge",
+          "Couldn't remember particular learning from CLSS",
+          "Couldn't remember particular learning from CLSS"
+        ]
+      },
+      {
+        "col_idx": 77,
+        "col_name": "Processes to cascade CLSS learnings at school level__Resources shared in the school whatsapp group",
+        "non_null": 55,
+        "null": 20,
+        "completion_pct": 73.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.19,
+          "std": 0.39,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 44,
+          "1": 10,
+          "Processes to cascade CLSS learnings at school level/Resources shared in the scho": 1
+        },
+        "text_samples": [
+          "Processes to cascade CLSS learnings at school level/Resources shared in the school whatsapp group"
+        ]
+      },
+      {
+        "col_idx": 78,
+        "col_name": "Processes to cascade CLSS learnings at school level__Participating teacher share their notes",
+        "non_null": 55,
+        "null": 20,
+        "completion_pct": 73.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.15,
+          "std": 0.36,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 46,
+          "1": 8,
+          "Processes to cascade CLSS learnings at school level/Participating teacher share ": 1
+        },
+        "text_samples": [
+          "Processes to cascade CLSS learnings at school level/Participating teacher share their notes"
+        ]
+      },
+      {
+        "col_idx": 79,
+        "col_name": "Processes to cascade CLSS learnings at school level__Participating teacher verbally cascade the learning Peer learning discussions",
+        "non_null": 55,
+        "null": 20,
+        "completion_pct": 73.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.37,
+          "std": 0.49,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 34,
+          "1": 20,
+          "Processes to cascade CLSS learnings at school level/Participating teacher verbal": 1
+        },
+        "text_samples": [
+          "Processes to cascade CLSS learnings at school level/Participating teacher verbally cascade the learning (Peer learning discussions"
+        ]
+      },
+      {
+        "col_idx": 80,
+        "col_name": "Processes to cascade CLSS learnings at school level__No learnings shared or no set process adopted",
+        "non_null": 55,
+        "null": 20,
+        "completion_pct": 73.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.28,
+          "std": 0.45,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 39,
+          "1": 15,
+          "Processes to cascade CLSS learnings at school level/No learnings shared or no se": 1
+        },
+        "text_samples": [
+          "Processes to cascade CLSS learnings at school level/No learnings shared or no set process adopted"
+        ]
+      },
+      {
+        "col_idx": 81,
+        "col_name": "Processes to cascade CLSS learnings at school level__Other",
+        "non_null": 55,
+        "null": 20,
+        "completion_pct": 73.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.17,
+          "std": 0.38,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 45,
+          "1": 9,
+          "Processes to cascade CLSS learnings at school level/Other": 1
+        },
+        "text_samples": [
+          "Processes to cascade CLSS learnings at school level/Other"
+        ]
+      },
+      {
+        "col_idx": 82,
+        "col_name": "Could teacher recall RSK MP as attendance platform for CLSS",
+        "non_null": 54,
+        "null": 21,
+        "completion_pct": 72.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Yes": 45,
+          "No": 8,
+          "Could teacher recall RSK MP as attendance platform for CLSS": 1
+        },
+        "text_samples": [
+          "Could teacher recall RSK MP as attendance platform for CLSS"
+        ]
+      },
+      {
+        "col_idx": 83,
+        "col_name": "What challenges do they face in filling attendance and feedback form post the samwad__Awareness Issue",
+        "non_null": 54,
+        "null": 21,
+        "completion_pct": 72.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.15,
+          "std": 0.36,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 45,
+          "1": 8,
+          "What challenges do they face in filling attendance and feedback form post the sa": 1
+        },
+        "text_samples": [
+          "What challenges do they face in filling attendance and feedback form post the samwad?/Awareness Issue"
+        ]
+      },
+      {
+        "col_idx": 84,
+        "col_name": "What challenges do they face in filling attendance and feedback form post the samwad__Session end rush for teachers to leave the venue",
+        "non_null": 54,
+        "null": 21,
+        "completion_pct": 72.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.23,
+          "std": 0.42,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 41,
+          "1": 12,
+          "What challenges do they face in filling attendance and feedback form post the sa": 1
+        },
+        "text_samples": [
+          "What challenges do they face in filling attendance and feedback form post the samwad?/Session end rush for teachers to leave the venue"
+        ]
+      },
+      {
+        "col_idx": 85,
+        "col_name": "What challenges do they face in filling attendance and feedback form post the samwad__Not perceived important",
+        "non_null": 54,
+        "null": 21,
+        "completion_pct": 72.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.08,
+          "std": 0.27,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 49,
+          "1": 4,
+          "What challenges do they face in filling attendance and feedback form post the sa": 1
+        },
+        "text_samples": [
+          "What challenges do they face in filling attendance and feedback form post the samwad?/Not perceived important"
+        ]
+      },
+      {
+        "col_idx": 86,
+        "col_name": "What challenges do they face in filling attendance and feedback form post the samwad__Unwilling teachers",
+        "non_null": 54,
+        "null": 21,
+        "completion_pct": 72.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.15,
+          "std": 0.36,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 45,
+          "1": 8,
+          "What challenges do they face in filling attendance and feedback form post the sa": 1
+        },
+        "text_samples": [
+          "What challenges do they face in filling attendance and feedback form post the samwad?/Unwilling teachers"
+        ]
+      },
+      {
+        "col_idx": 87,
+        "col_name": "What challenges do they face in filling attendance and feedback form post the samwad__others",
+        "non_null": 54,
+        "null": 21,
+        "completion_pct": 72.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.64,
+          "std": 0.48,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 1.0
+        },
+        "top_frequencies": {
+          "1": 34,
+          "0": 19,
+          "What challenges do they face in filling attendance and feedback form post the sa": 1
+        },
+        "text_samples": [
+          "What challenges do they face in filling attendance and feedback form post the samwad?/others"
+        ]
+      },
+      {
+        "col_idx": 88,
+        "col_name": "Does teacher know about CLSS and it's format",
+        "non_null": 14,
+        "null": 61,
+        "completion_pct": 18.7,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Yes": 10,
+          "No": 3,
+          "Does teacher know about CLSS and it's format": 1
+        },
+        "text_samples": [
+          "Does teacher know about CLSS and it's format"
+        ]
+      },
+      {
+        "col_idx": 89,
+        "col_name": "Reasons of non-participation in CLSS__Could find time",
+        "non_null": 14,
+        "null": 61,
+        "completion_pct": 18.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 13,
+          "Reasons of non-participation in CLSS/Could find time": 1
+        },
+        "text_samples": [
+          "Reasons of non-participation in CLSS/Could find time"
+        ]
+      },
+      {
+        "col_idx": 90,
+        "col_name": "Reasons of non-participation in CLSS__Not instructed to attend",
+        "non_null": 14,
+        "null": 61,
+        "completion_pct": 18.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.23,
+          "std": 0.44,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 10,
+          "1": 3,
+          "Reasons of non-participation in CLSS/Not instructed to attend": 1
+        },
+        "text_samples": [
+          "Reasons of non-participation in CLSS/Not instructed to attend"
+        ]
+      },
+      {
+        "col_idx": 91,
+        "col_name": "Reasons of non-participation in CLSS__Busy with other work",
+        "non_null": 14,
+        "null": 61,
+        "completion_pct": 18.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.08,
+          "std": 0.28,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 12,
+          "Reasons of non-participation in CLSS/Busy with other work": 1,
+          "1": 1
+        },
+        "text_samples": [
+          "Reasons of non-participation in CLSS/Busy with other work"
+        ]
+      },
+      {
+        "col_idx": 92,
+        "col_name": "Reasons of non-participation in CLSS__Didn't find any information",
+        "non_null": 14,
+        "null": 61,
+        "completion_pct": 18.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.08,
+          "std": 0.28,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 12,
+          "Reasons of non-participation in CLSS/Didn't find any information": 1,
+          "1": 1
+        },
+        "text_samples": [
+          "Reasons of non-participation in CLSS/Didn't find any information"
+        ]
+      },
+      {
+        "col_idx": 93,
+        "col_name": "Reasons of non-participation in CLSS__Was not aware",
+        "non_null": 14,
+        "null": 61,
+        "completion_pct": 18.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 13,
+          "Reasons of non-participation in CLSS/Was not aware": 1
+        },
+        "text_samples": [
+          "Reasons of non-participation in CLSS/Was not aware"
+        ]
+      },
+      {
+        "col_idx": 94,
+        "col_name": "Reasons of non-participation in CLSS__Others",
+        "non_null": 14,
+        "null": 61,
+        "completion_pct": 18.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.23,
+          "std": 0.44,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0": 10,
+          "1": 3,
+          "Reasons of non-participation in CLSS/Others": 1
+        },
+        "text_samples": [
+          "Reasons of non-participation in CLSS/Others"
+        ]
+      },
+      {
+        "col_idx": 95,
+        "col_name": "Are there any online courses teacher has done in last 1 year If yes, mention course name and platform",
+        "non_null": 1,
+        "null": 74,
+        "completion_pct": 1.3,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Are there any online courses teacher has done in last 1 year? If yes, mention co": 1
+        },
+        "text_samples": [
+          "Are there any online courses teacher has done in last 1 year? If yes, mention course name and platform"
+        ]
+      },
+      {
+        "col_idx": 96,
+        "col_name": "_index",
+        "non_null": 61,
+        "null": 14,
+        "completion_pct": 81.3,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 30.5,
+          "std": 17.46,
+          "min": 1.0,
+          "max": 60.0,
+          "median": 30.5
+        },
+        "top_frequencies": {
+          "_index": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1
+        },
+        "text_samples": []
+      },
+      {
+        "col_idx": 97,
+        "col_name": "Name of the online platforms used by the teacher",
+        "non_null": 60,
+        "null": 15,
+        "completion_pct": 80.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "0": 10,
+          "DIKSHA": 9,
+          "Diksha App, I-GOT": 2,
+          "Diksha, कर्मयोगी": 2,
+          "Igot": 2
+        },
+        "text_samples": [
+          "DIKSHA and Karmayogi",
+          "Mygov and DIKSHA",
+          "DIKSHA, Karmyogi"
+        ]
+      },
+      {
+        "col_idx": 98,
+        "col_name": "Diksha Course",
+        "non_null": 60,
+        "null": 15,
+        "completion_pct": 80.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "0": 10,
+          "DIKSHA": 2,
+          "RSK": 2,
+          "Education Department (DIET)": 1,
+          "आपने बताया की आपने मानसिक तनाव कैसे कम करें इस पर online  कोर्स किया हैं.": 1
+        },
+        "text_samples": [
+          "Education Department (DIET)",
+          "आपने बताया की आपने मानसिक तनाव कैसे कम करें इस पर online  कोर्स किया हैं.",
+          "Suchna ka adhikar"
+        ]
+      },
+      {
+        "col_idx": 99,
+        "col_name": "DIKSHA",
+        "non_null": 60,
+        "null": 15,
+        "completion_pct": 80.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.4,
+          "std": 0.49,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.0
+        },
+        "top_frequencies": {
+          "0.0": 36,
+          "1.0": 24
+        },
+        "text_samples": []
+      },
+      {
+        "col_idx": 100,
+        "col_name": "iGOT",
+        "non_null": 60,
+        "null": 15,
+        "completion_pct": 80.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.5,
+          "std": 0.5,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 0.5
+        },
+        "top_frequencies": {
+          "0.0": 30,
+          "1.0": 30
+        },
+        "text_samples": []
+      },
+      {
+        "col_idx": 101,
+        "col_name": "Subject Training",
+        "non_null": 60,
+        "null": 15,
+        "completion_pct": 80.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Subject Training, CLSS, Digital Training (PLC)": 1,
+          "Teacher took part in three days block level training in the month of July, after": 1,
+          "Digital course, CLSS, sub Training": 1,
+          "She could not recall": 1,
+          "Teacher has participated in 5 CLSS throughout the year at JSK and one Block leve": 1
+        },
+        "text_samples": [
+          "Subject Training, CLSS, Digital Training (PLC)",
+          "Teacher took part in three days block level training in the month of July, after that he participated in the almost all CLSS from Aug to Jan.",
+          "Digital course, CLSS, sub Training"
+        ]
+      },
+      {
+        "col_idx": 102,
+        "col_name": "Unnamed: 101",
+        "non_null": 14,
+        "null": 61,
+        "completion_pct": 18.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 1.14,
+          "std": 0.36,
+          "min": 1.0,
+          "max": 2.0,
+          "median": 1.0
+        },
+        "top_frequencies": {
+          "1.0": 12,
+          "2.0": 2
+        },
+        "text_samples": []
+      },
+      {
+        "col_idx": 103,
+        "col_name": "Did Online Course",
+        "non_null": 50,
+        "null": 25,
+        "completion_pct": 66.7,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "median": 1.0
+        },
+        "top_frequencies": {
+          "1.0": 50
+        },
+        "text_samples": []
+      }
+    ]
+  },
+  "Sheet1": {
+    "rows": 12,
+    "cols": 4,
+    "total_cells": 48,
+    "columns_detail": [
+      {
+        "col_idx": 1,
+        "col_name": "Annual Enagement ",
+        "non_null": 12,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Subject Training": 1,
+          "Digital Training": 1,
+          "CLSS": 1,
+          "SKG": 1,
+          "Webex": 1
+        },
+        "text_samples": [
+          "Subject Training",
+          "Digital Training",
+          "APF Demo Sessions"
+        ]
+      },
+      {
+        "col_idx": 2,
+        "col_name": "Unnamed: 1",
+        "non_null": 12,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 20.08,
+          "std": 19.83,
+          "min": 0.0,
+          "max": 56.0,
+          "median": 13.0
+        },
+        "top_frequencies": {
+          "9": 2,
+          "56": 1,
+          "40": 1,
+          "53": 1,
+          "1": 1
+        },
+        "text_samples": []
+      },
+      {
+        "col_idx": 3,
+        "col_name": "Unnamed: 2",
+        "non_null": 0,
+        "null": 12,
+        "completion_pct": 0.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {},
+        "text_samples": []
+      },
+      {
+        "col_idx": 4,
+        "col_name": "Look for the other activities participated by teachers in the qualitative data set ",
+        "non_null": 0,
+        "null": 12,
+        "completion_pct": 0.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {},
+        "text_samples": []
+      }
+    ]
+  },
+  "Qual_FreeText": {
+    "rows": 61,
+    "cols": 58,
+    "total_cells": 3538,
+    "columns_detail": [
+      {
+        "col_idx": 1,
+        "col_name": "Teacher_ID",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 30.5,
+          "std": 17.46,
+          "min": 1.0,
+          "max": 60.0,
+          "median": 30.5
+        },
+        "top_frequencies": {
+          "Teacher_ID": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1
+        },
+        "text_samples": []
+      },
+      {
+        "col_idx": 2,
+        "col_name": "Name of the interviewer",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Ritesh Pandey": 8,
+          "Aishwarya Yadav": 7,
+          "Rashmi Mishra": 6,
+          "Rahul Kumar": 6,
+          "Srujan Deshpande": 6
+        },
+        "text_samples": [
+          "Name of the interviewer",
+          "Pushpendra Singh",
+          "Dharmendra Mishra"
+        ]
+      },
+      {
+        "col_idx": 3,
+        "col_name": "Name of the note-taker",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Vaibhav Tambe": 6,
+          "Vaibhav Kurwade": 6,
+          "Devendra Sharma": 5,
+          "Jay Prakash": 4,
+          "Other": 4
+        },
+        "text_samples": [
+          "Name of the note-taker",
+          "Dharmendra Mishra",
+          "Dharmendra Mishra"
+        ]
+      },
+      {
+        "col_idx": 4,
+        "col_name": "District of respondent teacher",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Balaghat": 4,
+          "Betul": 3,
+          "Ujjain": 3,
+          "Chhindwara": 3,
+          "Datia": 3
+        },
+        "text_samples": [
+          "District of respondent teacher"
+        ]
+      },
+      {
+        "col_idx": 5,
+        "col_name": "Gender of respondent",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Male": 38,
+          "Female": 22,
+          "Gender of respondent": 1
+        },
+        "text_samples": [
+          "Gender of respondent"
+        ]
+      },
+      {
+        "col_idx": 6,
+        "col_name": "Date of the interview",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "2026-06-12 00:00:00": 8,
+          "2026-06-15 00:00:00": 8,
+          "2026-06-16 00:00:00": 8,
+          "2026-06-19 00:00:00": 8,
+          "2026-06-11 00:00:00": 7
+        },
+        "text_samples": [
+          "Date of the interview",
+          "2026-06-10 00:00:00",
+          "2026-06-10 00:00:00"
+        ]
+      },
+      {
+        "col_idx": 7,
+        "col_name": "Subject taught by teacher",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Maths Science": 14,
+          "Social Science": 11,
+          "Maths": 8,
+          "Social Science Sanskrit": 6,
+          "Hindi Social Science": 5
+        },
+        "text_samples": [
+          "Subject taught by teacher",
+          "Hindi Social Science",
+          "Hindi Social Science Sanskrit"
+        ]
+      },
+      {
+        "col_idx": 8,
+        "col_name": "Years of teaching experience",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 20.93,
+          "std": 8.78,
+          "min": 3.0,
+          "max": 43.0,
+          "median": 20.0
+        },
+        "top_frequencies": {
+          "16": 6,
+          "25": 6,
+          "28": 6,
+          "15": 5,
+          "13": 3
+        },
+        "text_samples": [
+          "Years of teaching experience"
+        ]
+      },
+      {
+        "col_idx": 9,
+        "col_name": "Teachers Academic Responsibilities in a Day",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Teachers Academic Responsibilities in a Day": 1,
+          "Teacher daily takes 3 period which is fix. since he is the only teacher in the s": 1,
+          "Teacher conducts 4 classes in the day, beyond that he took some extra classes li": 1,
+          "मैं शाला आने के बाद बच्चों को प्रार्थना कराता हूँ , teaching करता हूँ , जरुरत पढ़": 1,
+          "Teaching class 6,7 and 8 Hindi and social science. Conducting baaal sabhas on Sa": 1
+        },
+        "text_samples": [
+          "Teachers Academic Responsibilities in a Day",
+          "Teacher daily takes 3 period which is fix. since he is the only teacher in the school, he has to take rest of subjects as well like Hindi and Sanskrit.",
+          "Teacher conducts 4 classes in the day, beyond that he took some extra classes like moral education, give some time to improve student learning skills. During the break he also oversee over the children during they were playing the game. As he is senior teacher and have some health so he hardly participate in the other activities."
+        ]
+      },
+      {
+        "col_idx": 10,
+        "col_name": "Teachers non-academic responsibilities in a Day",
+        "non_null": 60,
+        "null": 1,
+        "completion_pct": 98.4,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Teachers non-academic responsibilities in a Day": 1,
+          "Student documentations, Attendence, school level data collection (MDM/SIR/Electi": 1,
+          "Due to health concern and as senior teacher he dont do any non-academic activity": 1,
+          "पेड़ पोधो को पानी देना, साफ शाला और शौचालय की साफ सफाई देखना I": 1,
+          "Apaar id, birth certificate of children, samagra id, mid day meal updating any d": 1
+        },
+        "text_samples": [
+          "Teachers non-academic responsibilities in a Day",
+          "Student documentations, Attendence, school level data collection (MDM/SIR/Election duty )and update into various platforms and portal.",
+          "Due to health concern and as senior teacher he dont do any non-academic activity on regular basis. But sometimes he needs to take part of social activity of that village, like if village is organizing in games, etc."
+        ]
+      },
+      {
+        "col_idx": 11,
+        "col_name": "Key response note on teacher's daily engagement",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key response note on teacher's daily engagement": 1,
+          "Being a individual teacher at school. he has to perform various academics and no": 1,
+          "Teachers conduct four classes a day, except that he supports the students with N": 1,
+          "शिक्षक ने इसका कोई क्लियर आंसर नहीं दिया, आप बोले की मैं अपने sub पढ़ाता हूँ, जरु": 1,
+          "The teacher starts her day by conducting assembly and then she is engaged in her": 1
+        },
+        "text_samples": [
+          "Key response note on teacher's daily engagement",
+          "Being a individual teacher at school. he has to perform various academics and non-academics duties in a day. which is sometime very challenging for him as teacher and as HM",
+          "Teachers conduct four classes a day, except that he supports the students with N-1, n-2, n-3."
+        ]
+      },
+      {
+        "col_idx": 12,
+        "col_name": "Activities participated over 2025-26 academic year",
+        "non_null": 55,
+        "null": 6,
+        "completion_pct": 90.2,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Subject Training Digital Training CLSS": 3,
+          "Subject Training Digital Training CLSS YTL Any other": 3,
+          "Subject Training Digital Training CLSS Any other": 3,
+          "Subject Training CLSS Any other": 3,
+          "Subject Training Digital Training CLSS SKG YTL": 2
+        },
+        "text_samples": [
+          "Activities participated over 2025-26 academic year",
+          "Subject Training Digital Training CLSS Webex YTL",
+          "Subject Training Digital Training CLSS SKG YTL"
+        ]
+      },
+      {
+        "col_idx": 13,
+        "col_name": "List all the participated activities with timeline such as CLSS Aug, Dec",
+        "non_null": 60,
+        "null": 1,
+        "completion_pct": 98.4,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "List all the participated activities with timeline such as  CLSS (Aug, Dec)": 1,
+          "Subject Training, CLSS, Digital Training (PLC)": 1,
+          "Teacher took part in three days block level training in the month of July, after": 1,
+          "Digital course, CLSS, sub Training": 1,
+          "She could not recall": 1
+        },
+        "text_samples": [
+          "List all the participated activities with timeline such as  CLSS (Aug, Dec)",
+          "Subject Training, CLSS, Digital Training (PLC)",
+          "Teacher took part in three days block level training in the month of July, after that he participated in the almost all CLSS from Aug to Jan."
+        ]
+      },
+      {
+        "col_idx": 14,
+        "col_name": "Key response notes on teacher's annual engagement",
+        "non_null": 59,
+        "null": 2,
+        "completion_pct": 96.7,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key response notes on teacher's annual engagement": 1,
+          "Throughout annual engagement teacher was involved in various activities (SIR, BL": 1,
+          "Teacher mainly took part in the academic activities, CLSS, In person training, D": 1,
+          "शिक्षक ने बताया वो  सभी CLSS में भाग लिए हैं और कोर्स भी किये हैं": 1,
+          "She did not remember any activity apart from leadership training without probing": 1
+        },
+        "text_samples": [
+          "Key response notes on teacher's annual engagement",
+          "Throughout annual engagement teacher was involved in various activities (SIR, BLO Duty, Election Duty, Census, other data related work at school level )",
+          "Teacher mainly took part in the academic activities, CLSS, In person training, Digital training of DIKSHA & Igot -Karmayogi courses."
+        ]
+      },
+      {
+        "col_idx": 15,
+        "col_name": "Key feedback to improve training session design or in-person training in general",
+        "non_null": 54,
+        "null": 7,
+        "completion_pct": 88.5,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key feedback to improve training session design or in-person training in general": 1,
+          "real classroom demo video help to connect more during training.": 1,
+          "Teacher finds in person training, but he highlighted that there is issue at the ": 1,
+          "लगातार होते रहना चाहिए ऐसी चर्चा और कम से कम 10 दिन का होना चाहिए.": 1,
+          "She suggested infrastructural changes like better seating arrangements and washr": 1
+        },
+        "text_samples": [
+          "Key feedback to improve training session design or in-person training in general",
+          "real classroom demo video help to connect more during training.",
+          "Teacher finds in person training, but he highlighted that there is issue at the block level. At the block level official look at this activity as timepass, so People dont take training seriously.  He highlighted the issue in the structure of training, he suggested there should be four group based on the geograpahies and context. So, training should cater differently for all these group based on their experiences.  Select MTs from the more interior like tribal areas and select the MTs who are more interested in training and that subject."
+        ]
+      },
+      {
+        "col_idx": 16,
+        "col_name": "Training resources received from in-person training",
+        "non_null": 57,
+        "null": 4,
+        "completion_pct": 93.4,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Margdarshika - Teaching Plan/Modules": 27,
+          "Not received": 18,
+          "PPT Margdarshika - Teaching Plan/Modules": 6,
+          "Training resources received from in-person training": 1,
+          "ToT": 1
+        },
+        "text_samples": [
+          "Training resources received from in-person training",
+          "Margdarshika - Teaching Plan/Modules",
+          "Margdarshika - Teaching Plan/Modules"
+        ]
+      },
+      {
+        "col_idx": 17,
+        "col_name": "Name of the material__lesson plan or strategy teacher tried using in class-",
+        "non_null": 18,
+        "null": 43,
+        "completion_pct": 29.5,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Name of the material/lesson plan or strategy teacher tried using in class-": 1,
+          "The teacher has applied the assessment method included in lesson plan, and he im": 1,
+          "He could remember magnet related just the topic or chapter and related resources": 1,
+          "Teacher mention that she has use cold calling and group work during teaching.": 1,
+          "शिक्षक मार्गदर्शिका जिसमें दिए गए लेसन प्लान को आपने कक्षा में उपयोग में लाया I ": 1
+        },
+        "text_samples": [
+          "Name of the material/lesson plan or strategy teacher tried using in class-",
+          "The teacher has applied the assessment method included in lesson plan, and he implement this on availability of time sometimes daily, weekly and monthly. The teacher has been using the strategy of asking questions before starting any topic to include the pre-knowledge of students.",
+          "He could remember magnet related just the topic or chapter and related resources from the training but could not specify the activities or module prescribed activities which he might have implemented in classroom. He also has created a lab set-up and broadly he was mentioning activities he is trying to do with children there( not necessarily related to training)"
+        ]
+      },
+      {
+        "col_idx": 18,
+        "col_name": "Key feedback__response on training material and resources",
+        "non_null": 49,
+        "null": 12,
+        "completion_pct": 80.3,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key feedback/response on training material and resources": 1,
+          "Teacher mentioned he has attended training and received margdarsika and used it ": 1,
+          "Teacher was not able to recall the any topic from the training material or class": 1,
+          "केवल नोटबुक मिलता हैं और LED टीवी में दिखा कर डिस्कशन करते हैं.": 1,
+          "She could not give any concrete examples of using the resources": 1
+        },
+        "text_samples": [
+          "Key feedback/response on training material and resources",
+          "Teacher mentioned he has attended training and received margdarsika and used it but not very often. but not able to share the learning experience",
+          "Teacher was not able to recall the any topic from the training material or classroom implementation, but he shared some feedback on training material should be grounded according to context, easy to follow."
+        ]
+      },
+      {
+        "col_idx": 19,
+        "col_name": "Examples of classroom implementation of any topic__ plan or material",
+        "non_null": 34,
+        "null": 27,
+        "completion_pct": 55.7,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Examples of classroom implementation of any topic/ plan or material ": 1,
+          "No examples remembered or shared.": 1,
+          "The teacher starts class with a hook (concept not clear to the teacher) related ": 1,
+          "शिक्षक ने CLSS एवं प्रशिक्षण से प्राप्त समूह कार्य, प्रभावी गृहकार्य, पुनरावलोकन": 1,
+          "Vague example of topic related to Panchayat was shared.": 1
+        },
+        "text_samples": [
+          "Examples of classroom implementation of any topic/ plan or material",
+          "No examples remembered or shared.",
+          "The teacher starts class with a hook (concept not clear to the teacher) related to the topic and the teacher shared an example of using pre-knowledge questions before starting a new lesson. The teacher also reported using questioning techniques and student participation strategies learned during the training to make classroom discussions more interactive and engaging."
+        ]
+      },
+      {
+        "col_idx": 20,
+        "col_name": "Key response note on teachers' experience with follow-up activities.",
+        "non_null": 54,
+        "null": 7,
+        "completion_pct": 88.5,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key response note on teachers' experience with follow-up activities.": 1,
+          "Teacher was not able to share any experience related to follow-up activities": 1,
+          "Teacher did not take in part of any follow up activities due to unavailability o": 1,
+          "इसमें शिक्षक चालू करके मोबाइल रख देते हैं, इसे ध्यान से नहीं सुनते हैं.": 1,
+          "She does not like anything done online. Kyoki ve thik se phone chlana nahi janti": 1
+        },
+        "text_samples": [
+          "Key response note on teachers' experience with follow-up activities.",
+          "Teacher was not able to share any experience related to follow-up activities",
+          "Teacher did not take in part of any follow up activities due to unavailability of network."
+        ]
+      },
+      {
+        "col_idx": 21,
+        "col_name": "Reasons for finding particular follow-up activity useful or not useful",
+        "non_null": 44,
+        "null": 17,
+        "completion_pct": 72.1,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Reasons for finding particular follow-up activity useful or not useful": 1,
+          "NOT USEFULL": 1,
+          "She said, she does not get time during the school hours to attend YTL and also t": 1,
+          "The teacher finds the quiz helpful, and he said that it recalls his memory and h": 1,
+          "According to him YTLs allow him to be in his school and attend learning sessions": 1
+        },
+        "text_samples": [
+          "Reasons for finding particular follow-up activity useful or not useful",
+          "She said, she does not get time during the school hours to attend YTL and also the school is in low network area",
+          "The teacher finds the quiz helpful, and he said that it recalls his memory and help to prepare questions for the classroom teaching."
+        ]
+      },
+      {
+        "col_idx": 22,
+        "col_name": "Are there any challenges which might limit teachers participation in online discussion calls",
+        "non_null": 46,
+        "null": 15,
+        "completion_pct": 75.4,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Are there any challenges which might limit teachers participation in online disc": 1,
+          "Network challenge": 1,
+          "NO": 1,
+          "Network issue, time issue, mobile data": 1,
+          "Non-academic duties and internet connectivity are the primary challenge.": 1
+        },
+        "text_samples": [
+          "Are there any challenges which might limit teachers participation in online discussion calls?",
+          "Network challenge",
+          "Network issue, time issue, mobile data"
+        ]
+      },
+      {
+        "col_idx": 23,
+        "col_name": "Post in person training or follow up calls, what makes classroom implementation difficult",
+        "non_null": 45,
+        "null": 16,
+        "completion_pct": 73.8,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Post in person training or follow up calls, what makes classroom implementation ": 1,
+          "Low engagement of students (they not able to connect the topic) , Low attendance": 1,
+          "इसका ने इसका कोई क्लियर जवाब नहीं दिया": 1,
+          "Did not use. Also from her explanation we got to know that even when she joined ": 1,
+          "Post in person training the material was too much for him and he said it looks v": 1
+        },
+        "text_samples": [
+          "Post in person training or follow up calls, what makes classroom implementation difficult?",
+          "Low engagement of students (they not able to connect the topic) , Low attendance, Lack of resources",
+          "इसका ने इसका कोई क्लियर जवाब नहीं दिया"
+        ]
+      },
+      {
+        "col_idx": 24,
+        "col_name": "Name of the Govt__ Department promoted courses",
+        "non_null": 51,
+        "null": 10,
+        "completion_pct": 83.6,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "DIKSHA": 2,
+          "RSK": 2,
+          "Name of the Govt/ Department promoted courses": 1,
+          "Education Department (DIET)": 1,
+          "आपने बताया की आपने मानसिक तनाव कैसे कम करें इस पर online  कोर्स किया हैं.": 1
+        },
+        "text_samples": [
+          "Name of the Govt/ Department promoted courses",
+          "Education Department (DIET)",
+          "आपने बताया की आपने मानसिक तनाव कैसे कम करें इस पर online  कोर्स किया हैं."
+        ]
+      },
+      {
+        "col_idx": 25,
+        "col_name": "Name of the non-govt promoted courses__ done on own will",
+        "non_null": 14,
+        "null": 47,
+        "completion_pct": 23.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "नहीं": 2,
+          "Name of the non-govt promoted courses/ done on own will": 1,
+          "शिक्षक इसका जवाब नहीं दे पाए": 1,
+          "No non-government or self-enrolled courses were reported by the teacher.": 1,
+          "Nothing": 1
+        },
+        "text_samples": [
+          "Name of the non-govt promoted courses/ done on own will",
+          "शिक्षक इसका जवाब नहीं दे पाए",
+          "No non-government or self-enrolled courses were reported by the teacher."
+        ]
+      },
+      {
+        "col_idx": 26,
+        "col_name": "Name of the online platforms used by the teacher",
+        "non_null": 51,
+        "null": 10,
+        "completion_pct": 83.6,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "DIKSHA": 9,
+          "Diksha App, I-GOT": 2,
+          "Diksha, कर्मयोगी": 2,
+          "Igot": 2,
+          "Diksha": 2
+        },
+        "text_samples": [
+          "Name of the online platforms used by the teacher",
+          "DIKSHA and Karmayogi",
+          "Mygov and DIKSHA"
+        ]
+      },
+      {
+        "col_idx": 27,
+        "col_name": "Reason for perceived effectiveness of online or digital medium learning",
+        "non_null": 54,
+        "null": 7,
+        "completion_pct": 88.5,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Reason for perceived effectiveness of online or digital medium learning": 1,
+          "Because online learning is not so useful. offline training is more effective and": 1,
+          "As teacher said it is the due to the human tendency as human can learn more effe": 1,
+          "इसमें सिखने को मिलता है, क्या सिखने को मिलता हैं पूछने पर आपने स्पष्ट जवाब नहीं ": 1,
+          "According to her small videos and written material is useful": 1
+        },
+        "text_samples": [
+          "Reason for perceived effectiveness of online or digital medium learning",
+          "Because online learning is not so useful. offline training is more effective and useful.",
+          "As teacher said it is the due to the human tendency as human can learn more effectively from audio and visual."
+        ]
+      },
+      {
+        "col_idx": 28,
+        "col_name": "Key response note on teacher's perception on digital learning",
+        "non_null": 57,
+        "null": 4,
+        "completion_pct": 93.4,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key response note on teacher's perception on digital learning": 1,
+          "According to teacher online platform is not so effective for learning because it": 1,
+          "Techer have interest in the learning through mainly digital format, and most of ": 1,
+          "Digital course बंद करके training शुरू करना चाहिए.": 1,
+          "She likes taking digital courses because they are self-paced": 1
+        },
+        "text_samples": [
+          "Key response note on teacher's perception on digital learning",
+          "According to teacher online platform is not so effective for learning because it has not one to one interaction as training has.",
+          "Techer have interest in the learning through mainly digital format, and most of the learning should be in the online format. Human have tendency to learn effectively from the audio and video."
+        ]
+      },
+      {
+        "col_idx": 29,
+        "col_name": "Any other general insights or information shared by teachers with respect to their digital learning engagement and preference",
+        "non_null": 40,
+        "null": 21,
+        "completion_pct": 65.6,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Any other general insights or information shared by teachers with respect to the": 1,
+          "Teacher keenly shown his interest in the digital learning he expressed he can do": 1,
+          "शिक्षक ने पहले बताया की वह घर में भी course का लेते हैं, और बाद में बोले की घर म": 1,
+          "She thought she should also show these courses to children as well.": 1,
+          "The teacher said he sometimes complete 2 courses in a day on DIKSHA app and some": 1
+        },
+        "text_samples": [
+          "Any other general insights or information shared by teachers with respect to their digital learning engagement and preference",
+          "Teacher keenly shown his interest in the digital learning he expressed he can do digital course 27 hrs in the week.",
+          "शिक्षक ने पहले बताया की वह घर में भी course का लेते हैं, और बाद में बोले की घर में दुसरे जिम्मदारी होने के कारण नहीं कर पाते हैं, स्कूल और घर दोनों में करते हैं. स्कूल में करने से बच्चों की पढाई प्रभावित होती हैं."
+        ]
+      },
+      {
+        "col_idx": 30,
+        "col_name": "Key response note on DIKSHA course engagement and features",
+        "non_null": 33,
+        "null": 28,
+        "completion_pct": 54.1,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key response note on DIKSHA course engagement and features": 1,
+          "Teacher were not able to recall what feature he find engaging. after giving prom": 1,
+          "Teacher highlighted key features as te way of explanation, and CFUs and Post wor": 1,
+          "Most engaging features याद नहीं आ रहा हैं, ये कोर्स  लम्बा होने कारण बोर लगता है": 1,
+          "She likes the small videos and the questions, she likes the multiple choice ques": 1
+        },
+        "text_samples": [
+          "Key response note on DIKSHA course engagement and features",
+          "Teacher were not able to recall what feature he find engaging. after giving prompt question, he was able to share one feature.",
+          "Teacher highlighted key features as te way of explanation, and CFUs and Post work."
+        ]
+      },
+      {
+        "col_idx": 31,
+        "col_name": "Specific feedback to improve the course quality",
+        "non_null": 32,
+        "null": 29,
+        "completion_pct": 52.5,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Specific feedback to improve the course quality": 1,
+          "Digital course बंद करके training शुरू करना चाहिए.": 1,
+          "She thinks that the videos can be a smaller and the written material shorter": 1,
+          "Improving login process, text size should be more legible. ": 1,
+          "Teacher has mention she has done may not able to recall anything from course eve": 1
+        },
+        "text_samples": [
+          "Specific feedback to improve the course quality",
+          "Digital course बंद करके training शुरू करना चाहिए.",
+          "She thinks that the videos can be a smaller and the written material shorter"
+        ]
+      },
+      {
+        "col_idx": 32,
+        "col_name": "Key response or observation note Overall",
+        "non_null": 38,
+        "null": 23,
+        "completion_pct": 62.3,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key response or observation note (Overall)": 1,
+          "Teacher has shown interest in the digital learning but at the same time he was n": 1,
+          "WhatsApp's ज्यदा अच्छा हैं इससे जानकारी जल्दी मिल जाती हैं.": 1,
+          "There are 2 major groups one sankul group and another group made during in perso": 1,
+          "The teacher get most of the information from the JSK WhatsApp group, but the tea": 1
+        },
+        "text_samples": [
+          "Key response or observation note (Overall)",
+          "Teacher has shown interest in the digital learning but at the same time he was not able to recall what he learned except diksha features.",
+          "WhatsApp's ज्यदा अच्छा हैं इससे जानकारी जल्दी मिल जाती हैं."
+        ]
+      },
+      {
+        "col_idx": 33,
+        "col_name": "Reason for not doing DIKSHA course",
+        "non_null": 22,
+        "null": 39,
+        "completion_pct": 36.1,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Time issue": 4,
+          "Not aware": 4,
+          "Technical issue": 3,
+          "Other engagement Technical issue Not aware": 2,
+          "Time issue Not aware": 2
+        },
+        "text_samples": [
+          "Reason for not doing DIKSHA course",
+          "Time issue Other engagement",
+          "Teacher has done one course on PLC, For other courses, there was no awareness because of communication overlow in dedicated groups."
+        ]
+      },
+      {
+        "col_idx": 34,
+        "col_name": "Key response on reasons for not doing DIKSHA courses",
+        "non_null": 16,
+        "null": 45,
+        "completion_pct": 26.2,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key response on reasons for not doing DIKSHA courses": 1,
+          "According to teacher he mentioned doing online course is not effective.": 1,
+          "The teacher was aware about the DIKSHA courses, but time management and non-acad": 1,
+          "He did not say he did not do any course but could not recall anything": 1,
+          "There are lot of daily basis information coming on whats app technical challenge": 1
+        },
+        "text_samples": [
+          "Key response on reasons for not doing DIKSHA courses",
+          "According to teacher he mentioned doing online course is not effective.",
+          "The teacher was aware about the DIKSHA courses, but time management and non-academic duties are main challenges of not doing it sometimes."
+        ]
+      },
+      {
+        "col_idx": 35,
+        "col_name": "CLSS topics recalled",
+        "non_null": 37,
+        "null": 24,
+        "completion_pct": 60.7,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "No topic recalled": 18,
+          "कक्षा प्रबंधन के शुरुआती प्रयास प्रभावी गृहकार्य पुनरवलोकन एवं समेकन": 2,
+          "कक्षा प्रबंधन के शुरुआती प्रयास पूर्वज्ञान से शुरु, समूहकार्य से सीख प्रभावी गृह": 2,
+          "कक्षा प्रबंधन के शुरुआती प्रयास": 2
+        },
+        "text_samples": [
+          "CLSS topics recalled",
+          "पूर्वज्ञान से शुरु, समूहकार्य से सीख प्रभावी गृहकार्य पुनरवलोकन एवं समेकन",
+          "कक्षा प्रबंधन के शुरुआती प्रयास प्रभावी गृहकार्य पुनरवलोकन एवं समेकन"
+        ]
+      },
+      {
+        "col_idx": 36,
+        "col_name": "Key response or feedback or observation on CLSS topics choice",
+        "non_null": 36,
+        "null": 25,
+        "completion_pct": 59.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key response or feedback or observation on CLSS topics choice ": 1,
+          "Teacher was able to recall first month (August) CLSS topic correctly. ": 1,
+          "he was talking very highly about clss, as this is the platfrm where he gets to d": 1,
+          "The teacher found topics such as cold calling, classroom rules, and classroom ma": 1,
+          "समूह कार्य, प्रभावी गृहकार्य एवं पुनरावलोकन।": 1
+        },
+        "text_samples": [
+          "Key response or feedback or observation on CLSS topics choice",
+          "Teacher was able to recall first month (August) CLSS topic correctly.",
+          "he was talking very highly about clss, as this is the platfrm where he gets to discuss with his fellow teachers and it helps him a lot."
+        ]
+      },
+      {
+        "col_idx": 37,
+        "col_name": "Two things liked about CLSS",
+        "non_null": 54,
+        "null": 7,
+        "completion_pct": 88.5,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Two things liked about CLSS": 1,
+          "Get platform to share an experience and get a chance to co- create solutions": 1,
+          "Teacher not specifically highlighted any two things he liked, except that he sai": 1,
+          "U सर्कल में बैठना, सभी के विचारो को शामिल करना अच्छा लगा.": 1,
+          "सबका अनुभव सुन ने को मिलता है, अपने को बोलने का मौका मिलता है और झिझक कम होती है": 1
+        },
+        "text_samples": [
+          "Two things liked about CLSS",
+          "Get platform to share an experience and get a chance to co- create solutions",
+          "Teacher not specifically highlighted any two things he liked, except that he said only this is good platform. The objective is also a good thing about the CLSS."
+        ]
+      },
+      {
+        "col_idx": 38,
+        "col_name": "What makes a successful and helpful peer learning community",
+        "non_null": 52,
+        "null": 9,
+        "completion_pct": 85.2,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "What makes a successful and helpful peer learning community": 1,
+          "No response": 1,
+          "Sahajkarta should be active, it should be compulsory to all teachers, also need ": 1,
+          "बैठक के दौरान एक अच्छी बातचीत सभी को मौका ": 1,
+          "The facilitator and participants should be active": 1
+        },
+        "text_samples": [
+          "What makes a successful and helpful peer learning community",
+          "Sahajkarta should be active, it should be compulsory to all teachers, also need to ensure the teacher attendance. Half time should be pre decided agenda on any subject but half time should be there for discussion teacher local academic challenges. Those official from JSK who are interested  should take part in CLSS, these official can be Sankul Pracharya, High school teacher. CLSS can be in the online format.",
+          "बैठक के दौरान एक अच्छी बातचीत सभी को मौका"
+        ]
+      },
+      {
+        "col_idx": 39,
+        "col_name": "Instance of CLSS learning solving classroom challenge",
+        "non_null": 50,
+        "null": 11,
+        "completion_pct": 82.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Instance of CLSS learning solving classroom challenge": 1,
+          "No response": 1,
+          "He is not able to recall.": 1,
+          "हाँ": 1,
+          "The teacher said classroom management and giving homework to students has helped": 1
+        },
+        "text_samples": [
+          "Instance of CLSS learning solving classroom challenge",
+          "He is not able to recall.",
+          "The teacher said classroom management and giving homework to students has helped him a lot. After the CLSS on Homework he was able to give better homework to students."
+        ]
+      },
+      {
+        "col_idx": 40,
+        "col_name": "Two things to be changed or done differently in CLSS",
+        "non_null": 49,
+        "null": 12,
+        "completion_pct": 80.3,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Two things to be changed or done differently in CLSS": 1,
+          "As Facilitator must have good communication to convey thoughts and learning. Res": 1,
+          "Sahajkarta should be active, it should be compulsory to all teachers, also need ": 1,
+          "दो चीज़ होनी चाहिए अच्छी बातचीत और सभी शिक्षकों को बोलने का मौका": 1,
+          "Suggestion only on infrastructure": 1
+        },
+        "text_samples": [
+          "Two things to be changed or done differently in CLSS",
+          "As Facilitator must have good communication to convey thoughts and learning. Resources and Infrastructure",
+          "Sahajkarta should be active, it should be compulsory to all teachers, also need to ensure the teacher attendance. Half time should be pre decided agenda on any subject but half time should be there for discussion teacher local academic challenges. Those official from JSK who are interested  should take part in CLSS, these official can be Sankul Pracharya, High school teacher."
+        ]
+      },
+      {
+        "col_idx": 41,
+        "col_name": "Usefulness and relevance of facilitation guide and PPT",
+        "non_null": 40,
+        "null": 21,
+        "completion_pct": 65.6,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Usefulness and relevance of facilitation guide and PPT": 1,
+          "He mentioned if teacher gets Facilitation guide and PPT then it will be useful.": 1,
+          "शिक्षक को ये याद नहीं था": 1,
+          "Activities and Facilitation was helpful he said but he was not able to give any ": 1,
+          "did not share anything": 1
+        },
+        "text_samples": [
+          "Usefulness and relevance of facilitation guide and PPT",
+          "He mentioned if teacher gets Facilitation guide and PPT then it will be useful.",
+          "शिक्षक को ये याद नहीं था"
+        ]
+      },
+      {
+        "col_idx": 42,
+        "col_name": "Processes to cascade CLSS learnings at school level",
+        "non_null": 55,
+        "null": 6,
+        "completion_pct": 90.2,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "No learnings shared or no set process adopted": 15,
+          "Participating teacher verbally cascade the learning (Peer learning discussions": 13,
+          "Other": 9,
+          "Resources shared in the school whatsapp group": 4,
+          "Resources shared in the school whatsapp group Participating teacher verbally cas": 3
+        },
+        "text_samples": [
+          "Processes to cascade CLSS learnings at school level",
+          "No learnings shared or no set process adopted",
+          "Participating teacher share their notes Participating teacher verbally cascade the learning (Peer learning discussions"
+        ]
+      },
+      {
+        "col_idx": 43,
+        "col_name": "Key response note on current practice to cascade CLSS learning",
+        "non_null": 50,
+        "null": 11,
+        "completion_pct": 82.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key response note on current practice to cascade CLSS learning": 1,
+          "Being a single teacher there is no benefit to share the same.": 1,
+          "Not mentioned by teacher.": 1,
+          "शिक्षक ने इसका क्लियर जवाब नहीं दिया": 1,
+          "She only has information on the clss that she herself attended": 1
+        },
+        "text_samples": [
+          "Key response note on current practice to cascade CLSS learning",
+          "Being a single teacher there is no benefit to share the same.",
+          "Not mentioned by teacher."
+        ]
+      },
+      {
+        "col_idx": 44,
+        "col_name": "Teachers suggestion on process and arrangement to promote cascade learning or peer learning at school level",
+        "non_null": 42,
+        "null": 19,
+        "completion_pct": 68.9,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Teachers suggestion on process and arrangement to promote cascade learning or pe": 1,
+          "इस पर कुछ नहीं बताये": 1,
+          "She could not recall any of the clss apart from u shape seating arrangement": 1,
+          "The teachers suggested and emphasized on the discussion about CLSS in the school": 1,
+          "1. The schools should be shut down on the last Saturdays so that it can maintain": 1
+        },
+        "text_samples": [
+          "Teachers suggestion on process and arrangement to promote cascade learning or peer learning at school level",
+          "इस पर कुछ नहीं बताये",
+          "She could not recall any of the clss apart from u shape seating arrangement"
+        ]
+      },
+      {
+        "col_idx": 45,
+        "col_name": "What challenges do they face in filling attendance and feedback form post the samwad",
+        "non_null": 54,
+        "null": 7,
+        "completion_pct": 88.5,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "others": 29,
+          "Session end rush for teachers to leave the venue": 4,
+          "Unwilling teachers": 3,
+          "Session end rush for teachers to leave the venue Unwilling teachers": 3,
+          "Awareness Issue others": 2
+        },
+        "text_samples": [
+          "What challenges do they face in filling attendance and feedback form post the samwad?",
+          "Not perceived important",
+          "Unwilling teachers"
+        ]
+      },
+      {
+        "col_idx": 46,
+        "col_name": "Key response or observation note on teachers experience with CLSS attendance and other logistics",
+        "non_null": 50,
+        "null": 11,
+        "completion_pct": 82.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key response or observation  note on teachers experience with CLSS attendance an": 1,
+          "Venue should be accessible and also with at least basic facilities": 1,
+          "Network issues can be one of the challenges in the filling the attendance form o": 1,
+          "शिक्षक ने बताया की इसमें उनको कुछ challenges नहीं आता हैं.": 1,
+          " login issue on RSKMP Portal": 1
+        },
+        "text_samples": [
+          "Key response or observation  note on teachers experience with CLSS attendance and other logistics",
+          "Venue should be accessible and also with at least basic facilities",
+          "Network issues can be one of the challenges in the filling the attendance form of clss. Teacher was clearly aaware of the CLSS Process, where he need to go to at the JSK and attend the samvad, the overall process of discussion and teacher experience sharing. He was also aware the feedback form filling process, timing and day of the CLSS."
+        ]
+      },
+      {
+        "col_idx": 47,
+        "col_name": "Reasons of non-participation in CLSS",
+        "non_null": 13,
+        "null": 48,
+        "completion_pct": 21.3,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Others": 8,
+          "Reasons of non-participation in CLSS": 1,
+          "Not instructed to attend Didn't find any information": 1,
+          "Busy with other work": 1,
+          "Not instructed to attend ": 1
+        },
+        "text_samples": [
+          "Reasons of non-participation in CLSS",
+          "Not instructed to attend Didn't find any information",
+          "Busy with other work"
+        ]
+      },
+      {
+        "col_idx": 48,
+        "col_name": "Key response on CLSS non participation reasons",
+        "non_null": 7,
+        "null": 54,
+        "completion_pct": 11.5,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key response on CLSS non participation reasons": 1,
+          "The teacher has attended all the CLSS sessions. But he said sometimes due to the": 1,
+          "Teacher took part in the 2 CLSS.": 1,
+          "Teacher took part in the CLSS.": 1,
+          "Only one teacher from our school attended the CLSS, and I did not get the opport": 1
+        },
+        "text_samples": [
+          "Key response on CLSS non participation reasons",
+          "The teacher has attended all the CLSS sessions. But he said sometimes due to the non-academic work it has been difficult to join.",
+          "Teacher took part in the 2 CLSS."
+        ]
+      },
+      {
+        "col_idx": 49,
+        "col_name": "As per the teacher, how can CLSS be made more helpful for teachers",
+        "non_null": 5,
+        "null": 56,
+        "completion_pct": 8.2,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "As per the teacher, how can CLSS be made more helpful for teachers": 1,
+          "NA, Teacher took part in CLSS.": 1,
+          "As per the teacher the CLSS can be made more helpful if it can be more engaging ": 1,
+          "Everyone should get opportunity to participate": 1,
+          "The participants of CLSS should share their learning with other teachers also": 1
+        },
+        "text_samples": [
+          "As per the teacher, how can CLSS be made more helpful for teachers",
+          "NA, Teacher took part in CLSS.",
+          "As per the teacher the CLSS can be made more helpful if it can be more engaging because sometimes it is boring for him as well. Not every section but some section he said."
+        ]
+      },
+      {
+        "col_idx": 50,
+        "col_name": "Key observation on teacher's motivation, awareness, challenges of non-participation",
+        "non_null": 6,
+        "null": 55,
+        "completion_pct": 9.8,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key observation on teacher's motivation, awareness, challenges of non-participat": 1,
+          "It has been observed that teachers was not motivated for the academic activities": 1,
+          "The teacher was aware of the CLSS and mentioned seeing materials on it being sha": 1,
+          "The teacher was not aware of anything like CLSS.": 1,
+          "The teacher initially mentioned taking part in the CLSS and when probed further ": 1
+        },
+        "text_samples": [
+          "Key observation on teacher's motivation, awareness, challenges of non-participation",
+          "It has been observed that teachers was not motivated for the academic activities and he was unable to describe any learning from it.",
+          "The teacher was aware of the CLSS and mentioned seeing materials on it being shared in the group. He could not attend majorly because of not being able to travel due to a physical disability. He finds it difficult to get a vehicle to take him to the locations. He however believes Shaikshik Samwad is a very useful platform and discussions among teachers help resolve problems."
+        ]
+      },
+      {
+        "col_idx": 51,
+        "col_name": "General perception on Teacher mentoring and classroom observation process",
+        "non_null": 60,
+        "null": 1,
+        "completion_pct": 98.4,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "General perception on Teacher mentoring and classroom observation process": 1,
+          "according to teacher classroom observation means any official comes to classroom": 1,
+          "Teacher has affirmative response about the CRO and TM, He highlighted this need ": 1,
+          "इसमें कुछ तैयारी नहीं करनी पढ़ती हैं, अपना अनुभव काम आता हैं.": 1,
+          "अच्छा लगता है कोई आता है तो": 1
+        },
+        "text_samples": [
+          "General perception on Teacher mentoring and classroom observation process",
+          "according to teacher classroom observation means any official comes to classroom for observation on student assessment, syllabus completion.",
+          "Teacher has affirmative response about the CRO and TM, He highlighted this need to be there in the place. At least once a month every teacher classroom needs to observe by any official or even villagers can come, and time to time mentoring from senior also needed. Teacher mainly see CRO as mainly seeing the class of the teacher how he is teaching and how children were responding. Teacher overally find this process as supportive mechanism for the teacher."
+        ]
+      },
+      {
+        "col_idx": 52,
+        "col_name": "What should be kept in mind by mentor official mentors while doing CRO & Mentoring",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "What should be kept in mind by mentor (official mentors) while doing CRO & Mento": 1,
+          "After giving prompt question teacher explained mentoring means - CAC/ Officials ": 1,
+          "The official who ever coming should come with the helping mindset, and coordinat": 1,
+          "सभी अधिकारी अलग अलग होते हैं, अधिकारीयों को शिक्षकों से सम्मान पूर्वक बात करना च": 1,
+          "They should give feedback on teaching and what can be done better in class": 1
+        },
+        "text_samples": [
+          "What should be kept in mind by mentor (official mentors) while doing CRO & Mentoring",
+          "After giving prompt question teacher explained mentoring means - CAC/ Officials should support in classroom process, take lectures when it required",
+          "The official who ever coming should come with the helping mindset, and coordination between both need to be there. Official should come as mentor (salahkar) rather than doing any disciplinary action, Also come with mindset of the exact reality and context of school."
+        ]
+      },
+      {
+        "col_idx": 53,
+        "col_name": "Support expectation from mentor and process",
+        "non_null": 59,
+        "null": 2,
+        "completion_pct": 96.7,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Support expectation from mentor and process": 1,
+          "Officials should identify actual support and requirements of teachers and plan a": 1,
+          "Support in finding any mistake and guidance with respect to that. Teacher was no": 1,
+          "Resource  provide करना चाहिए": 1,
+          "Support in difficult topics": 1
+        },
+        "text_samples": [
+          "Support expectation from mentor and process",
+          "Officials should identify actual support and requirements of teachers and plan accordingly",
+          "Support in finding any mistake and guidance with respect to that. Teacher was not able to describe this in the greater details."
+        ]
+      },
+      {
+        "col_idx": 54,
+        "col_name": "Any other suggestions to improve professional development support for teachers",
+        "non_null": 43,
+        "null": 18,
+        "completion_pct": 70.5,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Any other suggestions to improve professional development support for teachers?": 1,
+          "Digital program needed more, except that teacher mainly highlighed his challenge": 1,
+          "शिक्षकों के लिय स्टेट लेवल ट्रेंनिंग होना चाहिए, Digital कोर्स को बंद करना चाहिए": 1,
+          "No": 1,
+          "1. The training should have less technicality as majority of the teachers are ol": 1
+        },
+        "text_samples": [
+          "Any other suggestions to improve professional development support for teachers?",
+          "Digital program needed more, except that teacher mainly highlighed his challenges as administrative challenges like staff need to be increase, remove workload, Syllabus need to in the more easy format.",
+          "शिक्षकों के लिय स्टेट लेवल ट्रेंनिंग होना चाहिए, Digital कोर्स को बंद करना चाहिए ये शिक्षकों को कम फायदा पहुचता हैं."
+        ]
+      },
+      {
+        "col_idx": 55,
+        "col_name": "Insight on teacher's motivation Intrinsic VS extrinsic with respect to professional development",
+        "non_null": 29,
+        "null": 32,
+        "completion_pct": 47.5,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Insight on teacher's motivation (Intrinsic VS extrinsic) with respect to profess": 1,
+          "Teacher was intrinsically shown keen to learn, he is also working in the very in": 1,
+          "Active in term of participation, doing activities with students on bagless Satur": 1,
+          "मैडम की बातों से यह स्पष्ट होता है कि उनकी प्रेरणा मुख्य रूप से आंतरिक है। उन्हो": 1,
+          "There is not much active participation in TPD related activities, has general aw": 1
+        },
+        "text_samples": [
+          "Insight on teacher's motivation (Intrinsic VS extrinsic) with respect to professional development",
+          "Teacher was intrinsically shown keen to learn, he is also working in the very interior of the balaghat. He engage students in multiple ways. So overally teacher was intrinscially motivated.",
+          "Active in term of participation, doing activities with students on bagless Saturday, baal cabinet- extracurricular activities of teachers. Generally motivated teacher."
+        ]
+      },
+      {
+        "col_idx": 56,
+        "col_name": "Any unexpected insight, not in questionnaire",
+        "non_null": 23,
+        "null": 38,
+        "completion_pct": 37.7,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "No": 2,
+          "नहीं": 2,
+          "Any unexpected insight, not in questionnaire": 1,
+          "Nothing": 1,
+          "She shared that the new textbook is good, but it should have more questions in b": 1
+        },
+        "text_samples": [
+          "Any unexpected insight, not in questionnaire",
+          "She shared that the new textbook is good, but it should have more questions in between the chapter and at the end. She shared that this new book pushes teacher to prepare questions herself and prepare for the class.",
+          "If someone is not recongnising main speaker of YTL then they have not attended it. In both the schools of Betul associated master trainers are very active they are sharing most of the information. teachers are also receiving follow up resources."
+        ]
+      },
+      {
+        "col_idx": 57,
+        "col_name": "Are there any gender specific insights, concerns or suggestion highlighted or observed",
+        "non_null": 22,
+        "null": 39,
+        "completion_pct": 36.1,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "कोई विशेष लैंगिक मुद्दा या सुझाव सामने नहीं आया।": 3,
+          "No": 2,
+          "नहीं": 2,
+          "Are there any gender specific insights, concerns or suggestion highlighted or ob": 1,
+          "Nothing": 1
+        },
+        "text_samples": [
+          "Are there any gender specific insights, concerns or suggestion highlighted or observed",
+          "She shared absence of functional female toilets at training centres is a problem",
+          "The JSk tried to do CLSS in different schools but it was not successful because there was no public transport, the school was in interior amd female teachers faced a lot of problem."
+        ]
+      },
+      {
+        "col_idx": 58,
+        "col_name": "Unnamed: 57",
+        "non_null": 58,
+        "null": 3,
+        "completion_pct": 95.1,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Good": 24,
+          "Average": 18,
+          "Good ": 4,
+          "VGood": 4,
+          "Vgood": 3
+        },
+        "text_samples": []
+      }
+    ]
+  },
+  "Obs_Observations": {
+    "rows": 61,
+    "cols": 15,
+    "total_cells": 915,
+    "columns_detail": [
+      {
+        "col_idx": 1,
+        "col_name": "Teacher_ID",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 30.5,
+          "std": 17.46,
+          "min": 1.0,
+          "max": 60.0,
+          "median": 30.5
+        },
+        "top_frequencies": {
+          "Teacher_ID": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1
+        },
+        "text_samples": []
+      },
+      {
+        "col_idx": 2,
+        "col_name": "Name of the interviewer",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Ritesh Pandey": 8,
+          "Aishwarya Yadav": 7,
+          "Rashmi Mishra": 6,
+          "Rahul Kumar": 6,
+          "Srujan Deshpande": 6
+        },
+        "text_samples": [
+          "Name of the interviewer",
+          "Pushpendra Singh",
+          "Dharmendra Mishra"
+        ]
+      },
+      {
+        "col_idx": 3,
+        "col_name": "Name of the note-taker",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Vaibhav Tambe": 6,
+          "Vaibhav Kurwade": 6,
+          "Devendra Sharma": 5,
+          "Jay Prakash": 4,
+          "Other": 4
+        },
+        "text_samples": [
+          "Name of the note-taker",
+          "Dharmendra Mishra",
+          "Dharmendra Mishra"
+        ]
+      },
+      {
+        "col_idx": 4,
+        "col_name": "District of respondent teacher",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Balaghat": 4,
+          "Betul": 3,
+          "Ujjain": 3,
+          "Chhindwara": 3,
+          "Datia": 3
+        },
+        "text_samples": [
+          "District of respondent teacher"
+        ]
+      },
+      {
+        "col_idx": 5,
+        "col_name": "Gender of respondent",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Male": 38,
+          "Female": 22,
+          "Gender of respondent": 1
+        },
+        "text_samples": [
+          "Gender of respondent"
+        ]
+      },
+      {
+        "col_idx": 6,
+        "col_name": "Date of the interview",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "2026-06-12 00:00:00": 8,
+          "2026-06-15 00:00:00": 8,
+          "2026-06-16 00:00:00": 8,
+          "2026-06-19 00:00:00": 8,
+          "2026-06-11 00:00:00": 7
+        },
+        "text_samples": [
+          "Date of the interview",
+          "2026-06-10 00:00:00",
+          "2026-06-10 00:00:00"
+        ]
+      },
+      {
+        "col_idx": 7,
+        "col_name": "Subject taught by teacher",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Maths Science": 14,
+          "Social Science": 11,
+          "Maths": 8,
+          "Social Science Sanskrit": 6,
+          "Hindi Social Science": 5
+        },
+        "text_samples": [
+          "Subject taught by teacher",
+          "Hindi Social Science",
+          "Hindi Social Science Sanskrit"
+        ]
+      },
+      {
+        "col_idx": 8,
+        "col_name": "Years of teaching experience",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 20.93,
+          "std": 8.78,
+          "min": 3.0,
+          "max": 43.0,
+          "median": 20.0
+        },
+        "top_frequencies": {
+          "16": 6,
+          "25": 6,
+          "28": 6,
+          "15": 5,
+          "13": 3
+        },
+        "text_samples": [
+          "Years of teaching experience"
+        ]
+      },
+      {
+        "col_idx": 9,
+        "col_name": "Key observation note on teacher's daily engagement",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key observation note on teacher's daily engagement": 1,
+          "Teacher is also headmaster therefore he highly engaged in academic and non-acade": 1,
+          "Initially teacher got confused with term activity, so he started explaining that": 1,
+          "शिक्षक ने इसका कोई क्लियर आंसर नहीं दिया, वो पूर्व में कही गयी बातों को दोहरा रह": 1,
+          "The teacher said that she is taking all 6 classes everyday but she also informed": 1
+        },
+        "text_samples": [
+          "Key observation note on teacher's daily engagement",
+          "Teacher is also headmaster therefore he highly engaged in academic and non-academic responsibilities.",
+          "Initially teacher got confused with term activity, so he started explaining that there were 30-40 students will be the classroom. Government design a lot of activity, so it will get difficult to manage with low grade level student. But overall, the teacher does not take part in the other adiminstrative work due to health concern and seniority."
+        ]
+      },
+      {
+        "col_idx": 10,
+        "col_name": "Key observation notes Annual Engagement",
+        "non_null": 43,
+        "null": 18,
+        "completion_pct": 70.5,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key observation notes (Annual Engagement) ": 1,
+          "The teacher demonstrated good recall of the different professional development a": 1,
+          "शिक्षक वर्ष भर विभिन्न शैक्षणिक एवं विभागीय गतिविधियों में सक्रिय रूप से जुड़े र": 1,
+          "He is almost regular in his classroom and apart from it, he involved 30% in nona": 1,
+          "He is confidently shared about the last year experience, which indicateds that h": 1
+        },
+        "text_samples": [
+          "Key observation notes (Annual Engagement)",
+          "The teacher demonstrated good recall of the different professional development activities attended during the year, though specific dates and timelines were not remembered. Responses reflected regular engagement with academic learning opportunities and training programs.",
+          "शिक्षक वर्ष भर विभिन्न शैक्षणिक एवं विभागीय गतिविधियों में सक्रिय रूप से जुड़े रहे। उन्होंने विषय आधारित शैक्षिक संवाद (CLSS), सीख की यात्रा तथा अन्य विभागीय कार्यक्रमों में नियमित भागीदारी की। शिक्षक प्रशिक्षणों से प्राप्त सीख को कक्षा में लागू करने का प्रयास करते हैं और नई शिक्षण रणनीतियों को अपनाने के प्रति सकारात्मक दृष्टिकोण रखते हैं। हालांकि, शैक्षणिक कार्यों के साथ-साथ प्रशासनिक एवं गैर-शैक्षणिक जिम्मेदारियों के कारण समय प्रबंधन एक चुनौती के रूप में सामने आया। इसके बावजूद शिक्षक अपनी व्यावसायिक सीख को निरंतर बढ़ाने के लिए प्रतिबद्ध दिखाई दिए।"
+        ]
+      },
+      {
+        "col_idx": 11,
+        "col_name": "Key observation note on teachers experience, participation and expectations In-person trg",
+        "non_null": 43,
+        "null": 18,
+        "completion_pct": 70.5,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key observation note on teachers experience, participation and expectations (In-": 1,
+          "The teacher suggested that such trainings should be conducted regularly and that": 1,
+          "PPT, प्रशिक्षण सामग्री, मॉड्यूल/मार्गदर्शिका": 1,
+          "The training was based on the textbook, and there was also a discussion on the P": 1,
+          "Tearcher is very confidently shared about training experience and also shared cl": 1
+        },
+        "text_samples": [
+          "Key observation note on teachers experience, participation and expectations (In-person trg)",
+          "The teacher suggested that such trainings should be conducted regularly and that effective monitoring should be ensured to improve their impact.",
+          "PPT, प्रशिक्षण सामग्री, मॉड्यूल/मार्गदर्शिका"
+        ]
+      },
+      {
+        "col_idx": 12,
+        "col_name": "Key observation note on access and adoption of training material",
+        "non_null": 33,
+        "null": 28,
+        "completion_pct": 54.1,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key observation note on access and adoption of training material ": 1,
+          "The teacher did not receive any training materials or resources. However, the te": 1,
+          "शिक्षक को प्रशिक्षण के दौरान उपलब्ध कराई गई PPT, मार्गदर्शिका एवं अन्य शिक्षण सा": 1,
+          "It was difficult for him to recall the training content. He remembered that the ": 1,
+          "while sharing response teacher share concern that sometimes they want to do thin": 1
+        },
+        "text_samples": [
+          "Key observation note on access and adoption of training material",
+          "The teacher did not receive any training materials or resources. However, the teacher recalled and adopted some key practices from the training, such as checking students' prior knowledge, using topic hooks, and cold calling techniques, and found them useful in classroom teaching.",
+          "शिक्षक को प्रशिक्षण के दौरान उपलब्ध कराई गई PPT, मार्गदर्शिका एवं अन्य शिक्षण सामग्री तक पहुँच प्राप्त हुई। शिक्षक ने बताया कि प्रशिक्षण में साझा की गई रणनीतियों, जैसे समूह कार्य, प्रभावी गृहकार्य एवं पुनरावलोकन गतिविधियों को कक्षा में लागू करने का प्रयास किया गया। शिक्षक प्रशिक्षण सामग्री को उपयोगी एवं व्यवहारिक मानते हैं, क्योंकि यह सीधे कक्षा शिक्षण से जुड़ी है। हालांकि, कार्यभार एवं समय की सीमाओं के कारण सभी सुझावों का नियमित और पूर्ण रूप से उपयोग कर पाना हमेशा संभव नहीं हो पाता। समग्र रूप से शिक्षक प्रशिक्षण सामग्री को अपनाने के प्रति सकारात्मक एवं उत्साही दिखाई दिए।"
+        ]
+      },
+      {
+        "col_idx": 13,
+        "col_name": "Key observation note on teacher's perceived value of online learning",
+        "non_null": 42,
+        "null": 19,
+        "completion_pct": 68.9,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key observation note on teacher's perceived value of online learning": 1,
+          "teacher is saying that he has done courses, but he dont remember anything major ": 1,
+          "The teacher showed a positive attitude towards online learning and viewed digita": 1,
+          "शिक्षक डिजिटल सीखने को उपयोगी मानते हैं, लेकिन नेटवर्क और लंबे कोर्स रुचि को प्र": 1,
+          "Teacher is doing the courses but not able to recall any learning from the same.": 1
+        },
+        "text_samples": [
+          "Key observation note on teacher's perceived value of online learning",
+          "teacher is saying that he has done courses, but he dont remember anything major and thus, it feels like he either havent done and asked somebody else to do it for him or else he hasnt found it useful enough, in a way so that he remembers.",
+          "The teacher showed a positive attitude towards online learning and viewed digital courses as a useful source of professional learning and classroom support."
+        ]
+      },
+      {
+        "col_idx": 14,
+        "col_name": "Key observation note on non-participation",
+        "non_null": 10,
+        "null": 51,
+        "completion_pct": 16.4,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key observation note on non-participation": 1,
+          "Awareness exists, but structured orientation and support for course participatio": 1,
+          "The teacher's non-participation in DIKSHA courses appears to be influenced by mu": 1,
+          "The teacher have not attended any follow up activites which she was not informed": 1,
+          "Though he said he did the plc course, but he couldn't share any specific thing h": 1
+        },
+        "text_samples": [
+          "Key observation note on non-participation",
+          "Awareness exists, but structured orientation and support for course participation appear limited.",
+          "The teacher's non-participation in DIKSHA courses appears to be influenced by multiple factors, including limited awareness of available courses, time constraints, network-related challenges, and low motivation to engage with online learning opportunities."
+        ]
+      },
+      {
+        "col_idx": 15,
+        "col_name": "Key observation note on CLSS learning cascade process in schools",
+        "non_null": 30,
+        "null": 31,
+        "completion_pct": 49.2,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Key observation note on CLSS learning cascade process in schools": 1,
+          "CLSS learnings are mainly shared through informal discussions among teachers.": 1,
+          "CLSS की सीख सहकर्मियों के साथ अनौपचारिक रूप से साझा की जाती है, लेकिन विद्यालय म": 1,
+          "In this school, teachers share their experiences at the school level. However, t": 1,
+          "there is no any process placed to casecade learning of the CLSS with their teach": 1
+        },
+        "text_samples": [
+          "Key observation note on CLSS learning cascade process in schools",
+          "CLSS learnings are mainly shared through informal discussions among teachers.",
+          "CLSS की सीख सहकर्मियों के साथ अनौपचारिक रूप से साझा की जाती है, लेकिन विद्यालय में इसके लिए कोई नियमित एवं संरचित कैस्केड प्रक्रिया देखने को नहीं मिली।"
+        ]
+      }
+    ]
+  },
+  "Kobo_Audit": {
+    "rows": 61,
+    "cols": 14,
+    "total_cells": 854,
+    "columns_detail": [
+      {
+        "col_idx": 1,
+        "col_name": "Kobo System Columns (platform metadata — not for analysis)",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "start": 1,
+          "2026-06-10 20:20:02.900000": 1,
+          "2026-06-11 08:35:14.667000": 1,
+          "2026-06-12 09:51:56.649000": 1,
+          "2026-06-12 10:38:36.435000": 1
+        },
+        "text_samples": [
+          "2026-06-10 20:20:02.900000",
+          "2026-06-11 08:35:14.667000",
+          "2026-06-12 09:51:56.649000"
+        ]
+      },
+      {
+        "col_idx": 2,
+        "col_name": "Unnamed: 1",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "end": 1,
+          "2026-06-10 21:39:35.743000": 1,
+          "2026-06-11 10:20:33.713000": 1,
+          "2026-06-12 10:50:34.164000": 1,
+          "2026-06-12 11:05:10.079000": 1
+        },
+        "text_samples": [
+          "2026-06-10 21:39:35.743000",
+          "2026-06-11 10:20:33.713000",
+          "2026-06-12 10:50:34.164000"
+        ]
+      },
+      {
+        "col_idx": 3,
+        "col_name": "Unnamed: 2",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "phonenumber not found": 60,
+          "phonenumber": 1
+        },
+        "text_samples": [
+          "phonenumber not found",
+          "phonenumber not found",
+          "phonenumber not found"
+        ]
+      },
+      {
+        "col_idx": 4,
+        "col_name": "Unnamed: 3",
+        "non_null": 1,
+        "null": 60,
+        "completion_pct": 1.6,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "Please mention your name": 1
+        },
+        "text_samples": [
+          "Please mention your name"
+        ]
+      },
+      {
+        "col_idx": 5,
+        "col_name": "Unnamed: 4",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 787444435.15,
+          "std": 1825036.24,
+          "min": 784559848.0,
+          "max": 791773500.0,
+          "median": 787230048.0
+        },
+        "top_frequencies": {
+          "_id": 1,
+          "784559848": 1,
+          "784669407": 1,
+          "785019839": 1,
+          "785022320": 1
+        },
+        "text_samples": []
+      },
+      {
+        "col_idx": 6,
+        "col_name": "Unnamed: 5",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "_uuid": 1,
+          "54f73d22-1540-4b40-855f-011af1df34da": 1,
+          "38ba08ec-fb69-4826-ad1a-06d6a8779b9a": 1,
+          "2e04c987-2c7f-4284-b3d8-5b6d3d1fb3dc": 1,
+          "2b29316c-e14f-458f-a4b4-e867a886bfb0": 1
+        },
+        "text_samples": [
+          "54f73d22-1540-4b40-855f-011af1df34da",
+          "38ba08ec-fb69-4826-ad1a-06d6a8779b9a",
+          "2e04c987-2c7f-4284-b3d8-5b6d3d1fb3dc"
+        ]
+      },
+      {
+        "col_idx": 7,
+        "col_name": "Unnamed: 6",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "_submission_time": 1,
+          "2026-06-10 16:09:34": 1,
+          "2026-06-11 04:50:36": 1,
+          "2026-06-12 05:20:31": 1,
+          "2026-06-12 05:39:59": 1
+        },
+        "text_samples": [
+          "_submission_time",
+          "2026-06-10 16:09:34",
+          "2026-06-11 04:50:36"
+        ]
+      },
+      {
+        "col_idx": 8,
+        "col_name": "Unnamed: 7",
+        "non_null": 1,
+        "null": 60,
+        "completion_pct": 1.6,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "_validation_status": 1
+        },
+        "text_samples": [
+          "_validation_status"
+        ]
+      },
+      {
+        "col_idx": 9,
+        "col_name": "Unnamed: 8",
+        "non_null": 1,
+        "null": 60,
+        "completion_pct": 1.6,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "_notes": 1
+        },
+        "text_samples": []
+      },
+      {
+        "col_idx": 10,
+        "col_name": "Unnamed: 9",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "submitted_via_web": 60,
+          "_status": 1
+        },
+        "text_samples": [
+          "submitted_via_web",
+          "submitted_via_web",
+          "submitted_via_web"
+        ]
+      },
+      {
+        "col_idx": 11,
+        "col_name": "Unnamed: 10",
+        "non_null": 1,
+        "null": 60,
+        "completion_pct": 1.6,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "_submitted_by": 1
+        },
+        "text_samples": []
+      },
+      {
+        "col_idx": 12,
+        "col_name": "Unnamed: 11",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "vhhfLfBTNauNfukD2mG5Tb": 23,
+          "vrkGtpFt4RKYw94LShV8PM": 14,
+          "vuyoeKgrfcwXk6iMoNP2qP": 7,
+          "vsz9hrDr2icpXRL77iEUZb": 6,
+          "vwUDBCse2Lr3Wgt2vFaMKH": 6
+        },
+        "text_samples": [
+          "vsz9hrDr2icpXRL77iEUZb",
+          "vsz9hrDr2icpXRL77iEUZb",
+          "vuyoeKgrfcwXk6iMoNP2qP"
+        ]
+      },
+      {
+        "col_idx": 13,
+        "col_name": "Unnamed: 12",
+        "non_null": 1,
+        "null": 60,
+        "completion_pct": 1.6,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "_tags": 1
+        },
+        "text_samples": []
+      },
+      {
+        "col_idx": 14,
+        "col_name": "Unnamed: 13",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "meta/rootUuid": 1,
+          "uuid:54f73d22-1540-4b40-855f-011af1df34da": 1,
+          "uuid:38ba08ec-fb69-4826-ad1a-06d6a8779b9a": 1,
+          "uuid:2e04c987-2c7f-4284-b3d8-5b6d3d1fb3dc": 1,
+          "uuid:2b29316c-e14f-458f-a4b4-e867a886bfb0": 1
+        },
+        "text_samples": [
+          "uuid:54f73d22-1540-4b40-855f-011af1df34da",
+          "uuid:38ba08ec-fb69-4826-ad1a-06d6a8779b9a",
+          "uuid:2e04c987-2c7f-4284-b3d8-5b6d3d1fb3dc"
+        ]
+      }
+    ]
+  },
+  "Sheet2": {
+    "rows": 61,
+    "cols": 8,
+    "total_cells": 488,
+    "columns_detail": [
+      {
+        "col_idx": 1,
+        "col_name": "Row Labels",
+        "non_null": 5,
+        "null": 56,
+        "completion_pct": 8.2,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "0": 1,
+          "1": 1,
+          "Processes to cascade CLSS learnings at school level/Resources shared in the scho": 1,
+          "(blank)": 1,
+          "Grand Total": 1
+        },
+        "text_samples": [
+          "Processes to cascade CLSS learnings at school level/Resources shared in the school whatsapp group"
+        ]
+      },
+      {
+        "col_idx": 2,
+        "col_name": "Count of Processes to cascade CLSS learnings at school level__Resources shared in the school whatsapp group",
+        "non_null": 4,
+        "null": 57,
+        "completion_pct": 6.6,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 27.5,
+          "std": 26.06,
+          "min": 1.0,
+          "max": 55.0,
+          "median": 27.0
+        },
+        "top_frequencies": {
+          "44.0": 1,
+          "10.0": 1,
+          "1.0": 1,
+          "55.0": 1
+        },
+        "text_samples": []
+      },
+      {
+        "col_idx": 3,
+        "col_name": "s. no",
+        "non_null": 60,
+        "null": 1,
+        "completion_pct": 98.4,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 30.5,
+          "std": 17.46,
+          "min": 1.0,
+          "max": 60.0,
+          "median": 30.5
+        },
+        "top_frequencies": {
+          "1.0": 1,
+          "2.0": 1,
+          "3.0": 1,
+          "4.0": 1,
+          "5.0": 1
+        },
+        "text_samples": []
+      },
+      {
+        "col_idx": 4,
+        "col_name": "Activities participated over 2025-26 academic year__Digital Training",
+        "non_null": 61,
+        "null": 0,
+        "completion_pct": 100.0,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.67,
+          "std": 0.48,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 1.0
+        },
+        "top_frequencies": {
+          "1": 40,
+          "0": 20,
+          "Activities participated over 2025-26 academic year/Digital Training": 1
+        },
+        "text_samples": [
+          "Activities participated over 2025-26 academic year/Digital Training"
+        ]
+      },
+      {
+        "col_idx": 5,
+        "col_name": "Name of the online platforms used by the teacher",
+        "non_null": 51,
+        "null": 10,
+        "completion_pct": 83.6,
+        "is_numeric": false,
+        "numeric_stats": {},
+        "top_frequencies": {
+          "DIKSHA": 9,
+          "Diksha App, I-GOT": 2,
+          "Diksha, कर्मयोगी": 2,
+          "Igot": 2,
+          "Diksha": 2
+        },
+        "text_samples": [
+          "Name of the online platforms used by the teacher",
+          "DIKSHA and Karmayogi",
+          "Mygov and DIKSHA"
+        ]
+      },
+      {
+        "col_idx": 6,
+        "col_name": "Unnamed: 5",
+        "non_null": 40,
+        "null": 21,
+        "completion_pct": 65.6,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.6,
+          "std": 0.5,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 1.0
+        },
+        "top_frequencies": {
+          "1.0": 24,
+          "0.0": 16
+        },
+        "text_samples": []
+      },
+      {
+        "col_idx": 7,
+        "col_name": "Diksha & Igot",
+        "non_null": 41,
+        "null": 20,
+        "completion_pct": 67.2,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 0.59,
+          "std": 0.5,
+          "min": 0.0,
+          "max": 1.0,
+          "median": 1.0
+        },
+        "top_frequencies": {
+          "1.0": 24,
+          "0.0": 17
+        },
+        "text_samples": []
+      },
+      {
+        "col_idx": 8,
+        "col_name": "Igot",
+        "non_null": 30,
+        "null": 31,
+        "completion_pct": 49.2,
+        "is_numeric": true,
+        "numeric_stats": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "median": 1.0
+        },
+        "top_frequencies": {
+          "1.0": 30
+        },
+        "text_samples": []
+      }
+    ]
+  }
+}
