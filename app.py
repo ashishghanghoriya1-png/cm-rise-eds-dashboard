@@ -71,33 +71,32 @@ st.markdown("""
         display: inline-block !important;
     }
     
-    /* Executive Hero Header (Clean Light Design) */
+    /* Executive Hero Header (Config 2026 Theme Design) */
     .hero-header {
-        background-color: #FFFFFF !important;
+        background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%) !important;
         border-radius: 16px !important;
         padding: 2.2rem 2.5rem !important;
         margin-bottom: 2rem !important;
-        border: 1px solid #E2E8F0 !important;
-        border-left: 8px solid #0EA5E9 !important;
-        box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.01) !important;
+        border: 2px solid #0EA5E9 !important;
+        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15) !important;
     }
     
     .hero-badge {
         display: inline-block !important;
-        background-color: #E0F2FE !important;
-        color: #0284C7 !important;
-        border: 1px solid #BAE6FD !important;
+        background-color: #BEF264 !important;
+        color: #0F172A !important;
+        border: none !important;
         padding: 0.35rem 0.85rem !important;
         border-radius: 20px !important;
         font-size: 0.78rem !important;
-        font-weight: 700 !important;
+        font-weight: 800 !important;
         letter-spacing: 0.06em !important;
         text-transform: uppercase !important;
         margin-bottom: 0.8rem !important;
     }
 
     .hero-title {
-        color: #0F172A !important;
+        color: #F8FAFC !important;
         font-size: 2.1rem !important;
         font-weight: 800 !important;
         line-height: 1.25 !important;
@@ -106,7 +105,7 @@ st.markdown("""
     }
 
     .hero-subtitle {
-        color: #475569 !important;
+        color: #94A3B8 !important;
         font-size: 1.05rem !important;
         font-weight: 500 !important;
         margin: 0 !important;
@@ -389,7 +388,7 @@ if not filtered_quant.empty:
 # ---------------------------------------------------------
 # Main Application Tabs
 # ---------------------------------------------------------
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs([
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs([
     "🏆 Executive Summary & Gaps",
     "🏫 In-Person Training (IPT)",
     "📱 Digital Courses (DIKSHA)",
@@ -399,8 +398,7 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs([
     "📢 Brand Awareness Funnel",
     "🔮 TabFM Policy Simulator",
     "🤖 Qwen AI Assistant & Data",
-    "💬 Teacher Quote Bank & Sentiments",
-    "🎨 Figma Config 2026 Studio"
+    "💬 Teacher Quote Bank & Sentiments"
 ])
 
 # =========================================================
@@ -1292,119 +1290,6 @@ with tab10:
                 <p style="font-size: 0.92rem !important; color: #065F46 !important; font-weight: 700 !important; margin-top: 0.3rem !important;"><b>💡 Strategic Policy Action:</b> {policy}</p>
             </div>
             """, unsafe_allow_html=True)
-# =========================================================
-# TAB 11: FIGMA CONFIG 2026 PLAYGROUND & INTERACTIVE STUDIO
-# =========================================================
-with tab11:
-    st.markdown('<div class="section-title">11. Figma Config 2026 Playground & Interactive Studio</div>', unsafe_allow_html=True)
-    
-    # Config 2026 Hero Header Card (Matching Figma Lime Accent & Typography)
-    st.markdown("""
-    <div style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%) !important; border-radius: 16px !important; padding: 2.2rem 2.5rem !important; margin-bottom: 2rem !important; border: 2px solid #BEF264 !important; box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15) !important;">
-        <span style="background-color: #BEF264 !important; color: #0F172A !important; padding: 0.35rem 0.85rem !important; border-radius: 20px !important; font-size: 0.78rem !important; font-weight: 800 !important; letter-spacing: 0.06em !important; text-transform: uppercase !important; display: inline-block !important; margin-bottom: 0.8rem !important;">FIGMA MCP • CONFIG 2026 PLAYGROUND</span>
-        <h1 style="color: #ECFDF5 !important; font-size: 2.4rem !important; font-weight: 800 !important; margin: 0 0 0.6rem 0 !important; letter-spacing: -0.025em !important; font-family: 'Plus Jakarta Sans', sans-serif !important;">Config 2026 playground</h1>
-        <p style="color: #94A3B8 !important; font-size: 1.1rem !important; font-weight: 500 !important; margin: 0 !important; max-width: 800px !important; line-height: 1.6 !important;">Get up to speed on some of our biggest launches from Config 2026 — interactive shader controls, generative plugin prompts, timeline keyframe scrubbers, and live submission analytics.</p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # 2-Column Main Studio Grid
-    fig_col1, fig_col2 = st.columns([1, 1])
-
-    with fig_col1:
-        st.markdown('<div class="sub-section-title">🎛️ Interactive Shader & Effect Parameter Controls</div>', unsafe_allow_html=True)
-        
-        # Risograph Effect Control Card
-        st.markdown("""
-        <div style="background: #FFFFFF !important; border-radius: 12px !important; padding: 1.5rem !important; border: 2px solid #CBD5E1 !important; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05) !important; margin-bottom: 1.5rem !important;">
-            <div style="font-weight: 800; font-size: 1.05rem; color: #0F172A; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                <span>≈</span> <span>Risograph effect</span>
-                <span style="margin-left: auto; font-size: 0.75rem; background: #E0F2FE; color: #0369A1; padding: 0.2rem 0.5rem; border-radius: 6px;">Live GPU</span>
-            </div>
-        """, unsafe_allow_html=True)
-        
-        dither_size = st.slider("Dither Size", min_value=1, max_value=10, value=4, key="figma_dither")
-        offset_val = st.slider("Offset", min_value=1, max_value=10, value=3, key="figma_offset")
-        noise_scale = st.slider("Noise Scale", min_value=1, max_value=10, value=4, key="figma_noise")
-        
-        st.markdown("</div>", unsafe_allow_html=True)
-
-        # Generative Plugin Card
-        st.markdown('<div class="sub-section-title">🪄 Generative Plugin Prompt Engine</div>', unsafe_allow_html=True)
-        
-        plugin_prompt = st.text_input("Plugin Prompt Input:", "Create a circular image array plugin", key="figma_plugin_prompt")
-        
-        if st.button("⚡ Execute Generative Canvas Plugin", use_container_width=True):
-            st.success(f"Generated plugin execution matrix for: '{plugin_prompt}' (Parameters: Dither={dither_size}, Offset={offset_val}, Noise={noise_scale})")
-            
-            # Interactive Timeline Scrubber Result
-            st.markdown("""
-            <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 1.2rem; margin-top: 1rem;">
-                <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.85rem; color: #475569; margin-bottom: 0.5rem;">
-                    <span>Timeline Tracks</span>
-                    <span style="color: #6366F1;">Keyframe Scrubber (0.0 ➔ 1.0)</span>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
-
-    with fig_col2:
-        st.markdown('<div class="sub-section-title">💻 Code Action & Keyframe Timeline Scrubber</div>', unsafe_allow_html=True)
-        
-        # Code Pill Badge & Timeline Card
-        st.markdown("""
-        <div style="background: #FFFFFF !important; border-radius: 12px !important; padding: 1.5rem !important; border: 2px solid #CBD5E1 !important; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05) !important; margin-bottom: 1.5rem !important;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
-                <div style="background: #0F172A; color: #FFFFFF; font-weight: 800; font-size: 0.88rem; padding: 0.4rem 0.9rem; border-radius: 20px; display: inline-flex; align-items: center; gap: 0.5rem;">
-                    <span>{ }</span> <span>Build with code</span>
-                </div>
-                <span class="theme-badge" style="background: #DCFCE7 !important; color: #15803D !important; border-color: #86EFAC !important;">Config 2026 Ready</span>
-            </div>
-        """, unsafe_allow_html=True)
-
-        timeline_pos = st.slider("Keyframe Position (0.0 ➔ 1.0)", min_value=0.0, max_value=1.0, value=0.4, step=0.05, key="figma_timeline")
-        
-        spin_deg = int(timeline_pos * 360)
-        scale_val = round(0.5 + timeline_pos * 1.5, 2)
-
-        st.markdown(f"""
-        <div style="background: #F1F5F9; border-radius: 8px; padding: 1rem; margin-top: 0.8rem;">
-            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; color: #334155; margin-bottom: 0.4rem;">
-                <span>Track 1: Spin</span>
-                <span style="color: #0284C7; font-weight: 800;">{spin_deg}° Rotation</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; color: #334155;">
-                <span>Track 2: Scale</span>
-                <span style="color: #0D9488; font-weight: 800;">{scale_val}x Multiplier</span>
-            </div>
-        </div>
-        </div>
-        """, unsafe_allow_html=True)
-
-        st.markdown('<div class="sub-section-title">📊 Live Project Submissions Data Table (Figma Design)</div>', unsafe_allow_html=True)
-        
-        # Figma Design Submissions Table
-        figma_submissions_df = pd.DataFrame({
-            "Project Title": [
-                "Chesapeake Water Watch",
-                "Field research on the American Pika",
-                "Bacterial Water Quality Monitoring",
-                "Christmas Bird Count",
-                "The Milky Way Project",
-                "Rim Fire Monitoring"
-            ],
-            "ID": ["CW-000242", "XY-654321", "AB-123456", "MN-987654", "QR-321098", "JK-456789"],
-            "Date": ["Today", "09/07/25", "09/04/25", "08/26/25", "08/22/25", "08/16/25"],
-            "Category": ["Marine Sci.", "Biology", "Ecology", "Biology", "Astronomy", "Geology"],
-            "Status": ["In Review", "In Review", "Submitted", "Submitted", "In Review", "In Review"]
-        })
-        
-        st.dataframe(figma_submissions_df, use_container_width=True, height=240)
-
-    st.markdown("---")
-
-    # Rendered Image Preview from Figma
-    st.markdown('<div class="sub-section-title">🖼️ Direct Figma API Image Render (Frame 93:13350)</div>', unsafe_allow_html=True)
-    if os.path.exists(r"C:\Users\Peepul\.gemini\antigravity\brain\9143b5d2-cd0a-4e31-9de0-3d63eb2c8a75\figma_frame_render.png"):
-        st.image(r"C:\Users\Peepul\.gemini\antigravity\brain\9143b5d2-cd0a-4e31-9de0-3d63eb2c8a75\figma_frame_render.png", caption="Figma Config 2026 Playground Frame (Extracted live via Figma REST API)", use_container_width=True)
 
 # ---------------------------------------------------------
 # Executive Page Footnote (Reduced Elegant Font Size)
