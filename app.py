@@ -1034,34 +1034,36 @@ with tab5:
 
     with cro_c2:
         tri_df = pd.DataFrame({
-            "Technique": ["Cold Calling", "Entry Hook", "Think-Pair-Share", "Group Discussion", "Constructive Feedback"],
-            "EDS Self-Reported (%)": [33.0, 25.0, 6.0, 18.0, 10.0],
-            "CRO Observer Recorded (%)": [21.0, 47.0, 9.0, 9.0, 18.0]
+            "Technique": ["Entry Hook", "Cold Calling", "Group Discussion", "Constructive Feedback", "Think-Pair-Share"],
+            "EDS Self-Reported (%)": [25.0, 33.0, 18.0, 10.0, 6.0],
+            "CRO Observer Recorded (%)": [47.0, 21.0, 9.0, 18.0, 9.0]
         })
         fig_tri = go.Figure()
         fig_tri.add_trace(go.Bar(
-            x=tri_df["Technique"],
-            y=tri_df["EDS Self-Reported (%)"],
+            y=tri_df["Technique"],
+            x=tri_df["EDS Self-Reported (%)"],
             name="EDS Self-Reported (%)",
+            orientation="h",
             marker_color="#6366F1",
             text=[f"{v:.0f}%" for v in tri_df["EDS Self-Reported (%)"]],
-            textposition="auto",
-            textfont=dict(size=14, family="Plus Jakarta Sans", color="#FFFFFF")
+            textposition="outside",
+            textfont=dict(size=13, family="Plus Jakarta Sans", color="#0F172A")
         ))
         fig_tri.add_trace(go.Bar(
-            x=tri_df["Technique"],
-            y=tri_df["CRO Observer Recorded (%)"],
+            y=tri_df["Technique"],
+            x=tri_df["CRO Observer Recorded (%)"],
             name="CRO Observer Recorded (%)",
+            orientation="h",
             marker_color="#10B981",
             text=[f"{v:.0f}%" for v in tri_df["CRO Observer Recorded (%)"]],
-            textposition="auto",
-            textfont=dict(size=14, family="Plus Jakarta Sans", color="#FFFFFF")
+            textposition="outside",
+            textfont=dict(size=13, family="Plus Jakarta Sans", color="#0F172A")
         ))
-        apply_standard_chart_layout(fig_tri, title="Self-Reported vs CRO Observer Recorded Technique Application", height=400, barmode="group", show_legend=True, yaxis_title="Percentage (%)")
+        apply_standard_chart_layout(fig_tri, title="Self-Reported vs CRO Observer Recorded Technique Application", height=400, barmode="group", show_legend=True, xaxis_title="Percentage (%)")
         fig_tri.update_layout(
-            margin=dict(l=30, r=30, t=65, b=65),
-            yaxis=dict(range=[0, 58]),
-            xaxis=dict(tickfont=dict(size=12, color="#0F172A", family="Plus Jakarta Sans"))
+            margin=dict(l=150, r=50, t=65, b=65),
+            xaxis=dict(range=[0, 58]),
+            yaxis=dict(autorange="reversed", tickfont=dict(size=13, color="#0F172A", family="Plus Jakarta Sans"))
         )
         st.plotly_chart(fig_tri, use_container_width=True)
 
